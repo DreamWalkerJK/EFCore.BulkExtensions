@@ -1,9 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <Title>EFCore.BulkExtensions.Core</Title>
-    <RootNamespace>EFCore.BulkExtensions</RootNamespace>
-    <Description>EntityFramework .Net EFCore EF Core Bulk Batch Extensions for Insert Update Delete Read (CRUD) operations</Description>
+      <TargetFramework>net10.0</TargetFramework>
+
+      <PackageId>DreamWalkerJK.EFCore.BulkExtensions.Core</PackageId>
+      <PackageVersion>10.0.1-gaussdb.1</PackageVersion>
+      <Authors>borisdj, DreamWalkerJK</Authors>
+      <PackageProjectUrl>https://github.com/DreamWalkerJK/EFCore.BulkExtensions</PackageProjectUrl>
+      <RepositoryUrl>https://github.com/DreamWalkerJK/EFCore.BulkExtensions</RepositoryUrl>
+      <RepositoryType>Git</RepositoryType>
+      <PackageReleaseNotes>GaussDB support preview release 1.</PackageReleaseNotes>
+
+      <Title>EFCore.BulkExtensions.Core</Title>
+      <RootNamespace>EFCore.BulkExtensions</RootNamespace>
+      <Description>EntityFramework Core bulk operations core library with GaussDB support.</Description>
 	<NuGetAudit>false</NuGetAudit>
   </PropertyGroup>
   <ItemGroup>

@@ -1,14 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net10.0</TargetFramework>
-        <!-- The GaussDB provider identifies itself by its unsigned assembly
-             identity. StrongNamer rewrites that dependency and it then fails
-             during EF query compilation, so preserve the NuGet binary. -->
+
+        <PackageId>DreamWalkerJK.EFCore.BulkExtensions.GaussDB</PackageId>
+        <PackageVersion>10.0.1-gaussdb.1</PackageVersion>
+
+        <Authors>borisdj, DreamWalkerJK</Authors>
+        <PackageProjectUrl>https://github.com/DreamWalkerJK/EFCore.BulkExtensions</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/DreamWalkerJK/EFCore.BulkExtensions</RepositoryUrl>
+        <RepositoryType>Git</RepositoryType>
+
+        <Title>DreamWalkerJK.EFCore.BulkExtensions.GaussDB</Title>
+        <Description>Bulk operations for GaussDB with Entity Framework Core.</Description>
+        <PackageTags>$(PackageTags) GaussDB openGauss</PackageTags>
+        <PackageReleaseNotes>GaussDB support preview release 1.</PackageReleaseNotes>
+
         <DisableStrongNamer>true</DisableStrongNamer>
-        <Title>EFCore.BulkExtensions.GaussDB</Title>
-        <Description>EntityFramework .Net EFCore EF Core Bulk Batch Extensions for Insert Update Delete Read (CRUD) operations on GaussDB.</Description>
-        <PackageTags>$(PackageTags) GaussDB</PackageTags>
-        <PackageReleaseNotes>net 10</PackageReleaseNotes>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="DotNetCore.EntityFrameworkCore.GaussDB" Version="10.0.0" />
