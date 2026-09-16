@@ -1,0 +1,124 @@
+name: Publish GaussDB NuGet packages
+
+on:
+  push:
+    tags:
+      - 'gaussdb-v*'
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    name: Build and publish NuGet packages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Require a commit from release/gaussdb-preview
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin release/gaussdb-preview --no-tags
+          if ! git merge-base --is-ancestor "$GITHUB_SHA" "origin/release/gaussdb-preview"; then
+            echo "The tag must point to release/gaussdb-preview or one of its ancestors."
+            exit 1
+          fi
+
+      - name: Resolve package version from tag
+        shell: bash
+        run: |
+          set -euo pipefail
+          package_version="${GITHUB_REF_NAME#gaussdb-v}"
+          if [[ ! "$package_version" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
+            echo "Invalid tag version: $GITHUB_REF_NAME"
+            echo "Use a tag such as gaussdb-v10.0.1-gaussdb.2"
+            exit 1
+          fi
+          echo "PACKAGE_VERSION=$package_version" >> "$GITHUB_ENV"
+          echo "Publishing version: $package_version"
+
+      - name: Restore
+        run: >-
+          dotnet restore EFCore.BulkExtensions.GaussDB/EFCore.BulkExtensions.GaussDB.csproj
+          -p:NuGetAudit=false
+
+      - name: Build
+        run: >-
+          dotnet build EFCore.BulkExtensions.GaussDB/EFCore.BulkExtensions.GaussDB.csproj
+          --configuration Release
+          --no-restore
+          -p:GeneratePackageOnBuild=false
+          -p:NuGetAudit=false
+
+      - name: Pack Core
+        run: >-
+          dotnet pack EFCore.BulkExtensions.Core/EFCore.BulkExtensions.Core.csproj
+          --configuration Release
+          --no-build
+          --no-restore
+          -p:PackageVersion=${{ env.PACKAGE_VERSION }}
+          -p:NuGetAudit=false
+          --output artifacts
+
+      - name: Pack GaussDB
+        run: >-
+          dotnet pack EFCore.BulkExtensions.GaussDB/EFCore.BulkExtensions.GaussDB.csproj
+          --configuration Release
+          --no-build
+          --no-restore
+          -p:PackageVersion=${{ env.PACKAGE_VERSION }}
+          -p:NuGetAudit=false
+          --output artifacts
+
+      - name: Verify package dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          core_package="artifacts/DreamWalkerJK.EFCore.BulkExtensions.Core.${PACKAGE_VERSION}.nupkg"
+          gauss_package="artifacts/DreamWalkerJK.EFCore.BulkExtensions.GaussDB.${PACKAGE_VERSION}.nupkg"
+          test -f "$core_package"
+          test -f "$gauss_package"
+
+          nuspec_name="$(unzip -Z1 "$gauss_package" | grep '\.nuspec$' | head -n 1)"
+          nuspec="$(unzip -p "$gauss_package" "$nuspec_name")"
+          echo "$nuspec"
+          grep -F "id=\"DreamWalkerJK.EFCore.BulkExtensions.Core\"" <<< "$nuspec"
+          grep -F "version=\"${PACKAGE_VERSION}\"" <<< "$nuspec"
+          grep -F 'id="DotNetCore.EntityFrameworkCore.GaussDB"' <<< "$nuspec"
+          if grep -F 'id="EFCore.BulkExtensions.Core"' <<< "$nuspec"; then
+            echo 'The package must not depend on the official Core package.'
+            exit 1
+          fi
+
+      - name: NuGet login with Trusted Publishing
+        uses: NuGet/login@v1
+        id: nuget-login
+        with:
+          user: ${{ secrets.NUGET_USER }}
+
+      - name: Push Core package
+        run: >-
+          dotnet nuget push
+          artifacts/DreamWalkerJK.EFCore.BulkExtensions.Core.${{ env.PACKAGE_VERSION }}.nupkg
+          --api-key "${{ steps.nuget-login.outputs.NUGET_API_KEY }}"
+          --source https://api.nuget.org/v3/index.json
+          --skip-duplicate
+
+      - name: Push GaussDB package
+        run: >-
+          dotnet nuget push
+          artifacts/DreamWalkerJK.EFCore.BulkExtensions.GaussDB.${{ env.PACKAGE_VERSION }}.nupkg
+          --api-key "${{ steps.nuget-login.outputs.NUGET_API_KEY }}"
+          --source https://api.nuget.org/v3/index.json
+          --skip-duplicate
