@@ -7,7 +7,8 @@ Library is Lightweight and very Efficient (warp speed), having all mostly used [
 Was selected in top 10 [EF Core Extensions](https://docs.microsoft.com/en-us/ef/core/extensions/) recommended by *Microsoft*.  
 Repository included into [*Arctic Code Vault*](https://archiveprogram.github.com/arctic-vault/) for long-term preservation (code designated for survival).  
 Latest version is using EF Core 10.  
-Supports all 5 major sql databases: **SQLServer, PostgreSQL, MySQL, Oracle, SQLite.**    
+Supports **SQLServer, PostgreSQL, MySQL, Oracle, SQLite**, with a **GaussDB provider preview** on this branch.\
+See [GaussDB installation](#gaussdb-preview-installation), [usage and limitations](#gaussdb-provider), and [performance measurements](#gaussdb-preview-measurements).\
 Check out [Testimonials](https://docs.google.com/spreadsheets/d/e/2PACX-1vShdv2sTm3oQfowm9kVIx-PLBCk1lGQEa9E6n92-dX3pni7-XQUEp6taVcMSZVi9BaSAizv1YanWTy3/pubhtml?gid=801420190&single=true) from the Community and User Comments.  
 With thousands of pleased Users and many satisfied Clients from around the globe.  
 Customers range from small and medium-sized businesses to large corporations,  
@@ -49,6 +50,7 @@ Want to **Contact** for Development & Consulting: [**codis**](https://codis.tech
 Supported databases:  
 -**SQLServer** (or AzureSQL) under the hood uses [SqlBulkCopy](https://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqlbulkcopy.aspx) for Insert, Update/Delete = BulkInsert + raw Sql [MERGE](https://docs.microsoft.com/en-us/sql/t-sql/statements/merge-transact-sql).  
 -**PostgreSQL** (9.5+) is using [COPY BINARY](https://www.postgresql.org/docs/9.2/sql-copy.html) combined with [ON CONFLICT](https://www.postgresql.org/docs/10/sql-insert.html#SQL-ON-CONFLICT) for Update.  
+-**GaussDB** (preview) uses binary `COPY` for inserts and staging, `UPDATE ... FROM` / `DELETE ... USING` for updates and deletes, and `ON DUPLICATE KEY UPDATE` for upserts. The adapter uses `DotNetCore.EntityFrameworkCore.GaussDB`; validation has been performed against openGauss 6.0.3.\
 -**MySQL** (8+) is using [MySqlBulkCopy](https://mysqlconnector.net/api/mysqlconnector/mysqlbulkcopytype/) combined with [ON DUPLICATE](https://dev.mysql.com/doc/refman/8.0/en/insert-on-duplicate.html) for Update.  
 -**Oracle** (8+) is using [OracleBulkCopy](https://docs.oracle.com/cd/E11882_01/win.112/e23174/OracleBulkCopyClass.htm#ODPNT7446) combined with [MERGE](https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/MERGE.html) for Update.  
 -**SQLite** has no Copy tool, instead library uses [plain SQL](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/bulk-insert) combined with [UPSERT](https://www.sqlite.org/lang_UPSERT.html).  
@@ -58,8 +60,8 @@ Instead Test options are  SqlServer(Developer or Express), LocalDb(if alongside 
 ## Installation
 Available on [![NuGet](https://img.shields.io/nuget/v/EFCore.BulkExtensions.svg)](https://www.nuget.org/packages/EFCore.BulkExtensions/)  [![Downloads](https://img.shields.io/nuget/dt/EFCore.BulkExtensions.svg)](https://www.nuget.org/packages/EFCore.BulkExtensions/)  
 Package manager console command to install: *Install-Package EFCore.BulkExtensions*  
-Main nuget is for all Databases, and specific ones with single provider for those who need small size packages.  
-Specific ones have adapter suffix: MainNuget + *.SqlServer/PostgreSql/MySql/Oracle/Sqlite* 
+The upstream main NuGet package aggregates database adapters; specific packages contain a single provider for those who need smaller packages.\
+Upstream provider packages have adapter suffixes: MainNuget + *.SqlServer/PostgreSql/MySql/Oracle/Sqlite*. For this branch's GaussDB preview, use the separate package below.
 (
 [![](https://img.shields.io/static/v1?label=&message=MS&color=darkred)](https://www.nuget.org/packages/EFCore.BulkExtensions.SqlServer)
 [![](https://img.shields.io/static/v1?label=&message=PG&color=blue)](https://www.nuget.org/packages/EFCore.BulkExtensions.PostgreSql)
@@ -82,6 +84,25 @@ Its assembly is [Strong-Named](https://docs.microsoft.com/en-us/dotnet/standard/
 
 Supports follows official [.Net lifecycle](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core), currently v.10 as latest(LTS) and v.9.  
 MySql nuget is still and v.9 as their provider is not yet updated to EF 10.  
+
+### GaussDB preview installation
+
+The `EFCore.BulkExtensions.GaussDB` project is distributed by this fork as
+[`DreamWalkerJK.EFCore.BulkExtensions.GaussDB`](https://www.nuget.org/packages/DreamWalkerJK.EFCore.BulkExtensions.GaussDB/10.0.1-gaussdb.1), version `10.0.1-gaussdb.1`:
+
+```shell
+dotnet add package DreamWalkerJK.EFCore.BulkExtensions.GaussDB --version 10.0.1-gaussdb.1
+```
+
+It targets **.NET 10 / EF Core 10** and brings in `DotNetCore.EntityFrameworkCore.GaussDB 10.0.0`
+and the matching `DreamWalkerJK.EFCore.BulkExtensions.Core 10.0.1-gaussdb.1` transitively.
+Use this matching Core dependency instead of combining the preview with the upstream `EFCore.BulkExtensions.Core` package.
+The C# namespace remains `EFCore.BulkExtensions`.
+The .NET 10 aggregate project in this branch references GaussDB; the .NET 8 projects do not.
+
+BulkExtensions assemblies remain signed. Preserve the GaussDB provider's original dependency binaries:
+rewriting them with StrongNamer changes their assembly identities and breaks EF query compilation.
+The projects consuming GaussDB in this repository disable StrongNamer for that reason.
 
 ## Usage
 It's pretty simple and straightforward.  
@@ -131,6 +152,41 @@ context.Truncate<Entity>();
 context.TruncateAsync<Entity>();
 ```
 
+### GaussDB provider
+
+Configure the context with `UseGaussDB`; BulkExtensions selects the GaussDB adapter automatically.
+The provider supports synchronous and asynchronous **insert, update, upsert, delete, read and truncate** operations.
+
+```csharp
+using EFCore.BulkExtensions;
+using Microsoft.EntityFrameworkCore;
+
+var options = new DbContextOptionsBuilder<AppDbContext>()
+    .UseGaussDB(connectionString)
+    .Options;
+await using var context = new AppDbContext(options);
+
+await context.BulkInsertAsync(items, new BulkConfig { SetOutputIdentity = true });
+await context.BulkUpdateAsync(items);
+await context.BulkInsertOrUpdateAsync(items, new BulkConfig { CalculateStats = true });
+await context.BulkReadAsync(items);
+await context.BulkDeleteAsync(items);
+```
+
+`SetOutputIdentity` writes generated identities back to the input entities; `CalculateStats` exposes affected-row counts through `BulkConfig.StatsInfo`.
+Async operations use asynchronous database I/O, propagate cancellation, and clean up staging tables.
+Use an explicit transaction to group multiple operations, and begin a transaction before using `UseTempDB`.
+
+GaussDB-specific behavior and limitations:
+
+- Upsert with `UpdateByProperties` needs a unique key covering exactly those columns. An existing unique index is recognized; otherwise the adapter temporarily creates one, requiring permission and unique existing data.
+- Upsert follows database unique-key conflicts. `ON DUPLICATE KEY UPDATE` cannot update primary-key or unique-index columns, including unique columns outside `UpdateByProperties`. Exclude those additional columns with `PropertiesToExcludeOnUpdate`, or change them in a separate `BulkUpdate` matching on an unchanged key.
+- `BulkInsertOrUpdateOrDelete`, `OnConflictUpdateWhereSql` for upsert, and upserts containing only matching-key columns are unsupported. For synchronization, read existing keys and issue separate upsert and delete operations.
+- Process related entities per table, propagating generated IDs and setting foreign keys before inserting children. `IncludeGraph` is not a general GaussDB graph synchronization solution. For large deletes, index foreign-key columns and delete children before parents, or use configured database cascades.
+- With provider `10.0.0`, the package integration run encountered non-composable SQL while loading identity output for an owned/table-splitting model. `BulkInsert` with `SetOutputIdentity = true` is therefore not validated for every owned model; verify that mapping separately. The successful multi-table benchmarks below use explicit entity sets.
+
+See the [GaussDB provider README](EFCore.BulkExtensions.GaussDB/README.md) for additional configuration details and integration-test instructions.
+
 ## Performances
 Following are performances (in seconds)
 * For SQL Server (v. 2019):
@@ -145,6 +201,43 @@ TestTable has 6 columns (Guid, string x2, int, decimal?, DateTime), all inserted
 Test done locally on configuration: INTEL i7-10510U CPU 2.30GHz, DDR3 16 GB, SSD SAMSUNG 512 GB.  
 For small data sets there is an overhead since most Bulk ops need to create Temp table and also Drop it after finish.  
 Probably good advice would be to use **Bulk ops for sets greater than 1000** (condition in DbContext or Repository).
+
+### GaussDB preview measurements
+
+An independent package integration run on **2026-09-16** used `DreamWalkerJK.EFCore.BulkExtensions.GaussDB 10.0.1-gaussdb.1`,
+`DotNetCore.EntityFrameworkCore.GaussDB 10.0.0`, .NET 10, and a local Docker `opengauss:6.0.3` server.
+The run used one sequential process, `Pooling=false`, and the default `BulkConfig.BatchSize` of 2,000,
+with one Bulk API call per entity type and operation.
+
+Narrow-table measurements (`BulkPackageItems`), in **milliseconds**. Insert used the default `SetOutputIdentity = false`:
+
+| Rows | BulkInsertAsync | BulkUpdateAsync | BulkDeleteAsync |
+| ---: | ---: | ---: | ---: |
+| 10,000 | 296 | 410 | 109 |
+| 20,000 | 442 | 638 | 136 |
+| 50,000 | 921 | 1,281 | 274 |
+| 100,000 | 1,757 | 2,694 | 580 |
+
+The wider `DeepMission` model includes JSON and array fields and four related entity types:
+`DeepMission -> Segment -> Waypoint -> Constraint`, plus `Crew`.
+Each root has one row of each related type, giving **five rows per root**.
+The following times, in **seconds**, sum the five per-table Bulk API calls for each operation.
+Inserts include generated identity output; the application explicitly propagates foreign keys between calls.
+Foreign-key columns were indexed for the completed run.
+
+| Root entities | Total rows | Bulk insert sum | Bulk update sum | Bulk delete sum |
+| ---: | ---: | ---: | ---: | ---: |
+| 10,000 | 50,000 | 4.428 | 2.418 | 1.576 |
+| 20,000 | 100,000 | 7.162 | 4.364 | 2.839 |
+| 50,000 | 250,000 | 16.085 | 9.520 | 6.709 |
+| 100,000 | 500,000 | 32.252 | 18.935 | 13.381 |
+
+All eight volume scenarios passed row-count, updated-value and post-delete checks.
+Times cover the Bulk API calls, excluding object construction, application-side ID/FK preparation,
+validation queries and explicit transaction commits. Graph reads used conditional `COUNT` queries;
+they do not measure full `Include` / `ThenInclude` graph loading.
+These are observations from one local run, not a controlled EF-versus-Bulk comparison or concurrent-throughput measurements.
+The separate owned/table-splitting limitation is described in [GaussDB usage](#gaussdb-provider).
 
 ## Bulk info
 If Windows Authentication is used then in ConnectionString there should be *Trusted_Connection=True;* because Sql credentials are required to stay in connection.  
@@ -174,7 +267,7 @@ It makes Update when PK(PrimaryKey) is matched, otherwise does Insert.
 Those in Db that are not found in the list will be deleted.  
 Partial Sync can be done on table subset using expression set on config with method:  
 `bulkConfig.SetSynchronizeFilter<Item>(a => a.Quantity > 0);`  
-Not supported for SQLite (Lite has only UPSERT statement) nor currently for PostgreSQL. Here way to achieve sync functionality is to Select or BulkRead existing data from DB, split list into sublists and call separately Bulk methods for BulkInsertOrUpdate and Delete.
+Not supported for SQLite (Lite has only UPSERT statement), PostgreSQL, or GaussDB. Here way to achieve sync functionality is to Select or BulkRead existing data from DB, split list into sublists and call separately Bulk methods for BulkInsertOrUpdate and Delete.
 
 **BulkRead** (SELECT and JOIN done in Sql)  
 Used when need to Select from big List based on Unique Prop./Columns specified in config `UpdateByProperties`  
@@ -341,12 +434,12 @@ Return info will be within *BulkConfig.**TimeStampInfo*** in field `NumberOfSkip
 **ReplaceReadEntities** when set to True result of BulkRead operation will be provided using replace instead of update. Entities list parameter of BulkRead method will be repopulated with obtained data. Enables functionality of Contains/IN which will return all entities matching the criteria (does not have to be by unique columns).  
 **UseOptionLoopJoin** when set it appends 'OPTION (LOOP JOIN)' for SqlServer, to reduce potential deadlocks on tables that have FKs. Use this [sql hint](https://learn.microsoft.com/en-us/sql/t-sql/queries/hints-transact-sql-query?view=sql-server-ver16) as a last resort for experienced devs and db admins.  
 **ConflictOption**: -*None*(as errors), -*Replace*(conflicting with new rows), -*Ignore*(keep old rows)  
-**ApplySubqueryLimit** Default is zero '0'. When set to larger value it appends: LIMIT 'N', to generated query. Used only with PostgreSql.
+**ApplySubqueryLimit** Default is zero '0'. When set to larger value it appends: LIMIT 'N', to generated query. Used with PostgreSql and GaussDB.
 
 **DataReader** can be used when DataReader is also configured and when set it is propagated to SqlBulkCopy util object.  
 **EnableStreaming** can be set to True if want to have tracking of entities from BulkRead or when SetOutputIdentity is set, useful for big field like blob, binary column.
 
-**SqlBulkCopyOptions** is Enum (only for SqlServer) with [[Flags]](https://stackoverflow.com/questions/8447/what-does-the-flags-enum-attribute-mean-in-c) attribute which enables specifying one or more options:  
+**SqlBulkCopyOptions** is Enum (primarily for SqlServer; GaussDB also honors `KeepIdentity`) with [[Flags]](https://stackoverflow.com/questions/8447/what-does-the-flags-enum-attribute-mean-in-c) attribute which enables specifying one or more options:\
 *Default, KeepIdentity, CheckConstraints, TableLock, KeepNulls, FireTriggers, UseInternalTransaction*  
 If need to set Identity PK in memory, Not let DB do the autoincrement, then need to use **KeepIdentity**:  
 `var bulkConfig = new BulkConfig { SqlBulkCopyOptions = SqlBulkCopyOptions.KeepIdentity };`  
@@ -407,19 +500,21 @@ D { BulkDelete --------------|             | /                                  
 R { BulkRead ----------------|             |--Read -----|--Read -------|--Read         |
 - { Truncate ----------------|             |--Truncate -|--Truncate ---|--Truncate     |
 ```
-- Projects Composition:
+- Projects Composition (.NET 10 on this branch):
 
 | Num | Nuget                                  | References  | Transitive dep. | Note         | 
 | --- | -------------------------------------- | ----------- | --------------- | ------------ | 
-| [0] | EFCore.BulkExtensions.Core             |             |                 | shared       |
+| [0] | DreamWalkerJK.EFCore.BulkExtensions.Core |             |                 | shared preview Core |
 | [1] | EFCore.BulkExtensions.***SqlServer***  | [0]         |                 | per provider |
 | [2] | EFCore.BulkExtensions.***PostgreSql*** | [0]         |                 | per provider |
 | [3] | EFCore.BulkExtensions.***MySql***      | [0]         |                 | per provider |
 | [4] | EFCore.BulkExtensions.***Oracle***     | [0]         |                 | per provider |
 | [5] | EFCore.BulkExtensions.***Sqlite***     | [0]         |                 | per provider |
-| [6] | **EFCore.BulkExtensions** - main one   | [1,2,3,4,5] | [0]             | has all      |
+| [6] | DreamWalkerJK.EFCore.BulkExtensions.***GaussDB*** | [0] |               | preview provider |
+| [7] | **EFCore.BulkExtensions** - aggregate | [1,2,4,5,6] | [0]             | .NET 10 adapters |
 
-EFCore.BulkExtensions is main Project and Nuget that references all other nugets.  
+The .NET 10 aggregate project includes GaussDB; MySQL remains a separate EF Core 9 provider and is excluded from that aggregate.\
+This branch's GaussDB preview publishes the `DreamWalkerJK.EFCore.BulkExtensions.Core` and `DreamWalkerJK.EFCore.BulkExtensions.GaussDB` packages.\
 Other per provider projects have only Core dependency and specific adapter implementation with needed packages.
 
 List of all referenced [Links](https://docs.google.com/spreadsheets/d/e/2PACX-1vRE_rO6799VGMhLAldgDZoHJAdbKI0YZ8gweN7oaBG0KCIMtqZwlaeTyB9IMoThb69Tk0bkjIdNNWl_/pubhtml?gid=2013428247&single=true)
