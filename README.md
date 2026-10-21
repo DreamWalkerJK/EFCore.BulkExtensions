@@ -87,18 +87,17 @@ MySql nuget is still and v.9 as their provider is not yet updated to EF 10.
 
 ### GaussDB preview installation
 
-The current branch builds preview `10.0.1-gaussdb.2`. The installation example below uses
-the published `10.0.1-gaussdb.1` preview.
+The current preview release is `10.0.1-gaussdb.2`.
 
 The `EFCore.BulkExtensions.GaussDB` project is distributed by this fork as
-[`DreamWalkerJK.EFCore.BulkExtensions.GaussDB`](https://www.nuget.org/packages/DreamWalkerJK.EFCore.BulkExtensions.GaussDB/10.0.1-gaussdb.1), version `10.0.1-gaussdb.1`:
+[`DreamWalkerJK.EFCore.BulkExtensions.GaussDB`](https://www.nuget.org/packages/DreamWalkerJK.EFCore.BulkExtensions.GaussDB/10.0.1-gaussdb.2), version `10.0.1-gaussdb.2`:
 
 ```shell
-dotnet add package DreamWalkerJK.EFCore.BulkExtensions.GaussDB --version 10.0.1-gaussdb.1
+dotnet add package DreamWalkerJK.EFCore.BulkExtensions.GaussDB --version 10.0.1-gaussdb.2
 ```
 
 It targets **.NET 10 / EF Core 10** and brings in `DotNetCore.EntityFrameworkCore.GaussDB 10.0.0`
-and the matching `DreamWalkerJK.EFCore.BulkExtensions.Core 10.0.1-gaussdb.1` transitively.
+and the matching `DreamWalkerJK.EFCore.BulkExtensions.Core 10.0.1-gaussdb.2` transitively.
 Use this matching Core dependency instead of combining the preview with the upstream `EFCore.BulkExtensions.Core` package.
 The C# namespace remains `EFCore.BulkExtensions`.
 The .NET 10 aggregate project in this branch references GaussDB; the .NET 8 projects do not.

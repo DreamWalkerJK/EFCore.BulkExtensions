@@ -9,10 +9,10 @@ It is referenced by the .NET 10 aggregate project; the .NET 8 projects do not re
 This fork distributes the provider as `DreamWalkerJK.EFCore.BulkExtensions.GaussDB`:
 
 ```shell
-dotnet add package DreamWalkerJK.EFCore.BulkExtensions.GaussDB --version 10.0.1-gaussdb.1
+dotnet add package DreamWalkerJK.EFCore.BulkExtensions.GaussDB --version 10.0.1-gaussdb.2
 ```
 
-The package brings in `DreamWalkerJK.EFCore.BulkExtensions.Core 10.0.1-gaussdb.1` and the GaussDB EF Core provider transitively.
+The package brings in `DreamWalkerJK.EFCore.BulkExtensions.Core 10.0.1-gaussdb.2` and the GaussDB EF Core provider transitively.
 Use the matching preview Core dependency instead of combining it with the upstream `EFCore.BulkExtensions.Core` package.
 The C# namespace remains `EFCore.BulkExtensions`.
 

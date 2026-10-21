@@ -8,7 +8,7 @@
       <PackageProjectUrl>https://github.com/DreamWalkerJK/EFCore.BulkExtensions</PackageProjectUrl>
       <RepositoryUrl>https://github.com/DreamWalkerJK/EFCore.BulkExtensions</RepositoryUrl>
       <RepositoryType>Git</RepositoryType>
-      <PackageReleaseNotes>Preserve framework save pipelines and transaction ownership; fix composite-key and null output hydration.</PackageReleaseNotes>
+      <PackageReleaseNotes>Preserve framework save pipelines and transaction ownership; fix tracked owned graphs, composite and shadow foreign keys, selective/null owned output hydration, and per-table rowversion exclusions.</PackageReleaseNotes>
 
       <Title>EFCore.BulkExtensions.Core</Title>
       <RootNamespace>EFCore.BulkExtensions</RootNamespace>
