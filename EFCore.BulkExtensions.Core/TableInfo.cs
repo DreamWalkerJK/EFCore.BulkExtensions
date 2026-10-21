@@ -1018,6 +1018,8 @@ public class TableInfo
         var properties = navigation.TargetEntityType.GetProperties()
             .Where(property => property.PropertyInfo != null && selectedProperties.Contains(path + "." + property.Name))
             .Select(property => FastProperty.GetOrCreate(property.PropertyInfo!)).ToArray();
+        var missingValues = properties.Select(property => property.Property.PropertyType.IsValueType
+            ? Activator.CreateInstance(property.Property.PropertyType) : null).ToArray();
         var children = navigation.TargetEntityType.GetNavigations()
             .Where(child => child.ForeignKey.IsOwnership && !child.IsOnDependent && !child.IsCollection && child.PropertyInfo != null
                 && !child.TargetEntityType.IsMappedToJson() && OwnedTypeUtil.IsOwnedInSameTableAsOwner(child))
@@ -1036,8 +1038,8 @@ public class TableInfo
                     accessor.Set(entity, source);
                 else if (source == null && target != null)
                 {
-                    foreach (var property in properties)
-                        property.Set(target, null);
+                    for (var i = 0; i < properties.Length; i++)
+                        properties[i].Set(target, missingValues[i]);
                     foreach (var child in children)
                         child(target, null);
                 }
