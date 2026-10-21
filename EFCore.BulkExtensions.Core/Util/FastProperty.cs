@@ -25,7 +25,7 @@ public class FastProperty
     }
     
     private Func<object, object>? _getDelegate;
-    private Action<object, object>? _setDelegate;
+    private Action<object, object?>? _setDelegate;
 
     /// <summary>
     /// Constructor for FastPropery
@@ -34,9 +34,12 @@ public class FastProperty
     private FastProperty(PropertyInfo property)
     {
         Property = property;
+        _canAssignNull = !property.PropertyType.IsValueType || Nullable.GetUnderlyingType(property.PropertyType) != null;
         InitializeGet();
         InitializeSet();
     }
+
+    private readonly bool _canAssignNull;
 
     private void InitializeSet()
     {
@@ -59,7 +62,7 @@ public class FastProperty
         var setter = Property.GetSetMethod(true) ?? Property.DeclaringType?.GetProperty(Property.Name)?.GetSetMethod(true); // when Prop from parent it requires DeclaringType
 
         if (setter != null)
-            _setDelegate = Expression.Lambda<Action<object, object>>(Expression.Call(instanceCast, setter, valueCast), new ParameterExpression[] { instance, value }).Compile();
+            _setDelegate = Expression.Lambda<Action<object, object?>>(Expression.Call(instanceCast, setter, valueCast), new ParameterExpression[] { instance, value }).Compile();
     }
 
     private void InitializeGet()
@@ -99,7 +102,7 @@ public class FastProperty
     /// <param name="value"></param>
     public void Set(object instance, object? value)
     {
-        if (value != default && _setDelegate is not null)
+        if (_setDelegate is not null && (value is not null || _canAssignNull))
         {
             _setDelegate(instance, value);
         }

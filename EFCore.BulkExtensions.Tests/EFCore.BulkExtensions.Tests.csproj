@@ -9,6 +9,8 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <NoWarn>$(NoWarn);CA2007</NoWarn>
     <NuGetAudit>false</NuGetAudit>
+    <IsPackable>false</IsPackable>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)..\Keys\EFCore.BulkExtensions.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>

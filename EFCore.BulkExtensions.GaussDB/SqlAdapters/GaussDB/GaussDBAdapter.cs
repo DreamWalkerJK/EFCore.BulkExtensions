@@ -52,6 +52,17 @@ public class GaussDBAdapter : ISqlOperationsAdapter
 
         try
         {
+            // COPY uses the driver directly. Let EF command interceptors validate
+            // context/transaction lifetime before a direct insert can write rows.
+            // Staging inserts already pass through intercepted CREATE TABLE SQL.
+            if (!tableInfo.InsertToTempTable)
+            {
+                if (isAsync)
+                    await dbContext.Database.ExecuteSqlRawAsync("SELECT 1", cancellationToken).ConfigureAwait(false);
+                else
+                    dbContext.Database.ExecuteSqlRaw("SELECT 1");
+            }
+
             var operationType = tableInfo.InsertToTempTable ? OperationType.InsertOrUpdate : OperationType.Insert;
             var sqlCopy = GaussDBQueryBuilder.InsertIntoTable(tableInfo, operationType);
 
@@ -73,6 +84,13 @@ public class GaussDBAdapter : ISqlOperationsAdapter
                 int endModifier = columnType.IndexOf(')');
                 if (modifier >= 0 && endModifier > modifier)
                     columnType = columnType.Remove(modifier, endModifier - modifier + 1);
+                // Unquoted SQL char(n) is bpchar. The driver's "char" type name
+                // denotes PostgreSQL's internal single-byte type, not a string.
+                var isArray = columnType.EndsWith("[]", StringComparison.Ordinal);
+                var baseType = isArray ? columnType[..^2] : columnType;
+                if (baseType.Equals("char", StringComparison.OrdinalIgnoreCase)
+                    || baseType.Equals("character", StringComparison.OrdinalIgnoreCase))
+                    columnType = isArray ? "bpchar[]" : "bpchar";
                 return (GetValue: getValue, ColumnType: columnType, Convert: converter?.ConvertToProvider);
             }).ToArray();
             var entitiesCopiedCount = 0;

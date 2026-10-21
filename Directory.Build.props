@@ -18,7 +18,9 @@
     <DelaySign>false</DelaySign>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <LangVersion>latest</LangVersion>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <!-- Build/test should not package every transitive provider. Use dotnet pack
+         explicitly, or opt in with GeneratePackageOnBuild=true. -->
+    <GeneratePackageOnBuild Condition="'$(GeneratePackageOnBuild)' == ''">false</GeneratePackageOnBuild>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <PropertyGroup Condition="$(MSBuildProjectName.EndsWith('Net8'))">

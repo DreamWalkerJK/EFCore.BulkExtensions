@@ -973,22 +973,25 @@ public class TableInfo
         List<string> selectByPropertyNames = PropertyColumnNamesDict.Keys
             .Where(a => PrimaryKeysPropertyColumnNameDict.ContainsKey(a)).ToList();
 
-        Dictionary<string, T> existingEntitiesDict = new();
+        // Match the actual key values. String concatenation loses component boundaries
+        // ("a_b", "c") and ("a", "b_c"), and conflates null with the string "null".
+        Dictionary<PrimaryKeysPropertyColumnNameValues, T> existingEntitiesDict = new(existingEntities.Count);
         foreach (var existingEntity in existingEntities)
         {
-            string uniqueProperyValues = GetUniquePropertyValues(existingEntity!, selectByPropertyNames, FastPropertyDict);
-            existingEntitiesDict.TryAdd(uniqueProperyValues, existingEntity);
+            var key = new PrimaryKeysPropertyColumnNameValues(selectByPropertyNames.Select(propertyName => FastPropertyDict[propertyName].Get(existingEntity!)));
+            existingEntitiesDict.TryAdd(key, existingEntity);
         }
 
+        var entityList = entities as IList<T> ?? entities.ToList();
+        bool isPostgreSqlCompatible = (context.Database.ProviderName?.EndsWith(SqlType.PostgreSql.ToString(), StringComparison.InvariantCultureIgnoreCase) ?? false)
+            || (context.Database.ProviderName?.EndsWith(SqlType.GaussDB.ToString(), StringComparison.InvariantCultureIgnoreCase) ?? false);
         for (int i = 0; i < NumberOfEntities; i++)
         {
-            T entity = entities.ElementAt(i);
-            string uniqueProperyValues = GetUniquePropertyValues(entity!, selectByPropertyNames, FastPropertyDict);
+            T entity = entityList[i];
+            var key = new PrimaryKeysPropertyColumnNameValues(selectByPropertyNames.Select(propertyName => FastPropertyDict[propertyName].Get(entity!)));
 
-            existingEntitiesDict.TryGetValue(uniqueProperyValues, out T? existingEntity);
-            bool isPostgreSqlCompatible = (context.Database.ProviderName?.EndsWith(SqlType.PostgreSql.ToString(), StringComparison.InvariantCultureIgnoreCase) ?? false)
-                || (context.Database.ProviderName?.EndsWith(SqlType.GaussDB.ToString(), StringComparison.InvariantCultureIgnoreCase) ?? false);
-            if (existingEntity == null && isPostgreSqlCompatible && i < existingEntities.Count && entities.Count() == existingEntities.Count) // && entities.Count == existingEntities.Count conf fix for READ. TODO change (issue 1027)
+            existingEntitiesDict.TryGetValue(key, out T? existingEntity);
+            if (existingEntity == null && isPostgreSqlCompatible && i < existingEntities.Count && entityList.Count == existingEntities.Count) // && entities.Count == existingEntities.Count conf fix for READ. TODO change (issue 1027)
             {
                 existingEntity = existingEntities.ElementAt(i); // TODO check if BinaryImport with COPY on Postgres preserves order
             }
@@ -1531,8 +1534,15 @@ internal class PrimaryKeysPropertyColumnNameValues
 
     public override bool Equals(object? obj)
     {
-        return obj is PrimaryKeysPropertyColumnNameValues values &&
-               PkValues.SequenceEqual(values.PkValues);
+        if (obj is not PrimaryKeysPropertyColumnNameValues values || PkValues.Count != values.PkValues.Count)
+            return false;
+
+        for (int i = 0; i < PkValues.Count; i++)
+        {
+            if (!StructuralComparisons.StructuralEqualityComparer.Equals(PkValues[i], values.PkValues[i]))
+                return false;
+        }
+        return true;
     }
 
     public override int GetHashCode()
@@ -1542,7 +1552,7 @@ internal class PrimaryKeysPropertyColumnNameValues
             int hash = 19;
             foreach (var value in PkValues)
             {
-                hash = hash * 31 + (value == null ? 0 : value.GetHashCode());
+                hash = hash * 31 + (value == null ? 0 : StructuralComparisons.StructuralEqualityComparer.GetHashCode(value));
             }
             return hash;
         }
