@@ -1,5 +1,6 @@
 using GaussDB;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -195,6 +196,8 @@ public class GaussDBAdapter : ISqlOperationsAdapter
         var uniqueIndexCreated = false;
         var connectionOpenedInternally = false;
         var dbContext = context.DbContext;
+        string? bufferedOutputTableName = null;
+        bool bufferedOutputTableCreated = false;
 
         try
         {
@@ -275,7 +278,28 @@ public class GaussDBAdapter : ISqlOperationsAdapter
                 }
             }
 
-            var sqlMergeTable = GaussDBQueryBuilder.MergeTable<T>(tableInfo, operationType);
+            // EF composes queries for owned entities, inheritance and global filters.
+            // Data-modifying RETURNING/CTE statements cannot be composed as a derived
+            // table. Buffer those results, then materialize a regular SELECT instead.
+            var entityType = dbContext.Model.FindEntityType(type);
+            var requiresOutputBuffer = operationType is not OperationType.Read and not OperationType.Delete &&
+                tableInfo.BulkConfig.SetOutputIdentity &&
+                (tableInfo.HasOwnedTypes || entityType?.BaseType != null ||
+                    entityType?.GetDerivedTypes().Any() == true ||
+                    entityType?.GetAllBaseTypesInclusive().Any(e => e.GetDeclaredQueryFilters().Any()) == true);
+            if (requiresOutputBuffer)
+            {
+                bufferedOutputTableName = tableInfo.BulkConfig.UseTempDB
+                    ? $"[#{tableInfo.TempTableName}Result]"
+                    : $"{tableInfo.SchemaFormated}[{tableInfo.TempTableName}Result]";
+                var createOutputBuffer = GaussDBQueryBuilder.CreateTableCopy(tableInfo.FullTableName, bufferedOutputTableName,
+                    tableInfo.BulkConfig.UseTempDB, tableInfo.BulkConfig.UseUnlogged);
+                if (isAsync) await dbContext.Database.ExecuteSqlRawAsync(createOutputBuffer, cancellationToken).ConfigureAwait(false);
+                else dbContext.Database.ExecuteSqlRaw(createOutputBuffer);
+                bufferedOutputTableCreated = true;
+            }
+
+            var sqlMergeTable = GaussDBQueryBuilder.MergeTable<T>(tableInfo, operationType, bufferedOutputTableName);
             int affectedCount;
             if (operationType != OperationType.Read && (!tableInfo.BulkConfig.SetOutputIdentity || operationType == OperationType.Delete))
             {
@@ -291,9 +315,28 @@ public class GaussDBAdapter : ISqlOperationsAdapter
             else
             {
                 var sqlMergeTableOutput = sqlMergeTable.TrimEnd(';');
-                var outputEntities = isAsync
-                    ? await tableInfo.LoadOutputEntitiesAsync<T>(dbContext, type, sqlMergeTableOutput, cancellationToken).ConfigureAwait(false)
-                    : tableInfo.LoadOutputEntities<T>(dbContext, type, sqlMergeTableOutput);
+                if (bufferedOutputTableName != null)
+                {
+                    if (isAsync) await dbContext.Database.ExecuteSqlRawAsync(sqlMergeTable, cancellationToken).ConfigureAwait(false);
+                    else dbContext.Database.ExecuteSqlRaw(sqlMergeTable);
+                    sqlMergeTableOutput = $"SELECT * FROM {bufferedOutputTableName.Replace('[', '"').Replace(']', '"')}";
+                }
+                // Write results must include every row just modified, including rows
+                // hidden by query filters. Reads retain the configured filter behavior.
+                var ignoreQueryFilters = tableInfo.BulkConfig.IgnoreGlobalQueryFilters;
+                List<T> outputEntities;
+                try
+                {
+                    if (operationType != OperationType.Read)
+                        tableInfo.BulkConfig.IgnoreGlobalQueryFilters = true;
+                    outputEntities = isAsync
+                        ? await tableInfo.LoadOutputEntitiesAsync<T>(dbContext, type, sqlMergeTableOutput, cancellationToken).ConfigureAwait(false)
+                        : tableInfo.LoadOutputEntities<T>(dbContext, type, sqlMergeTableOutput);
+                }
+                finally
+                {
+                    tableInfo.BulkConfig.IgnoreGlobalQueryFilters = ignoreQueryFilters;
+                }
                 affectedCount = outputEntities.Count;
                 if (operationType == OperationType.Read && tableInfo.BulkConfig.ReplaceReadEntities)
                 {
@@ -352,6 +395,14 @@ public class GaussDBAdapter : ISqlOperationsAdapter
 
                 // Drop session-local tables too: a caller can reuse the same connection/transaction.
                 {
+                    if (bufferedOutputTableCreated)
+                    {
+                        var sqlDropResultTable = GaussDBQueryBuilder.DropTable(bufferedOutputTableName!);
+                        if (isAsync)
+                            await dbContext.Database.ExecuteSqlRawAsync(sqlDropResultTable, CancellationToken.None).ConfigureAwait(false);
+                        else dbContext.Database.ExecuteSqlRaw(sqlDropResultTable);
+                    }
+
                     if (outputTableCreated)
                     {
                         var sqlDropOutputTable = GaussDBQueryBuilder.DropTable(GaussDBQueryBuilder.GetStatsTableName(tableInfo));

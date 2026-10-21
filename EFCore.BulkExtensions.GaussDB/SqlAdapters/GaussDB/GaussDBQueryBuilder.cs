@@ -163,6 +163,12 @@ public class GaussDBQueryBuilder : SqlQueryBuilder
     /// <param name="operationType"></param>
     /// <exception cref="NotImplementedException"></exception>
     public static string MergeTable<T>(TableInfo tableInfo, OperationType operationType) where T : class
+        => MergeTable<T>(tableInfo, operationType, null);
+
+    /// <summary>
+    /// Generates a merge statement with an optional table receiving returned rows before EF materialization.
+    /// </summary>
+    public static string MergeTable<T>(TableInfo tableInfo, OperationType operationType, string? outputTableName) where T : class
     {
         var columnsList = GetColumnList(tableInfo, operationType);
 
@@ -334,11 +340,22 @@ public class GaussDBQueryBuilder : SqlQueryBuilder
                 .Replace("JOIN " + sourceTable, "JOIN " + projectedSource, StringComparison.Ordinal);
         }
 
+        var outputSelect = "SELECT * FROM upserted";
+        if (outputTableName != null)
+        {
+            var outputColumns = GetCommaSeparatedColumns(tableInfo.OutputPropertyColumnNamesDict.Values.ToList());
+            outputSelect = $"INSERT INTO {outputTableName} ({outputColumns}) SELECT {outputColumns} FROM upserted";
+        }
+
         if (tableInfo.BulkConfig.CalculateStats && operationType is OperationType.Insert or OperationType.InsertOrUpdate)
         {
             q = $"WITH upserted AS ({q}), " +
                 $"NEW AS ( INSERT INTO {GetStatsTableName(tableInfo)} SELECT xmax FROM upserted ) " +
-                $"SELECT * FROM upserted";
+                outputSelect;
+        }
+        else if (outputTableName != null)
+        {
+            q = $"WITH upserted AS ({q}) " + outputSelect;
         }
 
         q = q.Replace("[", @"""").Replace("]", @"""");

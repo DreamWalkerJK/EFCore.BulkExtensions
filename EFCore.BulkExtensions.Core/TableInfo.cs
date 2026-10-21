@@ -613,11 +613,9 @@ public class TableInfo
 
                         prefix += $"{property.Name}_";
 
-                        var ownedList = dbContext.Model.FindEntityTypes(property.PropertyType).Where(x => x.IsInOwnershipPath(entityType)).ToList();
-                        var ownedEntityType = ownedList.Count == 1
-                             ? ownedList[0] // IsInOwnershipPath fix for with multiple parents (issue #1149)
-                             : dbContext.Model.GetEntityTypes().SingleOrDefault(x => x.ClrType == property.PropertyType && x.Name.StartsWith(entityType.Name + "." + property.Name + "#"));
-                               // fix when entity has more then one ownedType (e.g. Address HomeAddress, Address WorkAddress) or one ownedType is in multiple Entities like Audit is usually.
+                        // A CLR type can be owned by several navigations, including nested
+                        // navigations. The navigation already identifies the exact mapping.
+                        var ownedEntityType = navigationProperty.TargetEntityType;
 
                         var ownedEntityProperties = ownedEntityType?.GetProperties().ToList() ?? [];
                         var ownedEntityPropertyNameColumnNameDict = new Dictionary<string, string>();
@@ -639,7 +637,10 @@ public class TableInfo
                             var converter = ownedEntityProperty.GetValueConverter() ?? ownedEntityProperty.GetTypeMapping().Converter;
                             if (converter != null)
                             {
-                                ConvertibleColumnConverterDict.Add($"{prefix}{ownedEntityProperty.Name}", converter);
+                                // Retain the property-path key used by existing adapters and
+                                // register the actual store column used by binary COPY.
+                                ConvertibleColumnConverterDict.TryAdd($"{prefix}{ownedEntityProperty.Name}", converter);
+                                ConvertibleColumnConverterDict.TryAdd(columnName, converter);
                             }
 
                             ColumnNamesTypesDict[columnName] = ownedEntityProperty.GetColumnType();
@@ -664,8 +665,16 @@ public class TableInfo
                                 if (doAddProperty)
                                 {
                                     PropertyColumnNamesDict.Add(ownedPropertyFullName, columnName);
-                                    PropertyColumnNamesCompareDict.Add(ownedPropertyFullName, columnName);
-                                    PropertyColumnNamesUpdateDict.Add(ownedPropertyFullName, columnName);
+                                    if ((!AreSpecifiedPropertiesToIncludeOnCompare || (BulkConfig.PropertiesToIncludeOnCompare?.Contains(ownedPropertyFullName) ?? false)) &&
+                                        (!AreSpecifiedPropertiesToExcludeOnCompare || !(BulkConfig.PropertiesToExcludeOnCompare?.Contains(ownedPropertyFullName) ?? false)))
+                                    {
+                                        PropertyColumnNamesCompareDict.Add(ownedPropertyFullName, columnName);
+                                    }
+                                    if ((!AreSpecifiedPropertiesToIncludeOnUpdate || (BulkConfig.PropertiesToIncludeOnUpdate?.Contains(ownedPropertyFullName) ?? false)) &&
+                                        (!AreSpecifiedPropertiesToExcludeOnUpdate || !(BulkConfig.PropertiesToExcludeOnUpdate?.Contains(ownedPropertyFullName) ?? false)))
+                                    {
+                                        PropertyColumnNamesUpdateDict.Add(ownedPropertyFullName, columnName);
+                                    }
                                     OutputPropertyColumnNamesDict.Add(ownedPropertyFullName, columnName);
                                 }
                             }
