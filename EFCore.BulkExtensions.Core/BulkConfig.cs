@@ -305,6 +305,18 @@ public class BulkConfig
     public bool OnSaveChangesSetFK { get; set; } = true;
 
     /// <summary>
+    ///     Uses the context's normal SaveChanges pipeline for BulkSaveChanges. The default is false.
+    /// </summary>
+    /// <remarks>
+    ///     Enable when the context owns persistence policies such as auditing, soft deletion, optimistic
+    ///     concurrency, transactional outbox capture, or provider-specific save coordination. The normal
+    ///     EF save performs the database writes; bulk-specific column, output, statistics, and progress
+    ///     options do not apply. Do not enable from a SaveChanges override that itself calls BulkSaveChanges.
+    ///     Explicit BulkInsert, BulkUpdate, BulkDelete and other bulk operations are unaffected.
+    /// </remarks>
+    public bool PreserveSaveChangesPipeline { get; set; }
+
+    /// <summary>
     ///     When set to True it ignores GlobalQueryFilters if they exist on the DbSet.
     /// </summary>
     public bool IgnoreGlobalQueryFilters { get; set; }

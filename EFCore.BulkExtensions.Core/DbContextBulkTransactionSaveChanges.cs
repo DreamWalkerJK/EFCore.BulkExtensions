@@ -4,6 +4,7 @@ using Medallion.Collections; // uses StrongNamer nuget to sign ref. with Strong 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,17 @@ internal static class DbContextBulkTransactionSaveChanges
 
     private static async Task SaveChangesAsync(DbContext dbContext, BulkConfig? bulkConfig, Action<decimal>? progress, bool isAsync, CancellationToken cancellationToken)
     {
+        // Framework contexts can own policies and transaction coordination inside SaveChanges.
+        // Those cannot be reproduced by writing the tracker directly through COPY/MERGE.
+        if (bulkConfig?.PreserveSaveChangesPipeline == true)
+        {
+            if (isAsync)
+                await dbContext.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+            else
+                dbContext.SaveChanges();
+            return;
+        }
+
         // 2 ways:
         // OPTION 1) iteration with Dic and Fast member
         // OPTION 2) using Node model (here setting FK still not implemented)
@@ -93,11 +105,15 @@ internal static class DbContextBulkTransactionSaveChanges
         var connection = dbContext.GetUnderlyingConnection(bulkConfig);
 
         var hasExistingTransaction = dbContext.Database.CurrentTransaction != null || Transaction.Current != null;
-
+        IDbContextTransaction? transaction = null;
         try
         {
-
-            var transaction = hasExistingTransaction ? null : dbContext.Database.CurrentTransaction ?? dbContext.Database.BeginTransaction();
+            if (!hasExistingTransaction)
+            {
+                transaction = isAsync
+                    ? await dbContext.Database.BeginTransactionAsync(cancellationToken).ConfigureAwait(false)
+                    : dbContext.Database.BeginTransaction();
+            }
 
             if (option == 1)
             {
@@ -206,23 +222,27 @@ internal static class DbContextBulkTransactionSaveChanges
             }
             if (!hasExistingTransaction)
             {
-                transaction!.Commit();
-                dbContext.ChangeTracker.AcceptAllChanges();
+                if (isAsync) await transaction!.CommitAsync(cancellationToken).ConfigureAwait(false);
+                else transaction!.Commit();
             }
+            // Like EF SaveChanges, successful flushes accept changes even when the caller owns the transaction.
+            dbContext.ChangeTracker.AcceptAllChanges();
         }
         finally
         {
-            if (!hasExistingTransaction)
+            try
             {
-
-                if (isAsync)
+                if (transaction is not null)
                 {
-                    await dbContext.Database.CloseConnectionAsync().ConfigureAwait(false);
+                    if (isAsync) await transaction.DisposeAsync().ConfigureAwait(false);
+                    else transaction.Dispose();
                 }
-                else
-                {
-                    dbContext.Database.CloseConnection();
-                }
+            }
+            finally
+            {
+                // Balance this method's OpenConnection call without closing a caller-owned open connection.
+                if (isAsync) await dbContext.Database.CloseConnectionAsync().ConfigureAwait(false);
+                else dbContext.Database.CloseConnection();
             }
         }
     }

@@ -1,0 +1,70 @@
+{
+  "sourceCommit": "4eb5e715f58823815363c930de5f2de4a30ec8f5",
+  "failures": 0,
+  "results": [
+    {
+      "name": "Current Monica native CRUD preserves audit, policy, soft delete and durable projections",
+      "status": "PASS",
+      "elapsedMs": 790,
+      "evidence": {
+        "CreatorId": "current-validator",
+        "EntityVersion": 1,
+        "IsDeleted": true,
+        "events": 3
+      }
+    },
+    {
+      "name": "BulkSaveChanges preserves current Monica creation policies and exactly one projection",
+      "status": "PASS",
+      "elapsedMs": 58,
+      "evidence": {
+        "CreatorId": "current-validator",
+        "DataSyncFlags": 3,
+        "events": 1
+      }
+    },
+    {
+      "name": "BulkSaveChanges preserves current Monica modification and soft deletion",
+      "status": "PASS",
+      "elapsedMs": 126,
+      "evidence": {
+        "EntityVersion": 1,
+        "IsDeleted": true,
+        "events": 3
+      }
+    },
+    {
+      "name": "BulkSaveChanges failure rolls back business and outbox after an early flush",
+      "status": "PASS",
+      "elapsedMs": 51,
+      "evidence": {
+        "businessRows": 0,
+        "outboxRows": 0
+      }
+    },
+    {
+      "name": "BulkSaveChanges honors stale concurrency tokens",
+      "status": "PASS",
+      "elapsedMs": 90,
+      "evidence": {
+        "staleRejected": true
+      }
+    },
+    {
+      "name": "Terminal Monica operation rejects subsequent BulkSaveChanges",
+      "status": "PASS",
+      "elapsedMs": 30,
+      "evidence": {
+        "rejected": true
+      }
+    },
+    {
+      "name": "Explicit bulk COPY participates in current Monica transaction rollback",
+      "status": "PASS",
+      "elapsedMs": 126,
+      "evidence": {
+        "businessRows": 0
+      }
+    }
+  ]
+}

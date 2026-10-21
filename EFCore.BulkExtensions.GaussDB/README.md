@@ -36,6 +36,25 @@ await context.BulkReadAsync(items);
 await context.BulkDeleteAsync(items);
 ```
 
+Applications whose contexts implement save policies, such as Monica/FIPS audit stamping,
+soft deletion, concurrency checks, DataSync, and transactional outbox projections, must keep
+that save pipeline. Use the integration setting when calling the bulk-save entry point:
+
+```csharp
+await context.BulkSaveChangesAsync(new BulkConfig
+{
+    PreserveSaveChangesPipeline = true
+});
+```
+
+This setting delegates to the context's normal EF `SaveChanges` implementation. It preserves
+application behavior and uses normal EF write performance; bulk column/output/statistics/progress
+settings do not apply. Do not enable it inside a `SaveChanges` override that calls bulk save itself.
+The default bulk-save path and explicit `BulkInsert`/`BulkUpdate`/`BulkDelete` bypass save policies.
+Explicit bulk operations can still join a caller-owned transaction for application-controlled imports.
+The [current Monica validation harness](../validation/monica/README.md) verifies these boundaries
+against real production Repository, UnitOfWork, audit policies, and outbox capture.
+
 ## Behavior and limitations
 
 Inserts use binary COPY. Staging, DML and output loading share one connection per operation.

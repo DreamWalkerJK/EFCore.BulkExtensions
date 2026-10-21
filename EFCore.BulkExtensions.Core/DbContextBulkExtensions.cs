@@ -510,6 +510,10 @@ public static class DbContextBulkExtensions
     /// <summary>
     /// Extension method for EFCore SaveChanges
     /// </summary>
+    /// <remarks>
+    /// By default this writes tracked entities directly and bypasses SaveChanges overrides and interceptors.
+    /// Set <see cref="BulkConfig.PreserveSaveChangesPipeline"/> when the context's persistence policies must run.
+    /// </remarks>
     /// <param name="dbContext"></param>
     /// <param name="bulkConfig"></param>
     /// <param name="progress"></param>
@@ -522,6 +526,10 @@ public static class DbContextBulkExtensions
     /// <summary>
     /// Extension method for EFCore SaveChanges
     /// </summary>
+    /// <remarks>
+    /// By default this writes tracked entities directly and bypasses SaveChanges overrides and interceptors.
+    /// Set <see cref="BulkConfig.PreserveSaveChangesPipeline"/> when the context's persistence policies must run.
+    /// </remarks>
     /// <param name="dbContext"></param>
     /// <param name="bulkConfig"></param>
     /// <param name="progress"></param>
