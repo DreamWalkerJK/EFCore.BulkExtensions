@@ -36,9 +36,9 @@ await context.BulkReadAsync(items);
 await context.BulkDeleteAsync(items);
 ```
 
-Applications whose contexts implement save policies, such as Monica/FIPS audit stamping,
-soft deletion, concurrency checks, DataSync, and transactional outbox projections, must keep
-that save pipeline. Use the integration setting when calling the bulk-save entry point:
+Applications whose contexts implement audit stamping, soft deletion, concurrency checks,
+synchronization policies, or transactional outbox projections must keep that save pipeline.
+Enable the following option when calling the bulk-save entry point:
 
 ```csharp
 await context.BulkSaveChangesAsync(new BulkConfig
@@ -52,8 +52,6 @@ application behavior and uses normal EF write performance; bulk column/output/st
 settings do not apply. Do not enable it inside a `SaveChanges` override that calls bulk save itself.
 The default bulk-save path and explicit `BulkInsert`/`BulkUpdate`/`BulkDelete` bypass save policies.
 Explicit bulk operations can still join a caller-owned transaction for application-controlled imports.
-The [current Monica validation harness](../validation/monica/README.md) verifies these boundaries
-against real production Repository, UnitOfWork, audit policies, and outbox capture.
 
 ## Behavior and limitations
 
@@ -90,21 +88,19 @@ read generated IDs with `SetOutputIdentity`, then assign foreign keys before ins
 For deletes, process children before parents or use configured database cascades; index foreign-key
 columns for large workloads. `IncludeGraph` is not a general graph synchronization solution for GaussDB.
 
-The 2026-10-21 validation fixes the earlier non-composable output failure for owned/table-splitting
-models. Nested and repeated owned types, renamed converted columns, generated output with query
-filters, selective owned updates, and output-table cleanup now have database regressions. Complex
-output is materialized through a result table; simple output retains the direct path.
+Nested and repeated owned types, renamed converted columns, generated output with query
+filters, and selective owned updates are supported. Owned and table-splitting models materialize
+complex output through a result table; simple entities retain the direct output path.
 
 Fixed-width `char(n)`/`character(n)` COPY columns use the driver's `bpchar` type. Direct COPY first
 executes an intercepted `SELECT 1` so EF command guards can reject an invalid context lifetime.
 This guard does not execute SaveChanges policies or rewrite the COPY command through interceptors.
 
-The supplied openGauss server defaults new databases to compatibility mode `A`, where SQL `date`
-is a timestamp. Native driver `DateOnly` reads and binary date COPY fail in that mode even without
-BulkExtensions. Models using native `DateOnly` require a PostgreSQL-compatible date type (the
-production-model harness creates a disposable `DBCOMPATIBILITY = 'PG'` database), or an explicit
-application mapping compatible with its existing schema. Do not change an existing database mode
-as an implicit side effect of installing this library.
+In openGauss compatibility mode `A`, SQL `date` is a timestamp. With driver `10.0.0`, native
+`DateOnly` reads and binary date COPY fail for that mapping. Models using native `DateOnly`
+require a PostgreSQL-compatible date type, such as in a `DBCOMPATIBILITY = 'PG'` database,
+or an explicit application mapping compatible with the existing schema. Installing this library
+does not change the database compatibility mode.
 
 The repository disables StrongNamer for projects consuming the GaussDB provider: rewriting
 its unsigned dependency binaries changes their identities and breaks EF query compilation.
@@ -123,21 +119,7 @@ Run only one test process against it at a time.
 dotnet test EFCore.BulkExtensions.Tests/EFCore.BulkExtensions.Tests.csproj -c Release --filter FullyQualifiedName~GaussDB
 ```
 
-This branch builds preview `10.0.1-gaussdb.2`; the installation example above refers to the earlier
-published preview. The new Core and GaussDB packages were packed locally and tested by an
-independent package-only consumer; publishing a release remains a separate step.
-
-Current verification: **113 GaussDB cases**, **143 total selected Core/query-builder cases**, a
-SQLite regression, **23 functional/volume scenarios**, **9 actual FIPS model scenarios**, and
-**7 real-host Monica scenarios**. The original FIPS shared suite has the same three failures before
-and after dependency replacement. Read [the current integration report](../validation/REPORT-20261021.md)
-for the exact results, existing application defects, performance and integration conditions.
+The suite covers synchronous and asynchronous operations, owned mappings, generated output,
+value converters, composite keys, transaction ownership, cancellation, and affected-row statistics.
 
 Build and test do not pack transitive provider projects. Use `dotnet pack` explicitly to create packages.
-
-The adapter validation on 2026-09-12 used the GaussDB provider against the supplied localhost:8888
-server, which reports openGauss 6.0.3. See [validation results](VALIDATION.md) for coverage,
-the initial performance measurements, packaging checks and environment limits.
-The subsequent independent package run on 2026-09-16 completed all eight volume scenarios,
-up to 100,000 narrow-table rows and 100,000 roots / 500,000 total rows in the multi-table model.
-See [GaussDB preview measurements](../README.md#gaussdb-preview-measurements) for timings and measurement scope.

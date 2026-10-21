@@ -8,7 +8,7 @@ Was selected in top 10 [EF Core Extensions](https://docs.microsoft.com/en-us/ef/
 Repository included into [*Arctic Code Vault*](https://archiveprogram.github.com/arctic-vault/) for long-term preservation (code designated for survival).  
 Latest version is using EF Core 10.  
 Supports **SQLServer, PostgreSQL, MySQL, Oracle, SQLite**, with a **GaussDB provider preview** on this branch.\
-See [GaussDB installation](#gaussdb-preview-installation), [usage and limitations](#gaussdb-provider), and [performance measurements](#gaussdb-preview-measurements).\
+See [GaussDB installation](#gaussdb-preview-installation) and [usage and limitations](#gaussdb-provider).\
 Check out [Testimonials](https://docs.google.com/spreadsheets/d/e/2PACX-1vShdv2sTm3oQfowm9kVIx-PLBCk1lGQEa9E6n92-dX3pni7-XQUEp6taVcMSZVi9BaSAizv1YanWTy3/pubhtml?gid=801420190&single=true) from the Community and User Comments.  
 With thousands of pleased Users and many satisfied Clients from around the globe.  
 Customers range from small and medium-sized businesses to large corporations,  
@@ -87,10 +87,8 @@ MySql nuget is still and v.9 as their provider is not yet updated to EF 10.
 
 ### GaussDB preview installation
 
-The current branch contains the `10.0.1-gaussdb.2` fixes and local-package verification against
-the 2026-10-21 FIPS/Monica sources. See the [current integration report](validation/REPORT-20261021.md)
-for test results, integration conditions and performance. The published installation below refers
-to the previous preview; the new local packages have not been published by this validation task.
+The current branch builds preview `10.0.1-gaussdb.2`. The installation example below uses
+the published `10.0.1-gaussdb.1` preview.
 
 The `EFCore.BulkExtensions.GaussDB` project is distributed by this fork as
 [`DreamWalkerJK.EFCore.BulkExtensions.GaussDB`](https://www.nuget.org/packages/DreamWalkerJK.EFCore.BulkExtensions.GaussDB/10.0.1-gaussdb.1), version `10.0.1-gaussdb.1`:
@@ -188,7 +186,7 @@ GaussDB-specific behavior and limitations:
 - Upsert follows database unique-key conflicts. `ON DUPLICATE KEY UPDATE` cannot update primary-key or unique-index columns, including unique columns outside `UpdateByProperties`. Exclude those additional columns with `PropertiesToExcludeOnUpdate`, or change them in a separate `BulkUpdate` matching on an unchanged key.
 - `BulkInsertOrUpdateOrDelete`, `OnConflictUpdateWhereSql` for upsert, and upserts containing only matching-key columns are unsupported. For synchronization, read existing keys and issue separate upsert and delete operations.
 - Process related entities per table, propagating generated IDs and setting foreign keys before inserting children. `IncludeGraph` is not a general GaussDB graph synchronization solution. For large deletes, index foreign-key columns and delete children before parents, or use configured database cascades.
-- With provider `10.0.0`, the package integration run encountered non-composable SQL while loading identity output for an owned/table-splitting model. `BulkInsert` with `SetOutputIdentity = true` is therefore not validated for every owned model; verify that mapping separately. The successful multi-table benchmarks below use explicit entity sets.
+- Owned and table-splitting models use a result table for generated output; simple entities retain the direct output path.
 
 See the [GaussDB provider README](EFCore.BulkExtensions.GaussDB/README.md) for additional configuration details and integration-test instructions.
 
@@ -206,43 +204,6 @@ TestTable has 6 columns (Guid, string x2, int, decimal?, DateTime), all inserted
 Test done locally on configuration: INTEL i7-10510U CPU 2.30GHz, DDR3 16 GB, SSD SAMSUNG 512 GB.  
 For small data sets there is an overhead since most Bulk ops need to create Temp table and also Drop it after finish.  
 Probably good advice would be to use **Bulk ops for sets greater than 1000** (condition in DbContext or Repository).
-
-### GaussDB preview measurements
-
-An independent package integration run on **2026-09-16** used `DreamWalkerJK.EFCore.BulkExtensions.GaussDB 10.0.1-gaussdb.1`,
-`DotNetCore.EntityFrameworkCore.GaussDB 10.0.0`, .NET 10, and a local Docker `opengauss:6.0.3` server.
-The run used one sequential process, `Pooling=false`, and the default `BulkConfig.BatchSize` of 2,000,
-with one Bulk API call per entity type and operation.
-
-Narrow-table measurements (`BulkPackageItems`), in **milliseconds**. Insert used the default `SetOutputIdentity = false`:
-
-| Rows | BulkInsertAsync | BulkUpdateAsync | BulkDeleteAsync |
-| ---: | ---: | ---: | ---: |
-| 10,000 | 296 | 410 | 109 |
-| 20,000 | 442 | 638 | 136 |
-| 50,000 | 921 | 1,281 | 274 |
-| 100,000 | 1,757 | 2,694 | 580 |
-
-The wider `DeepMission` model includes JSON and array fields and four related entity types:
-`DeepMission -> Segment -> Waypoint -> Constraint`, plus `Crew`.
-Each root has one row of each related type, giving **five rows per root**.
-The following times, in **seconds**, sum the five per-table Bulk API calls for each operation.
-Inserts include generated identity output; the application explicitly propagates foreign keys between calls.
-Foreign-key columns were indexed for the completed run.
-
-| Root entities | Total rows | Bulk insert sum | Bulk update sum | Bulk delete sum |
-| ---: | ---: | ---: | ---: | ---: |
-| 10,000 | 50,000 | 4.428 | 2.418 | 1.576 |
-| 20,000 | 100,000 | 7.162 | 4.364 | 2.839 |
-| 50,000 | 250,000 | 16.085 | 9.520 | 6.709 |
-| 100,000 | 500,000 | 32.252 | 18.935 | 13.381 |
-
-All eight volume scenarios passed row-count, updated-value and post-delete checks.
-Times cover the Bulk API calls, excluding object construction, application-side ID/FK preparation,
-validation queries and explicit transaction commits. Graph reads used conditional `COUNT` queries;
-they do not measure full `Include` / `ThenInclude` graph loading.
-These are observations from one local run, not a controlled EF-versus-Bulk comparison or concurrent-throughput measurements.
-The separate owned/table-splitting limitation is described in [GaussDB usage](#gaussdb-provider).
 
 ## Bulk info
 If Windows Authentication is used then in ConnectionString there should be *Trusted_Connection=True;* because Sql credentials are required to stay in connection.  

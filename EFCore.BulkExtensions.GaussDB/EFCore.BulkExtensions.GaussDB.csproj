@@ -13,7 +13,7 @@
         <Title>DreamWalkerJK.EFCore.BulkExtensions.GaussDB</Title>
         <Description>Bulk operations for GaussDB with Entity Framework Core.</Description>
         <PackageTags>$(PackageTags) GaussDB openGauss</PackageTags>
-        <PackageReleaseNotes>Fix nested/repeated owned mappings, generated output, fixed-width character COPY and EF command lifecycle guards. Validated against current FIPS and Monica sources.</PackageReleaseNotes>
+        <PackageReleaseNotes>Fix nested/repeated owned mappings, generated output, fixed-width character COPY and EF command lifecycle guards.</PackageReleaseNotes>
 
         <DisableStrongNamer>true</DisableStrongNamer>
     </PropertyGroup>

@@ -1,8 +1,0 @@
-<Project>
-  <!-- The harness consumes the unsigned provider without the package repository's signing/build defaults. -->
-  <PropertyGroup>
-    <DisableStrongNamer>true</DisableStrongNamer>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
-</Project>
