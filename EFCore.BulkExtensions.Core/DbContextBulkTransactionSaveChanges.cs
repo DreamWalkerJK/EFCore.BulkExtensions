@@ -55,14 +55,14 @@ internal static class DbContextBulkTransactionSaveChanges
             bulkConfig.SetOutputIdentity = true;
         }
 
-        var entries = dbContext.ChangeTracker.Entries().Where(x => x.State != EntityState.Unchanged);
-        var entriesGroupedByEntity = entries.GroupBy(a => new { EntityType = GetNonProxyType(a.Entity.GetType()), a.State },
+        var entries = GetEntriesToSave(dbContext);
+        var entriesGroupedByEntity = entries.GroupBy(a => new { EntityType = a.Entry.Metadata, a.State },
             (entry, group) => new
             {
                 entry.State,
-                Entities = group.Select(a => a.Entity).ToList(),
-                EntryType = entry.EntityType,
-                EntityType = dbContext.Model.FindEntityType(entry.EntityType)!,
+                Entities = group.Select(a => a.Entry.Entity).ToList(),
+                EntryType = entry.EntityType.ClrType,
+                EntityType = entry.EntityType,
             })
         .ToList();
 
@@ -117,78 +117,39 @@ internal static class DbContextBulkTransactionSaveChanges
 
             if (option == 1)
             {
-                Dictionary<string, Dictionary<string, FastProperty>> fastPropertyDicts = new();
                 foreach (var entryGroup in sortedGroups)
                 {
                     Type entityType = entryGroup.EntryType;
-                    entityType = (entityType.Namespace == "Castle.Proxies") ? entityType.BaseType! : entityType;
-                    var entityModelType = dbContext.Model.FindEntityType(entityType) ??
-                                            throw new ArgumentNullException($"Unable to determine EntityType from given type with name {entityType.Name}");
-
-                    var entityPropertyDict = new Dictionary<string, FastProperty>();
-                    if (!fastPropertyDicts.ContainsKey(entityType.Name))
-                    {
-                        var properties = entityModelType.GetProperties();
-                        var navigationPropertiesInfo = entityModelType.GetNavigations().Select(x => x.PropertyInfo);
-
-                        foreach (var property in properties)
-                        {
-                            if (property.PropertyInfo != null) // skip Shadow Property
-                            {
-                                entityPropertyDict.Add(property.Name, FastProperty.GetOrCreate(property.PropertyInfo));
-                            }
-                        }
-                        foreach (var navigationPropertyInfo in navigationPropertiesInfo)
-                        {
-                            if (navigationPropertyInfo != null)
-                            {
-                                entityPropertyDict.Add(navigationPropertyInfo.Name, FastProperty.GetOrCreate(navigationPropertyInfo));
-                            }
-                        }
-                        fastPropertyDicts.Add(entityType.Name, entityPropertyDict);
-                    }
-                    else
-                    {
-                        entityPropertyDict = fastPropertyDicts[entityType.Name];
-                    }
-
                     if (bulkConfig.OnSaveChangesSetFK)
                     {
-                        var navigations = entityModelType.GetNavigations().Where(x => !x.IsCollection && !x.TargetEntityType.IsOwned());
-                        if (navigations.Any())
+                        var navigations = entryGroup.EntityType.GetNavigations()
+                            .Where(x => x.IsOnDependent && !x.ForeignKey.IsOwnership && x.PropertyInfo != null);
+                        foreach (var navigation in navigations)
                         {
-                            foreach (var navigation in navigations)
+                            var navigationAccessor = FastProperty.GetOrCreate(navigation.PropertyInfo!);
+                            var keyProperties = navigation.ForeignKey.Properties.Select((foreignKey, index) => new
                             {
-                                // when FK entity was not modified it will not be in Dict, but also FK is auto set so no need here
-                                if (fastPropertyDicts.ContainsKey(navigation.ClrType.Name)) // otherwise set it:
+                                ForeignKey = foreignKey,
+                                PrincipalKey = navigation.ForeignKey.PrincipalKey.Properties[index],
+                                ForeignAccessor = foreignKey.PropertyInfo == null ? null : FastProperty.GetOrCreate(foreignKey.PropertyInfo),
+                                PrincipalAccessor = navigation.ForeignKey.PrincipalKey.Properties[index].PropertyInfo == null
+                                    ? null : FastProperty.GetOrCreate(navigation.ForeignKey.PrincipalKey.Properties[index].PropertyInfo!),
+                            }).ToArray();
+                            foreach (var entity in entryGroup.Entities)
+                            {
+                                var parentEntity = navigationAccessor.Get(entity);
+                                if (parentEntity is null) continue;
+                                foreach (var keyProperty in keyProperties)
                                 {
-                                    var parentPropertyDict = fastPropertyDicts[navigation.ClrType.Name];
-
-                                    var fkName = navigation.ForeignKey.Properties.Count > 0
-                                        ? navigation.ForeignKey.Properties[0].Name
-                                        : null;
-
-                                    var pkName = navigation.ForeignKey.PrincipalKey.Properties.Count > 0
-                                        ? navigation.ForeignKey.PrincipalKey.Properties[0].Name
-                                        : null;
-
-                                    if (pkName is not null && fkName is not null)
-                                    {
-                                        foreach (var entity in entryGroup.Entities)
-                                        {
-                                            var parentEntity = entityPropertyDict[navigation.Name].Get(entity);
-                                            if (parentEntity is not null)
-                                            {
-                                                var pkValue = parentPropertyDict[pkName].Get(parentEntity);
-                                                if (pkValue is not null)
-                                                {
-                                                    entityPropertyDict[fkName].Set(entity, pkValue);
-                                                }
-                                            }
-
-                                        }
-                                    }
-
+                                    var principalProperty = keyProperty.PrincipalKey;
+                                    var principalValue = keyProperty.PrincipalAccessor != null
+                                        ? keyProperty.PrincipalAccessor.Get(parentEntity)
+                                        : dbContext.Entry(parentEntity).Property(principalProperty.Name).CurrentValue;
+                                    var foreignProperty = keyProperty.ForeignKey;
+                                    if (keyProperty.ForeignAccessor != null)
+                                        keyProperty.ForeignAccessor.Set(entity, principalValue);
+                                    else
+                                        dbContext.Entry(entity).Property(foreignProperty.Name).CurrentValue = principalValue;
                                 }
                             }
                         }
@@ -207,7 +168,7 @@ internal static class DbContextBulkTransactionSaveChanges
             }
             else if (option == 2)
             {
-                List<BulkMethodEntries> bulkMethodEntriesList = GetBulkMethodEntries(entries);
+                List<BulkMethodEntries> bulkMethodEntriesList = GetBulkMethodEntries(entries.Select(entry => entry.Entry));
                 foreach (var bulkMethod in bulkMethodEntriesList)
                 {
                     if (isAsync)
@@ -220,6 +181,9 @@ internal static class DbContextBulkTransactionSaveChanges
                     }
                 }
             }
+            // Output hydration sets CLR keys. Let EF propagate those keys while
+            // added dependents still accept generated values.
+            dbContext.ChangeTracker.DetectChanges();
             if (!hasExistingTransaction)
             {
                 if (isAsync) await transaction!.CommitAsync(cancellationToken).ConfigureAwait(false);
@@ -245,6 +209,46 @@ internal static class DbContextBulkTransactionSaveChanges
                 else dbContext.Database.CloseConnection();
             }
         }
+    }
+
+    private static IReadOnlyCollection<(EntityEntry Entry, EntityState State)> GetEntriesToSave(DbContext dbContext)
+    {
+        var trackedEntries = dbContext.ChangeTracker.Entries().ToArray();
+        var entries = trackedEntries.Where(entry => entry.State != EntityState.Unchanged)
+            .ToDictionary(entry => entry.Entity, entry => (Entry: entry, State: entry.State), ReferenceEqualityComparer.Instance);
+        var ownerIndexes = new Dictionary<IForeignKey, Dictionary<PrimaryKeysPropertyColumnNameValues, EntityEntry>>();
+        foreach (var entry in trackedEntries.Where(entry => entry.State != EntityState.Unchanged && entry.Metadata.IsOwned()))
+        {
+            var ownerEntry = entry;
+            while (ownerEntry.Metadata.IsOwned())
+            {
+                if (!OwnedTypeUtil.IsOwnedInSameTableAsOwner(ownerEntry.Metadata))
+                    throw new NotSupportedException("BulkSaveChanges supports owned entities sharing their owner's table. Use PreserveSaveChangesPipeline for owned entities mapped to separate tables.");
+                var ownership = ownerEntry.Metadata.FindOwnership()!;
+                if (!ownerIndexes.TryGetValue(ownership, out var owners))
+                {
+                    owners = new Dictionary<PrimaryKeysPropertyColumnNameValues, EntityEntry>();
+                    foreach (var candidate in trackedEntries.Where(candidate => ownership.PrincipalEntityType.IsAssignableFrom(candidate.Metadata)))
+                    {
+                        var key = new PrimaryKeysPropertyColumnNameValues(ownership.PrincipalKey.Properties
+                            .Select(property => candidate.Property(property.Name).CurrentValue));
+                        // Replacing an owned instance can track both the old and new instance
+                        // with the same ownership key. Both lead to the same table owner.
+                        owners.TryAdd(key, candidate);
+                    }
+                    ownerIndexes.Add(ownership, owners);
+                }
+                var ownerKey = new PrimaryKeysPropertyColumnNameValues(ownership.Properties
+                    .Select(property => ownerEntry.Property(property.Name).CurrentValue));
+                if (!owners.TryGetValue(ownerKey, out var owner))
+                    throw new InvalidOperationException("The tracked owner of an owned entity could not be found.");
+                ownerEntry = owner;
+            }
+            entries.Remove(entry.Entity);
+            if (!entries.ContainsKey(ownerEntry.Entity))
+                entries.Add(ownerEntry.Entity, (ownerEntry, EntityState.Modified));
+        }
+        return entries.Values;
     }
 
     private static async Task InvokeBulkMethod(DbContext context, List<object> entities, Type entityType, string methodName, BulkConfig bulkConfig, Action<decimal>? progress, bool isAsync, CancellationToken cancellationToken)

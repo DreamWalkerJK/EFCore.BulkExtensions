@@ -356,23 +356,6 @@ public class TableInfo
                                               )?.GetColumnName(ObjectIdentifier);
         }
 
-        if (BulkConfig.AutoExcludeTimestamp)
-        {
-            var timestampProps = allProperties
-                .Where(p => p.IsConcurrencyToken && p.ValueGenerated == ValueGenerated.OnAddOrUpdate)
-                .Select(p => p.Name)
-                .ToList();
-
-            BulkConfig.PropertiesToExclude ??= new();
-            foreach (var prop in timestampProps)
-            {
-                if (!BulkConfig.PropertiesToExclude.Contains(prop))
-                    BulkConfig.PropertiesToExclude.Add(prop);
-            }
-        }
-
-
-
         // timestamp/row version properties are only set by the Db, the property has a [Timestamp] Attribute or is configured in FluentAPI with .IsRowVersion()
         // They can be identified by the columne type "timestamp" or .IsConcurrencyToken in combination with .ValueGenerated == ValueGenerated.OnAddOrUpdate
         string timestampDbTypeName = nameof(TimestampAttribute).Replace("Attribute", "").ToLower(); // = "timestamp";
@@ -385,7 +368,11 @@ public class TableInfo
         TimeStampColumnName = timeStampProperties.FirstOrDefault()?.GetColumnName(ObjectIdentifier); // can be only One
         TimeStampPropertyName = timeStampProperties.FirstOrDefault()?.Name; // can be only One
         var allPropertiesExceptTimeStamp = allProperties.Except(timeStampProperties);
-        var properties = allPropertiesExceptTimeStamp.Where(a => a.GetComputedColumnSql() == null);
+        // Keep automatic exclusions local to this table. BulkSaveChanges reuses one
+        // config across entity types, which need not have the same rowversion column.
+        var writableProperties = allPropertiesExceptTimeStamp.Where(property => !BulkConfig.AutoExcludeTimestamp
+            || !property.IsConcurrencyToken || property.ValueGenerated != ValueGenerated.OnAddOrUpdate);
+        var properties = writableProperties.Where(a => a.GetComputedColumnSql() == null);
 
         var propertiesWithDefaultValues = allPropertiesExceptTimeStamp.Where(a =>
             !a.IsShadowProperty() &&
@@ -409,8 +396,8 @@ public class TableInfo
             }
         }
 
-        var propertiesOnCompare = allPropertiesExceptTimeStamp.Where(a => a.GetComputedColumnSql() == null);
-        var propertiesOnUpdate = allPropertiesExceptTimeStamp.Where(a => a.GetComputedColumnSql() == null);
+        var propertiesOnCompare = writableProperties.Where(a => a.GetComputedColumnSql() == null);
+        var propertiesOnUpdate = writableProperties.Where(a => a.GetComputedColumnSql() == null);
 
         // TimeStamp prop. is last column in OutputTable since it is added later with varbinary(8) type in which Output can be inserted
         var outputProperties = allPropertiesExceptTimeStamp.Where(a => a.GetColumnName(ObjectIdentifier) != null).Concat(timeStampProperties);
@@ -969,6 +956,14 @@ public class TableInfo
                 propertyNames.Add(ownedTypeName);
             }
         }
+        // Replacing an owned navigation with the detached output instance breaks
+        // EF's identity map, especially when an owned value has just been replaced.
+        // Build the accessors once per batch and hydrate existing instances in place.
+        var selectedProperties = propColDict.Keys.ToHashSet();
+        var ownedUpdaters = OwnedTypesDict.Values
+            .Where(navigation => !navigation.IsCollection && !navigation.TargetEntityType.IsMappedToJson()
+                && navigation.PropertyInfo != null && OwnedTypeUtil.IsOwnedInSameTableAsOwner(navigation))
+            .ToDictionary(navigation => navigation.Name, navigation => CreateOwnedValuesUpdater(navigation, navigation.Name, selectedProperties));
 
         List<string> selectByPropertyNames = PropertyColumnNamesDict.Keys
             .Where(a => PrimaryKeysPropertyColumnNameDict.ContainsKey(a)).ToList();
@@ -999,7 +994,11 @@ public class TableInfo
             {
                 foreach (var propertyName in propertyNames)
                 {
-                    if (FastPropertyDict.ContainsKey(propertyName))
+                    if (ownedUpdaters.TryGetValue(propertyName, out var updateOwned))
+                    {
+                        updateOwned(entity!, existingEntity);
+                    }
+                    else if (FastPropertyDict.ContainsKey(propertyName))
                     {
                         var propertyValue = FastPropertyDict[propertyName].Get(existingEntity);
                         FastPropertyDict[propertyName].Set(entity!, propertyValue);
@@ -1012,6 +1011,51 @@ public class TableInfo
             }
         }
     }
+
+    private static Action<object, object?> CreateOwnedValuesUpdater(INavigation navigation, string path, HashSet<string> selectedProperties)
+    {
+        var accessor = FastProperty.GetOrCreate(navigation.PropertyInfo!);
+        var properties = navigation.TargetEntityType.GetProperties()
+            .Where(property => property.PropertyInfo != null && selectedProperties.Contains(path + "." + property.Name))
+            .Select(property => FastProperty.GetOrCreate(property.PropertyInfo!)).ToArray();
+        var children = navigation.TargetEntityType.GetNavigations()
+            .Where(child => child.ForeignKey.IsOwnership && !child.IsOnDependent && !child.IsCollection && child.PropertyInfo != null
+                && !child.TargetEntityType.IsMappedToJson() && OwnedTypeUtil.IsOwnedInSameTableAsOwner(child))
+            .Select(child => CreateOwnedValuesUpdater(child, path + "." + child.Name, selectedProperties)).ToArray();
+        var partialProjection = IsOwnedProjectionPartial(navigation.TargetEntityType, path, selectedProperties);
+        return (entity, output) =>
+        {
+            var source = output == null ? null : accessor.Get(output);
+            var target = accessor.Get(entity);
+            if (source == null || target == null)
+            {
+                // A partial projection cannot establish that an entire owned row is null.
+                if (!partialProjection)
+                    accessor.Set(entity, source);
+                else if (source != null && target == null)
+                    accessor.Set(entity, source);
+                else if (source == null && target != null)
+                {
+                    foreach (var property in properties)
+                        property.Set(target, null);
+                    foreach (var child in children)
+                        child(target, null);
+                }
+                return;
+            }
+            foreach (var property in properties)
+                property.Set(target, property.Get(source));
+            foreach (var child in children)
+                child(target, source);
+        };
+    }
+
+    private static bool IsOwnedProjectionPartial(IEntityType entityType, string path, HashSet<string> selectedProperties)
+        => entityType.GetProperties().Any(property => !property.IsShadowProperty() && !property.IsPrimaryKey()
+                && !selectedProperties.Contains(path + "." + property.Name))
+            || entityType.GetNavigations().Where(child => child.ForeignKey.IsOwnership && !child.IsOnDependent && !child.IsCollection
+                    && child.PropertyInfo != null && !child.TargetEntityType.IsMappedToJson() && OwnedTypeUtil.IsOwnedInSameTableAsOwner(child))
+                .Any(child => IsOwnedProjectionPartial(child.TargetEntityType, path + "." + child.Name, selectedProperties));
 
     internal void ReplaceReadEntities<T>(IEnumerable<T> entities, IList<T> existingEntities)
     {

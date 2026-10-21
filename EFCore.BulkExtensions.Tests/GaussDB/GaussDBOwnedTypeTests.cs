@@ -97,6 +97,60 @@ public partial class GaussDBBulkTests
         }
     }
 
+    [Theory]
+    [InlineData(false)]
+    [InlineData(true)]
+    public async Task BulkSaveChanges_ReusedNestedOwnedTypes_PersistsOwnerAndOwnedChanges(bool isAsync)
+    {
+        using var fixtureContext = _fixture.CreateContext();
+        using var context = CreateOwnedContext(fixtureContext.Database.GetConnectionString()!);
+        await context.Database.ExecuteSqlRawAsync("""
+            DROP TABLE IF EXISTS "GaussDbOwnedDocuments";
+            CREATE TABLE "GaussDbOwnedDocuments" (
+                "Id" integer PRIMARY KEY, "Name" text NOT NULL,
+                "home_state_db" text NOT NULL, "Home_Position_Latitude" numeric NOT NULL,
+                "work_state_db" text NOT NULL, "Work_Position_Latitude" numeric NOT NULL);
+            """);
+        var document = new OwnedDocument
+        {
+            Id = 1, Name = "tracked",
+            Home = new() { State = GaussDbStatus.Active, Position = new() { Latitude = 12m } },
+            Work = new() { State = GaussDbStatus.Inactive, Position = new() { Latitude = 34m } }
+        };
+        try
+        {
+            context.Add(document);
+            await Save();
+            Assert.All(context.ChangeTracker.Entries(), entry => Assert.Equal(EntityState.Unchanged, entry.State));
+
+            document.Home.Position.Latitude = 56m;
+            context.ChangeTracker.DetectChanges();
+            Assert.Equal(EntityState.Unchanged, context.Entry(document).State);
+            await Save();
+            var stored = await context.Set<OwnedDocument>().AsNoTracking().SingleAsync();
+            Assert.Equal(56m, stored.Home.Position.Latitude);
+            Assert.Equal(34m, stored.Work.Position.Latitude);
+            Assert.Equal("tracked", stored.Name);
+            Assert.Equal(0, await context.SaveChangesAsync());
+
+            context.Remove(document);
+            await Save();
+            Assert.Empty(context.ChangeTracker.Entries());
+            Assert.Equal(0, await context.Set<OwnedDocument>().CountAsync());
+        }
+        finally
+        {
+            await context.Database.ExecuteSqlRawAsync("""DROP TABLE IF EXISTS "GaussDbOwnedDocuments";""");
+        }
+
+        Task Save()
+        {
+            if (isAsync) return context.BulkSaveChangesAsync();
+            context.BulkSaveChanges();
+            return Task.CompletedTask;
+        }
+    }
+
     private static OwnedDocumentContext CreateOwnedContext(string connectionString)
         => new(new DbContextOptionsBuilder<OwnedDocumentContext>().UseGaussDB(connectionString).Options);
 

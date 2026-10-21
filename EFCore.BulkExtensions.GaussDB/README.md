@@ -52,6 +52,10 @@ application behavior and uses normal EF write performance; bulk column/output/st
 settings do not apply. Do not enable it inside a `SaveChanges` override that calls bulk save itself.
 The default bulk-save path and explicit `BulkInsert`/`BulkUpdate`/`BulkDelete` bypass save policies.
 Explicit bulk operations can still join a caller-owned transaction for application-controlled imports.
+The default bulk-save path supports nested and repeated owned references sharing their owner's
+table, including changes made only to owned values. It propagates every component of composite
+foreign keys, including shadow properties. Owned entities mapped to separate tables require
+`PreserveSaveChangesPipeline`; the default path rejects them before writing any rows.
 
 ## Behavior and limitations
 
