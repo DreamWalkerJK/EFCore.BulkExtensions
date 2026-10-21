@@ -1,0 +1,322 @@
+{
+  "Root": "FlightService.Domain.Entities.Flight",
+  "Table": "Flights",
+  "Properties": [
+    {
+      "Name": "Id",
+      "Column": "FPID",
+      "Type": "bigint"
+    },
+    {
+      "Name": "ControlAreas",
+      "Column": "ControlAreas",
+      "Type": "varchar"
+    },
+    {
+      "Name": "CreationTime",
+      "Column": "CreateTime",
+      "Type": "timestamp(0) without time zone"
+    },
+    {
+      "Name": "DataSyncFlags",
+      "Column": "DataSyncFlags",
+      "Type": "integer"
+    },
+    {
+      "Name": "DataSyncSource",
+      "Column": "DataSyncSource",
+      "Type": "varchar"
+    },
+    {
+      "Name": "DesignateControlAreaCode",
+      "Column": "DesignateControlAreaCode",
+      "Type": "varchar"
+    },
+    {
+      "Name": "DistributeNodes",
+      "Column": "DistributeNodes",
+      "Type": "varchar"
+    },
+    {
+      "Name": "GUFI",
+      "Column": "GUFI",
+      "Type": "varchar"
+    },
+    {
+      "Name": "IsAbolished",
+      "Column": "IsAbolished",
+      "Type": "boolean"
+    },
+    {
+      "Name": "IsDeleted",
+      "Column": "IsDeleted",
+      "Type": "boolean"
+    },
+    {
+      "Name": "IsFiled",
+      "Column": "IsFiled",
+      "Type": "boolean"
+    },
+    {
+      "Name": "Jurisdiction",
+      "Column": "Jurisdiction",
+      "Type": "varchar"
+    },
+    {
+      "Name": "RegMarking",
+      "Column": "RegMarking",
+      "Type": "char(20)"
+    },
+    {
+      "Name": "Source",
+      "Column": "Source",
+      "Type": "varchar"
+    },
+    {
+      "Name": "SourceId",
+      "Column": "SourceId",
+      "Type": "varchar"
+    },
+    {
+      "Name": "SourceInfo",
+      "Column": "SourceInfo",
+      "Type": "varchar"
+    },
+    {
+      "Name": "SsrCode",
+      "Column": "SsrCode",
+      "Type": "char(5)"
+    },
+    {
+      "Name": "State",
+      "Column": "State",
+      "Type": "varchar"
+    },
+    {
+      "Name": "UpdateMode",
+      "Column": "UpdateMode",
+      "Type": "varchar"
+    },
+    {
+      "Name": "UpdateTime",
+      "Column": "UpdateTime",
+      "Type": "timestamp(0) without time zone"
+    }
+  ],
+  "Owned": [
+    {
+      "Name": "AircraftInfo",
+      "Properties": [
+        {
+          "Name": "FlightId",
+          "Column": "FlightId",
+          "Type": "bigint"
+        },
+        {
+          "Name": "AidEquipment",
+          "Column": "AidEquipment",
+          "Type": "varchar"
+        },
+        {
+          "Name": "AircraftCode",
+          "Column": "AircraftCode",
+          "Type": "char(6)"
+        },
+        {
+          "Name": "AircraftNumber",
+          "Column": "AircraftNumber",
+          "Type": "integer"
+        },
+        {
+          "Name": "AircraftType",
+          "Column": "AircraftType",
+          "Type": "varchar"
+        },
+        {
+          "Name": "ApprovedArcType",
+          "Column": "ApprovedArcType",
+          "Type": "varchar"
+        },
+        {
+          "Name": "SurEquipment",
+          "Column": "SurEquipment",
+          "Type": "varchar"
+        },
+        {
+          "Name": "WTC",
+          "Column": "WTC",
+          "Type": "varchar"
+        }
+      ]
+    },
+    {
+      "Name": "Plan",
+      "Properties": [
+        {
+          "Name": "FlightId",
+          "Column": "FlightId",
+          "Type": "bigint"
+        },
+        {
+          "Name": "ADEP",
+          "Column": "ADEP",
+          "Type": "char(4)"
+        },
+        {
+          "Name": "ADES",
+          "Column": "ADES",
+          "Type": "char(4)"
+        },
+        {
+          "Name": "AIBT",
+          "Column": "AIBT",
+          "Type": "timestamp(0) without time zone"
+        },
+        {
+          "Name": "ALDT",
+          "Column": "ALDT",
+          "Type": "timestamp(0) without time zone"
+        },
+        {
+          "Name": "ALTN1",
+          "Column": "ALTN1",
+          "Type": "char(4)"
+        },
+        {
+          "Name": "ALTN2",
+          "Column": "ALTN2",
+          "Type": "char(4)"
+        },
+        {
+          "Name": "AOBT",
+          "Column": "AOBT",
+          "Type": "timestamp(0) without time zone"
+        },
+        {
+          "Name": "ATOT",
+          "Column": "ATOT",
+          "Type": "timestamp(0) without time zone"
+        },
+        {
+          "Name": "Callsign",
+          "Column": "Callsign",
+          "Type": "varchar"
+        },
+        {
+          "Name": "EIBT",
+          "Column": "EIBT",
+          "Type": "timestamp(0) without time zone"
+        },
+        {
+          "Name": "ELDT",
+          "Column": "ELDT",
+          "Type": "timestamp(0) without time zone"
+        },
+        {
+          "Name": "EOBT",
+          "Column": "EOBT",
+          "Type": "timestamp(0) without time zone"
+        },
+        {
+          "Name": "ETOT",
+          "Column": "ETOT",
+          "Type": "timestamp(0) without time zone"
+        },
+        {
+          "Name": "FlightRules",
+          "Column": "FlightRules",
+          "Type": "varchar"
+        },
+        {
+          "Name": "IOBT",
+          "Column": "IOBT",
+          "Type": "timestamp(0) without time zone"
+        },
+        {
+          "Name": "IsVipFlight",
+          "Column": "IsVipFlight",
+          "Type": "boolean"
+        },
+        {
+          "Name": "OriginADES",
+          "Column": "OrigADES",
+          "Type": "char(4)"
+        },
+        {
+          "Name": "OtherInfo",
+          "Column": "OtherInfo",
+          "Type": "text"
+        },
+        {
+          "Name": "Remarks",
+          "Column": "Remarks",
+          "Type": "text"
+        },
+        {
+          "Name": "SIBT",
+          "Column": "SIBT",
+          "Type": "timestamp(0) without time zone"
+        },
+        {
+          "Name": "SOBT",
+          "Column": "SOBT",
+          "Type": "timestamp(0) without time zone"
+        },
+        {
+          "Name": "TaskCode",
+          "Column": "FlightType",
+          "Type": "char(3)"
+        },
+        {
+          "Name": "TotalEET",
+          "Column": "TotalEET",
+          "Type": "interval(0)"
+        }
+      ]
+    },
+    {
+      "Name": "RouteInfo",
+      "Properties": [
+        {
+          "Name": "FlightId",
+          "Column": "FlightId",
+          "Type": "bigint"
+        },
+        {
+          "Name": "AirwayCodes",
+          "Column": "AirwayCodes",
+          "Type": "text"
+        },
+        {
+          "Name": "ApprovedRoute",
+          "Column": "ApprovedRoute",
+          "Type": "text"
+        },
+        {
+          "Name": "DeviateRoute",
+          "Column": "DeviateRoute",
+          "Type": "text"
+        },
+        {
+          "Name": "FiledRoute",
+          "Column": "FiledRoute",
+          "Type": "text"
+        }
+      ]
+    }
+  ],
+  "LabelKey": [
+    "LabelDataId",
+    "FlightId"
+  ],
+  "CoreAssemblies": [
+    {
+      "FullName": "EFCore.BulkExtensions.Core, Version=10.0.1.0, Culture=neutral, PublicKeyToken=4b4a274cf3aec644",
+      "Location": "D:\\Documents\\Code\\EFCore.BulkExtensions\\validation\\fips\\bin\\Release\\net10.0\\EFCore.BulkExtensions.Core.dll"
+    },
+    {
+      "FullName": "EFCore.BulkExtensions.GaussDB, Version=10.0.1.0, Culture=neutral, PublicKeyToken=4b4a274cf3aec644",
+      "Location": "D:\\Documents\\Code\\EFCore.BulkExtensions\\validation\\fips\\bin\\Release\\net10.0\\EFCore.BulkExtensions.GaussDB.dll"
+    }
+  ]
+}

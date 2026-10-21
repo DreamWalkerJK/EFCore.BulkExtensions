@@ -87,6 +87,11 @@ MySql nuget is still and v.9 as their provider is not yet updated to EF 10.
 
 ### GaussDB preview installation
 
+The current branch contains the `10.0.1-gaussdb.2` fixes and local-package verification against
+the 2026-10-21 FIPS/Monica sources. See the [current integration report](validation/REPORT-20261021.md)
+for test results, integration conditions and performance. The published installation below refers
+to the previous preview; the new local packages have not been published by this validation task.
+
 The `EFCore.BulkExtensions.GaussDB` project is distributed by this fork as
 [`DreamWalkerJK.EFCore.BulkExtensions.GaussDB`](https://www.nuget.org/packages/DreamWalkerJK.EFCore.BulkExtensions.GaussDB/10.0.1-gaussdb.1), version `10.0.1-gaussdb.1`:
 

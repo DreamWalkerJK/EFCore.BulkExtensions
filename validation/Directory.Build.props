@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <DisableStrongNamer>true</DisableStrongNamer>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+</Project>

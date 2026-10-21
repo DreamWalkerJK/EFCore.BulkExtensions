@@ -1,0 +1,8 @@
+{
+  "Compatibility": "A",
+  "DateLiteralType": "timestamp without time zone",
+  "NativeParameterWriteError": null,
+  "NativeDateOnlyReadError": "System.InvalidCastException: Reading as \u0027System.DateOnly\u0027 is not supported for fields having DataTypeName \u0027timestamp without time zone\u0027",
+  "NativeBinaryCopyError": "GaussDB.PostgresException: 08P01: insufficient data left in message",
+  "BulkApiUsed": false
+}

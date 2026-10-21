@@ -3,7 +3,7 @@
         <TargetFramework>net10.0</TargetFramework>
 
         <PackageId>DreamWalkerJK.EFCore.BulkExtensions.GaussDB</PackageId>
-        <PackageVersion>10.0.1-gaussdb.1</PackageVersion>
+        <PackageVersion>10.0.1-gaussdb.2</PackageVersion>
 
         <Authors>borisdj, DreamWalkerJK</Authors>
         <PackageProjectUrl>https://github.com/DreamWalkerJK/EFCore.BulkExtensions</PackageProjectUrl>
@@ -13,7 +13,7 @@
         <Title>DreamWalkerJK.EFCore.BulkExtensions.GaussDB</Title>
         <Description>Bulk operations for GaussDB with Entity Framework Core.</Description>
         <PackageTags>$(PackageTags) GaussDB openGauss</PackageTags>
-        <PackageReleaseNotes>GaussDB support preview release 1.</PackageReleaseNotes>
+        <PackageReleaseNotes>Fix nested/repeated owned mappings, generated output, fixed-width character COPY and EF command lifecycle guards. Validated against current FIPS and Monica sources.</PackageReleaseNotes>
 
         <DisableStrongNamer>true</DisableStrongNamer>
     </PropertyGroup>

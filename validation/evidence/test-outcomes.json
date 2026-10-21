@@ -1,0 +1,3906 @@
+[
+  {
+    "Name": "gaussdb-current-final",
+    "Counters": "<Counters total=\"143\" executed=\"143\" passed=\"143\" failed=\"0\" error=\"0\" timeout=\"0\" aborted=\"0\" inconclusive=\"0\" passedButRunAborted=\"0\" notRunnable=\"0\" notExecuted=\"0\" disconnected=\"0\" warning=\"0\" completed=\"0\" inProgress=\"0\" pending=\"0\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" />",
+    "Results": [
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkUpdateAndDelete_StatsCountOnlyAffectedRows(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsert_ConvertersSerialAndTypeModifiers_RoundTrip",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_Delete_GeneratesDeleteUsingTempTable",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitTests.MergeTableInsertOrUpdateTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkRead_NullableAndArrayMatchKeys_RoundTripDistinctValues(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.BulkSaveChangesPipelineTests.PreservePipeline_RunsPoliciesAndInterceptors_InsideCallerTransaction(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOperations_LargeBatch_PersistsAndUpdatesAllRows(count: 10000)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderPostgreSqlTests.RestructureForBatchWithoutJoinToOtherTablesTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOperations_ReusedNestedOwnedTypes_RoundTripAndRespectUpdateSelection(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitTests.MergeTableInsertOrUpdateWithCompareAndOnConflictUpdateWhereSqlTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkRead_CompositeKeysWithSeparators_PreservesEachEntity(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_Update_IncludesDefaultValuePropertyWithoutUpdatingKey",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkRead_LoadsMatchingRowsIntoEntities",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.RestructureForBatchDelete_GeneratesGaussDBDelete",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkUpsert_MixedIdentity_GeneratesNewIdsAndUpdatesDefaults(newRowFirst: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkRead_DatabaseNulls_ClearPreviouslyPopulatedProperties(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOutput_OwnedMixedIdentityUpsert_AssignsEachReturnedRow(newRowFirst: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsertOrUpdate_WithStats_ReturnsInsertedAndUpdatedCounts",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.RestructureForBatch_WithTagWithPreservesCommentAndCompleteAlias(isDelete: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.RestructureForBatchUpdateWithoutWhere_DoesNotThrow",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkSaveChanges_ExternalTransaction_AcceptsChangesAndPreservesOwnership(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOutput_WithOwnedObjectsAndQueryFilter_RoundTrips(isAsync: True, stats: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_Update_GeneratesUpdateFromTempTable",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.QueryBuilder_CreatesGaussDBCommandAndParameter",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitTests.MergeTableDeleteDeleteTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.SqlAdaptersMapping_ParallelContexts_KeepCorrectProviders",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.Truncate_RemovesRows",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderPostgreSqlTests.RestructureForBatchWithJoinToOtherTablesTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitOracleTests.MergeTableDeleteTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkSaveChanges_OwnedTransaction_DisposesBeforeNextSave(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOperations_CustomSourceMappings_UpdateReadDeleteAndInsert",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.RestructureForBatchWithoutJoin_GeneratesGaussDBUpdate",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.TableInfo_ReusedNestedOwnedTypes_MapsEachNavigationAndConverter",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.TableInfo_OwnedUpdateSelection_OnlyIncludesRequestedOwnedColumn",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkUpsert_PartialCompositeUniqueKey_UsesConfiguredMatch",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsert_CustomSourceTable_UsesDatabaseRows(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_CustomSourceMappings_ProjectSourceColumnsForEveryOperation(operation: Read)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.DbServer_IdentifiesDatabaseGeneratedIdentityStrategies(strategy: None, expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkUpdateAndDelete_StatsCountOnlyAffectedRows(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.BulkSaveChangesPipelineTests.PreservePipeline_RunsPoliciesAndInterceptors_InsideCallerTransaction(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.RestructureForBatchUpdate_WithoutWherePreservesCompleteAlias(alias: \"\\\"item12\\\"\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsert_CustomSourceTable_UsesDatabaseRows(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOutput_PostProcessFailure_CleansResultAndStagingTables",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.TableInfoMaterializationTests.UpdateReadEntities_IncludedColumns_DoesNotClearExcludedValues",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.RestructureForBatchUpdate_WithoutWherePreservesCompleteAlias(alias: \"i\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkUpdate_DefaultValueColumn_CanSetZero(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderPostgreSqlTests.MergeTableUpdateOnlyTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsertOrUpdateAsync_UsesUpdateByProperties",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOperations_NullableMatchKey_ReadUpdateDelete(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderPostgreSqlTests.DropUniqueIndexNameWithLongTableNameTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_CustomSourceMappings_ProjectSourceColumnsForEveryOperation(operation: Delete)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.SqlAdaptersMapping_ResolvesGaussDBServerFromProvider",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitTests.SelectJoinTableReadTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOperations_LargeBatch_PersistsAndUpdatesAllRows(count: 50000)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsert_InsertsRowsAndReportsProgress",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_CustomSourceMappings_DoNotCascadeColumnNameReplacements",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkUpdate_UpdatesSelectedRows",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkSaveChanges_ExternalTransaction_AcceptsChangesAndPreservesOwnership(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.UpdateReadEntities_NullAndLiteralNullKeys_RemainDistinct",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.RestructureForBatchWithLongAlias_PreservesAlias",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.DbServer_IdentifiesDatabaseGeneratedIdentityStrategies(strategy: SerialColumn, expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.DbServer_IdentifiesDatabaseGeneratedIdentityStrategies(strategy: IdentityAlwaysColumn, expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.DbServer_IdentifiesDatabaseGeneratedIdentityStrategies(strategy: IdentityByDefaultColumn, expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsert_OwnedConverterWithRenamedColumn_UsesProviderValue",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOperations_ReusedNestedOwnedTypes_RoundTripAndRespectUpdateSelection(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderPostgreSqlTests.MergeTableInsertOrUpdateWithOnConflictUpdateWhereSqlTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOutput_OwnedMixedIdentityUpsert_AssignsEachReturnedRow(newRowFirst: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsertOrUpdate_UpdatesExistingAndInsertsNewRows",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderPostgreSqlTests.MergeTableInsertOrUpdateWithInsertOnlyTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.RestructureForBatchUpdate_WithoutWherePreservesCompleteAlias(alias: \"item12\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkRead_DatabaseNulls_ClearPreviouslyPopulatedProperties(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsert_WithOutputIdentity_DuplicateKeyDoesNotUpdate(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsertAsync_InsertsRows",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkRead_NullableAndArrayMatchKeys_RoundTripDistinctValues(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkSaveChanges_OwnedTransaction_DisposesBeforeNextSave(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.Copy_CommandGuardRejectsWrite_BeforeAnyRowsAreCopied(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOutput_WithOwnedObjectsAndQueryFilter_RoundTrips(isAsync: False, stats: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitTests.MergeTableUpdateTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_CustomSourceMappings_ProjectSourceColumnsForEveryOperation(operation: Update)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOutput_WithOwnedObjectsAndQueryFilter_RoundTrips(isAsync: False, stats: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.InsertIntoTable_OmitsIdentityForDirectInsert",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkDeleteAsync_DeletesRows",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderSqliteTests.MergeTableInsertOrUpdateWithoutOnConflictUpdateWhereSqlTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.GetUniqueIndexName_TruncatesLongNames",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkUpsert_MixedIdentity_GeneratesNewIdsAndUpdatesDefaults(newRowFirst: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_InsertOrUpdateOrDelete_ThrowsNotSupported",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsert_WithCombinedKeepIdentity_PreservesExplicitIds",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitTests.MergeTableInsertOrUpdateNoUpdateWithOnConflictUpdateWhereSqlTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkRead_ReplaceEntities_ReturnsEveryMatchingRowAndClearsMissing",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitTests.MergeTableInsertTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkRead_CompositeKeysWithSeparators_PreservesEachEntity(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOperations_UseTempDb_KeepExternalTransactionAndAllowReuse",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.InsertIntoTable_UsesCopyWithBinaryFormat",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.DbServer_ExposesGaussDBProviderParts",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.RestructureForBatchUpdate_WithJoinWithoutWhereKeepsJoinPredicate",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.RestructureForBatchWithJoin_GeneratesGaussDBUpdateWithFromJoinTarget",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_InsertOrUpdateWithoutWhere_GeneratesGaussDBUpsert",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkUpsert_WithoutUniqueIndex_WorksInsideCallerTransaction",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.SelectFromOutputTable_UsesGaussDBIdentifiers",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOutput_WithOwnedObjectsAndQueryFilter_RoundTrips(isAsync: True, stats: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.Copy_FixedWidthCharacterStrings_RoundTrip(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkUpdate_DefaultValueColumn_CanSetZero(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitTests.MergeTableInsertOrUpdateWithOnConflictUpdateWhereSqlTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.Copy_FixedWidthCharacterStrings_RoundTrip(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.Copy_CommandGuardRejectsWrite_BeforeAnyRowsAreCopied(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_Read_GeneratesJoinOnPrimaryKey",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitTests.MergeTableInsertOrUpdateNoUpdateTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.TruncateAsync_RemovesRows",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitOracleTests.MergeTableUpdateTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_CustomSourceMappings_WithNullableReadKeyUseProjectedJoinColumn",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.CountUniqueConstraintAndIndex_IncludeTargetTableAndColumns",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_Read_WithNullableKey_UsesNullSafeJoin",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsert_WithOutputIdentity_PopulatesGeneratedIds",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderPostgreSqlTests.MergeTableInsertOrUpdateWithoutOnConflictUpdateWhereSqlTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitTests.MergeTableInsertOrUpdateWithCompareTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsert_WithOutputIdentity_DuplicateKeyDoesNotUpdate(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.RestructureForBatch_WithTagWithPreservesCommentAndCompleteAlias(isDelete: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsert_SingleEnumerationSource_PersistsAllRows(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderPostgreSqlTests.DropUniqueIndexNameTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.UpdateReadEntities_ArrayKeys_CompareElementsWithoutConcatenation",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsert_SingleEnumerationSource_PersistsAllRows(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_InsertOnly_GeneratesDoNothing",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkUpdateAsync_CancelledDuringCopy_CleansStagingTables",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkDelete_DeletesRows",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsert_CopyStats_ReportsInsertedRows",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitOracleTests.MergeTableInsertOrUpdateTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_CustomSourceMappings_ProjectSourceColumnsForEveryOperation(operation: InsertOrUpdate)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_CustomSourceMappings_ProjectSourceColumnsForEveryOperation(operation: Insert)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.BulkSaveChangesPipelineTests.PreservePipeline_PropagatesCancellation_BeforeExecutingContextSave",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitOracleTests.MergeTableInsertTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOutput_OwnedTempTables_ReuseCallerTransactionAndRollback(isAsync: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOperations_NullableMatchKey_ReadUpdateDelete(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.ReconfigureTableInfo_UsesSearchPathSchema",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkOutput_OwnedTempTables_ReuseCallerTransactionAndRollback(isAsync: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BatchCommands_TaggedAndUnfiltered_RunAgainstGaussDB",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.DbServer_IdentifiesDatabaseGeneratedIdentityStrategies(strategy: SequenceHiLo, expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderSqliteTests.MergeTableInsertOrUpdateWithOnConflictUpdateWhereSqlTest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.MergeTable_InsertOrUpdateWithWhere_ThrowsNotSupported",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkUpdateAsync_UpdatesRows",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.TableInfoMaterializationTests.UpdateReadEntities_DatabaseNulls_ClearExistingReferenceAndNullableValues",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBBulkTests.BulkInsert_WithCompositeKey_InsertsRows",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.GaussDB.GaussDBSqlQueryBuilderTests.DdlHelpers_GenerateGaussDBSql",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "EFCore.BulkExtensions.Tests.SqlQueryBuilderUnitTests.MergeTableUpdateWithOnConflictUpdateWhereSqlTest",
+        "Outcome": "Passed",
+        "Error": null
+      }
+    ]
+  },
+  {
+    "Name": "sqlite-batch-final",
+    "Counters": "<Counters total=\"1\" executed=\"1\" passed=\"1\" failed=\"0\" error=\"0\" timeout=\"0\" aborted=\"0\" inconclusive=\"0\" passedButRunAborted=\"0\" notRunnable=\"0\" notExecuted=\"0\" disconnected=\"0\" warning=\"0\" completed=\"0\" inProgress=\"0\" pending=\"0\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" />",
+    "Results": [
+      {
+        "Name": "EFCore.BulkExtensions.Tests.BatchUtil.BatchUtilTests.GetBatchSql_UpdateSqlite_ReturnsExpectedValues",
+        "Outcome": "Passed",
+        "Error": null
+      }
+    ]
+  },
+  {
+    "Name": "current-fips-shared-all",
+    "Counters": "<Counters total=\"316\" executed=\"313\" passed=\"310\" failed=\"3\" error=\"0\" timeout=\"0\" aborted=\"0\" inconclusive=\"0\" passedButRunAborted=\"0\" notRunnable=\"0\" notExecuted=\"0\" disconnected=\"0\" warning=\"0\" completed=\"0\" inProgress=\"0\" pending=\"0\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" />",
+    "Results": [
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenListItemsHaveSeveralFindings_PreservesDetailsAndAddsOneSidebarSummary",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"0\", targetJson: \"0\", expectedCount: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"{\\\"A\\\":1,\\\"B\\\":2}\", targetJson: \"{\\\"B\\\":2,\\\"A\\\":1}\", expectedCount: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.SetAsSelfHost_WhenCalledWithoutHeader_ShouldMarkCurrentAsyncFlowAsSelfHosted",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightRouteCacheDeduplicatorTests.ContainsEquivalentRoute_WithMatchingHashButDifferentSerializedContent_ShouldReturnFalse",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenTowerAndAftnAreAbsentFromVersion_ReturnsSidebarNoticesAndPreservesTheNativePlan",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.ImportAnalysis_WhenSerialized_PreservesValidationIssuesPropertyAndSharedFields",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiNativeValidationTests.ModifiedFingerprint_WhenCommandsAreOtherwiseValid_RejectsBeforeAnyWrite",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"0\", targetJson: null, expectedCount: 1)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateStoreLocksTests.ExecuteAsync_WhenLockIsAcquired_ShouldReleaseHandleOnce",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.BeginSampling_WithMultipleDialogs_ShouldRemainEnabledUntilLastDialogCloses",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.UnifiedServiceConfigStartupTests.Constructor_ShouldCreateAnApplicationOwnedStartupMarker",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenSelfHostedCommandHasKeptProxyDecision_ShouldStillStayLocal",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenCplAndTwrHistoryIsSkipped_ExposesBothParameterDifferencesWithoutChangingThePlan",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenDefinitionIsNotVisible_DoesNotCreateAnUnreachableSidebarSummary",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.IsolatedProviderTransaction_ShouldCommitOrRollbackBothTables(provider: \"GaussDB\", environmentVariable: \"FIPS_EFCORE_TEST_GAUSS\", commit: True)",
+        "Outcome": "Failed",
+        "Error": "Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.\r\n---- System.ArgumentException : Cannot write DateTime with Kind=UTC to PostgreSQL type 'timestamp without time zone', consider using 'timestamp with time zone'. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')"
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenTimeoutWrapsCancellation_ShouldNotRetry",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"False\", expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostOperation_WhenHeaderIsMissingOrInvalid_ShouldReturnFalse(headerValue: \"0\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/history\", expectedSummary: \"查询配置变更历史\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncJsonElementDeserializationTests.Deserialize_WhenProjectUnitIsUnknown_ShouldCacheFailedPlan",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.ExecuteStateStoreUpdateWithRetryAsync_WhenMaxRetryCountAllowsRetry_ShouldSucceed",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: Platform)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/mutation-groups/preview\", expectedSummary: \"预览配置变更组的完整校验\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.RoundTrip_WhenPathUsesListItemKey_ShouldPreserveListItemSegment",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.SaveStateWithRetryAsync_WhenCancelledAfterFailure_ShouldPreserveFailureWithoutRetry",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.MoDataSyncPropertySetterTests.SetDataSyncProperties_WhenOperationIsNotSelfHosted_ShouldLeaveEntityUnchanged",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: FlightPlan)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenRequestNameStartsWithCommand_ShouldProxyAndKeepDecision",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.DeliveryGate_DoesNotBlockIndependentRuns",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateUpdateExecutorTests.ExecuteAsync_WhenOptimisticWriteSucceeds_ShouldNotCallLockService",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateStoreLocksTests.ExecuteAsync_WithConcurrentSameKeyCalls_ShouldRunActionsSerially",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportScopeTests.ShouldAnalyze_WhenIdCannotBeClassified_RetainsItForDiagnostics(parameterId: \"unknown-options:Enabled\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Mediator_WhenDescriptorDisablesProxy_ShouldExecuteLocally",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiNativeValidationTests.InvalidCompleteCandidate_WhenFacadeReturnsFailure_RetainsRejectedDataAndAllPathsWithoutWrites",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.UnifiedServiceConfigStartupTests.StartupMarker_ShouldRejectReusingOneServiceConfigurationForAnotherHost",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.Decode_WhenKeyUsesLegacyShape_ShouldReject",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.MigrationSql_ShouldExpandColumnChangesToBothShards(provider: \"Sqlite\", environmentVariable: null)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: InvalidArgument, detail: \"无效的缓存值\", expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiNativeValidationTests.ExecutionFault_WhenUserCodeThrows_ReturnsSafeChineseFailedCoverageWithoutSecretOrWrites",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenTargetsAreSafe_ReturnsDisplayChangeSummaries",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.ValidationPreview_WhenSerialized_PreservesBoundaryKindsAndAllLogicalPaths",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.UnitOfWorkBatchExtensionsTests.RunInBatchesAsync_WhenCanceledAfterCommit_ShouldNotStartAnotherBatch",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.RoundTrip_WhenPathIsRoot_ShouldPreserveDefinitionAndPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenSelfHostedCrudActionAllowsSelfHostProxy_ShouldIgnoreKeptDecisionAndProxy",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiMutationMapperTests.MapPostCommitWarning_ReturnsChineseOperatorMessage(kind: LocalReload, expectedMessage: \"配置已保存，但当前服务无法重新加载配置。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.MoDataSyncPropertySetterTests.SetDataSyncProperties_WhenSelfHostedUploadingOperation_ShouldSetFlagsAndLocalSource",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/mutation-groups/affected-servic\"···, expectedSummary: \"保存配置前查询受影响的服务\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ModuleExtend.ExtendModuleLoggerTests.SensitiveHostingRequestLog_WhenAccessTokenNameIsEncoded_IsExcludedByHubPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightRouteCacheDeduplicatorTests.ContainsEquivalentRoute_ShouldFindLatestEquivalentRoute",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.TransactionAcrossShards_ShouldCommitOrRollbackBothTables(commit: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenSourceIsUnsafe_ReturnsMatchingBlockingIssue(targetStatus: UnsupportedSource, mutationStatus: UnsupportedSource, expectedCode: RollbackUnsupportedSource)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: Internal, detail: \"WRONGTYPE Operation against a key holding the wron\"···, expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationAffectedServiceMapperTests.Map_WhenServiceNameIsMissing_FallsBackToStableServiceKey",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: FlightQuery)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiNativeValidationTests.PairedChanges_WhenReviewedTogether_UseSameNormalizedCommandsAndCommitOneDocument",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiMutationMapperTests.MapPostCommitWarning_ReturnsChineseOperatorMessage(kind: AuditFinalization, expectedMessage: \"配置已保存，但变更审计无法完成。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: False, httpStatus: 400, body: \"{\\\"code\\\":451,\\\"message\\\":\\\"check fields\\\"}\", resultStatus: 502, reason: \"dependency.invalid_response\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenObjectAndNestedPropertyDiffer_CountsOnlyTheProperty",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: False, httpStatus: 500, body: \"{\\\"code\\\":500,\\\"message\\\":\\\"safe domain failure\\\",\"···, resultStatus: 500, reason: \"domain.failed\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.SaveStateWithRetryAsync_WhenRetryDelayIsCancelled_ShouldStopBeforeNextWrite",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiExportJsonTests.CreateExportJsonOptions_WhenContentContainsChinese_PreservesReadableTextAndSafeEscaping",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: Unavailable, detail: \"服务暂时不可用\", expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Extensions.StringExtensionsTests.BeIfNullOrEmpty_WhenAllValuesAreEmpty_ShouldReturnEmptyString",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenTransportFails_ShouldReturnUnavailableWithoutLocalFallback(mvc: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_PreservesObjectRuleAndLocalizesSafeOperationalFaults(kind: Code, problem: \"下限不能超过上限。\", expected: \"下限不能超过上限。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Invoke_WhenJsonContentTypeHasNoRequestObject_ShouldSendEmptyJsonObject",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenFrameworkMessageContainsSchemaName_PreservesTheName",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenCrudActionDisablesProxyAndChainKeepIsFalse_ShouldNotWriteDecisionHeader",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenCurrentDefinitionsAreAbsentFromHistory_ExplainsEveryRootWithoutInventingChanges",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenManyDefinitionsAreAbsentFromVersion_PreservesEveryUniqueSidebarNotice",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenNativePlanAlreadyChangesVisibleContainer_DoesNotCountItsChildrenAgain",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.DurableEventTimestampProviderTests.DurableUtcTimestamps_WhenCreatingProviderParameters_ShouldPreserveUtcClockValues(useGaussDb: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenCrudActionDisablesProxy_ShouldExecuteLocally",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenIssuesHaveDefaults_OmitsOnlyOptionalDefaultsAndPreservesNonBlockingState(ignoreCondition: WhenWritingNull)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenTargetIsBlocked_OmitsEveryMutationAndReturnsSourceFindings",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.SaveStateWithRetryAsync_WhenRedisTypeIsWrong_ShouldDeleteAndRebuild",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.RpcClient.RpcDateTimeContractTests.BuildApiRequestUri_WhenFlightListForAlarmDateTimeKindsDiffer_ShouldSerializeSameWallClockValues",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenMediatorHandlerDisablesProxy_ShouldExecuteLocally",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/mutation-groups\", expectedSummary: \"提交一个配置变更组\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenHistoricalRootExists_DoesNotInferMissingHistoryFromAnEmptyValue(json: \"0\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostOperation_WhenHeaderIsMissingOrInvalid_ShouldReturnFalse(headerValue: null)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiAffectedServicesTests.GetAffectedServicesAsync_WhenChangeIsValid_UsesPreparedParameterTargets",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferEndpointTests.MapEndpoints_UsesChineseOperatorDocumentation(route: \"/api/configuration/import\", expectedSummary: \"分析已导出的配置参数 JSON 文档\", expectedDescriptionFragment: \"此操作不会保存任何修改\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateUpdateExecutorTests.ExecuteAsync_WithOptimisticPathDisabled_ShouldUseShortLockPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenSelfHostedMediatorHandlerAllowsProxy_ShouldProxy",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenBlockedFindingHasNoVisualDifference_StillExposesBlockingStateWithoutCandidateDetails",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: True, httpStatus: 429, body: \"<html>secret</html>\", resultStatus: 503, reason: \"dependency.rate_limited\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightRouteCacheDeduplicatorTests.ContainsEquivalentRoute_WithNullAndEmptyCollections_ShouldReturnFalse",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: null, targetJson: null, expectedCount: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenFragmentHasOnlySchemaCoverage_StagesWithoutClaimingCompleteValidation",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenInvalidImportedValueIsUnchanged_DoesNotValidateOrReportIssue",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.ExecuteStateStoreUpdateWithRetryAsync_WhenMaxRetryCountIsReached_ShouldThrow",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostOperation_WhenSecondaryHeaderContainsSelfHostedAndUploading_ShouldReadBothFlags",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenHistoricalRootExists_DoesNotInferMissingHistoryFromAnEmptyValue(json: \"false\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Utils.UtilsFlightLabelTests.SplitByLabel_WhenExplicitLabelsArePresent_ShouldReturnLabelValuePairs",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostOperation_WhenHeaderIsMissingOrInvalid_ShouldReturnFalse(headerValue: \"not-a-number\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Invoke_WhenRequestHasJsonContentType_ShouldCopyHeadersAndOverwriteSource",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.DurableEventTimestampProviderTests.DurableUtcTimestamps_WhenCreatingProviderParameters_ShouldPreserveUtcClockValues(useGaussDb: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRedisCannotPersistSnapshot_ShouldReturnTrue",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiOptionTypeSelectionTests.Parse_WhenSelectionContainsOnlyWhitespace_DefaultsToSys",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiUnifiedVersionRollbackTests.PreviewUnifiedVersionRollbackAsync_WhenCompleteCurrentParametersChange_ReturnsChineseConflict",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateUpdateExecutorTests.CalculateMaxRetryCount_ShouldPreserveLegacyContentionWindow(lockWaitMilliseconds: 500, expectedRetryCount: 30)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: User)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: FlightEntity)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_WhenAuthorizationIsRequired_ExposesProtectedUnifiedVersionDeleteRoute",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenTransportFails_ShouldReturnUnavailableWithoutLocalFallback(mvc: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_PreservesPublishedValidationContractWithoutPromotingUnknown(capability: ObjectCode, revision: \"object-owner-revision\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.DeliveryGate_SerializesAndDeduplicatesAcrossReplicaInstances",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenClientExplicitlyDisablesProxy_ShouldOverrideDefaultCommandRule",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenCallerCancels_ShouldPropagateCancellationAndNeverSend(mvc: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.AffectedServicesEndpoint_DocumentsPreSaveConfirmationWithoutServerToken",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.DeliveryGate_TreatsReusedProgressIdAsANewRun",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValueCanonicalizerTests.Canonicalize_WhenScalarEnumUsesLegacyNumber_ReturnsMemberName",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.CompletePreviewEndpoint_IsProtectedAndDocumentsSameProcessFingerprint",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"yes\", expected: null)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportScopeTests.ShouldAnalyze_WhenSelectionIsExplicit_UsesTheSelectedCategoriesWithoutAddingSys",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenCalledFromRollbackPreview_PreservesConfiguredMessage",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.RpcClient.RpcDateTimeContractTests.BuildApiRequestUri_WhenCurrentFlightListHasFractionalTicks_ShouldPreserveWallClockPrecision",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.ParameterItem_WhenSerialized_DoesNotExposeCanonicalPersistenceHint",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenHistoryHasNoRoot_DoesNotTreatAnOrphanedParameterAsARecordedDefinition",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/history/{historyId}\", expectedSummary: \"获取一条配置变更历史\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.ProgressSnapshot_RoundTripsThroughTheDistributedEventJsonContract",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/unified-version\", expectedSummary: \"获取统一配置版本历史\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/rollback/unified-version/{versi\"···, expectedSummary: \"回滚到指定的统一配置版本\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_WhenStateOmitsSchemaPath_ShouldFailClosed",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.Record_AfterTypeCacheWarmup_ShouldNotAllocatePerMessage",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiAffectedServicesTests.GetAffectedServicesAsync_WhenChangesContainNull_ReturnsChineseBadRequest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.RecordConsumptionCompleted_ForInFlightMessage_ShouldCreateConsumptionOnlyCounter",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"\", expected: null)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"false\", targetJson: null, expectedCount: 1)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_WhenLegacyEnumComesFromExternalSource_ShowsNameWithoutShadowingRepair",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Utils.UtilsFlightLabelTests.SplitByLabel_WhenRegexLabelsArePresent_ShouldReturnRouteValuePairs",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenCollectionContentsDiffer_ReturnsOneRealParameterIdAndPreservesTargetValue(kind: Dictionary, currentJson: \"{\\\"A\\\":1}\", targetJson: \"{\\\"A\\\":2,\\\"B\\\":3}\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.Decode_WhenLogicalPathIsMalformed_ShouldReject",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateUpdateExecutorTests.ExecuteAsync_WhenOptimisticWriteConflicts_ShouldRetryInsideShortLockPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportScopeTests.ShouldAnalyze_WhenIdCannotBeClassified_RetainsItForDiagnostics(parameterId: \"invalid:key:shape\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenMissingValueUsesFrameworkFallback_PrefersConfiguredRuleMessage",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.IsolatedProviderTransaction_ShouldCommitOrRollbackBothTables(provider: \"GaussDB\", environmentVariable: \"FIPS_EFCORE_TEST_GAUSS\", commit: False)",
+        "Outcome": "Failed",
+        "Error": "Assert.Throws() Failure: Exception type was not an exact match\r\nExpected: typeof(Test.Platform.Shared.Repository.ShardingCompatibilityTests+IntentionalRollbackException)\r\nActual:   typeof(Microsoft.EntityFrameworkCore.DbUpdateException)\r\n---- Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.\r\n-------- System.ArgumentException : Cannot write DateTime with Kind=UTC to PostgreSQL type 'timestamp without time zone', consider using 'timestamp with time zone'. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')"
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenLocalCodeThrows_ShouldPropagateToHostExceptionHandler(mvc: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.TransactionAcrossShards_ShouldCommitOrRollbackBothTables(commit: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.MigrationSql_ShouldExpandColumnChangesToBothShards(provider: \"GaussDB\", environmentVariable: \"FIPS_EFCORE_TEST_GAUSS\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiUnifiedVersionRollbackTests.PreviewUnifiedVersionRollbackAsync_WhenSnapshotIsStable_ReturnsCompleteCurrentAndTargetParameters",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenFragmentValidationFailsWithoutDetailedIssues_ReturnsBlockingFinding",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiMutationMapperTests.MapPostCommitWarning_ReturnsChineseOperatorMessage(kind: EffectiveValueVerification, expectedMessage: \"配置已保存并重新加载，但实际生效值与已审核的目标值不一致。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"1\", expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.RollbackEndpoints_DocumentPreviewFingerprintAsConsistencyProtection",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_PreservesPublishedValidationContractWithoutPromotingUnknown(capability: PortableOnly, revision: \"portable-owner-revision\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.MigrationSql_ShouldExpandColumnChangesToBothShards(provider: \"PostgreSQL\", environmentVariable: \"FIPS_EFCORE_TEST_POSTGRES\")",
+        "Outcome": "NotExecuted",
+        "Error": "Set FIPS_EFCORE_TEST_POSTGRES to an isolated disposable test database to run this test."
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.GetSnapshot_WithUntimedCompletion_ShouldExcludeItFromAverageDuration",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenExportedEnumNameMatchesCanonicalDisplayButStorageIsNumeric_CreatesRepairMutation",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.GetSnapshot_WithIndependentSamplers_ShouldNotShareRateBaselines",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: False, httpStatus: 429, body: \"<html>secret</html>\", resultStatus: 503, reason: \"dependency.rate_limited\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.GetSnapshot_WhenMessagesArriveBetweenSamples_ShouldCalculateEntryAndConsumptionRates",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenSerialized_UsesPreviewFingerprintContract",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"false\", targetJson: \"false\", expectedCount: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: MilitaryFlight)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreviewChange_WhenGlobalDefaultsAreIgnored_StillWritesOperation(operation: Remove)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenNamingPolicyChanges_ConvergesOnlyItsIssueContract(policyKind: 1)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenHistoricalDefinitionContainsAddedAndRemovedParameters_PreservesTheirDisplayBoundaries",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiMutationMapperTests.MapPostCommitWarning_WhenKindIsUnknown_ReturnsChineseFallback",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.Analyzer_ShouldTrackEntryRatesOnlyOnSecondaryNode(operatingMode: PrimaryNodeMode, expectedTypeCount: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.MutationChange_WhenExpectedVersionIsNull_AlwaysWritesRequiredMember",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenIssuesHaveDefaults_OmitsOnlyOptionalDefaultsAndPreservesNonBlockingState(ignoreCondition: Never)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.UnifiedServiceConfigStartupTests.AddMonicaApplication_ShouldForwardTheConfigurationOwnedMarker",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenHistoricalRootExists_DoesNotInferMissingHistoryFromAnEmptyValue(json: null)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: True, httpStatus: 500, body: \"{\\\"code\\\":500,\\\"message\\\":\\\"safe domain failure\\\",\"···, resultStatus: 500, reason: \"domain.failed\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.DeliveryGate_DropsDuplicatesOutOfOrderAndPostTerminalSnapshots",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: Internal, detail: \"failed to set key: i/o timeout\", expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightRouteCacheDeduplicatorTests.ContainsEquivalentRoute_WithNullLegacyCollectionsAndValues_ShouldNotThrow",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.MapSensitiveIssue_NeverExposesValueRulesOrTechnicalProblem",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: PermissionDenied, detail: \"没有缓存写入权限\", expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenPlannedEnumValueIsNormalized_PreservesExistingRequestsAndAppendsOnlyMissingDifferences",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.PlatformScalarProjection_ShouldUseTheHostOwnedConfiguration",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateStoreLocksTests.ExecuteAsync_WithCustomTimeout_ShouldUseTimeoutAndRunFallbackAction",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenCanonicalEnumValueNeedsNoPersistedRepair_DoesNotCreateMutation",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.DbContextFactoryRegistrationTests.AddSharedDatabase_ShouldRegisterScopeOwningDbContextFactory",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: FlightRouteAdaptor)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenParametersHaveTemplates_PreservesTheCompleteParameterJson",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: DataExchange)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.ReportAndComplete_PublishDistinctSignalRSnapshots",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: DeadlineExceeded, detail: \"调用超时\", expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.UnitOfWorkBatchExtensionsTests.RunInBatchesAsync_ShouldCommitBoundedIndependentTransactions",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenChangedImportedValueIsInvalid_ReturnsBlockingIssue",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Invoke_WhenDaprProxyPatternIsConfigured_ShouldRewriteAppId",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenIssuesHaveDiagnostics_PreservesAllPathsRulesAndPresentValues",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenRuleDefinesErrorMessage_PreservesApplicationTextVerbatim",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.TranslateRuntimeIssue_UsesSameChineseSchemaGuidanceForStartupConsumers",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenCollectionContentsDiffer_ReturnsOneRealParameterIdAndPreservesTargetValue(kind: List, currentJson: \"[{\\\"Name\\\":\\\"A\\\",\\\"Value\\\":1}]\", targetJson: \"[{\\\"Name\\\":\\\"A\\\",\\\"Value\\\":2},{\\\"Name\\\":\\\"B\\\",\\\"Va\"···)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.MoDataSyncPropertySetterTests.SetDataSyncProperties_WhenObjectDoesNotImplementDataSyncContract_ShouldDoNothing",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenCompleteContractRejectsHistory_BlocksInsteadOfSkippingAndPreservesEveryPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostOperation_WhenHeaderIsMissingOrInvalid_ShouldReturnFalse(headerValue: \"\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Extensions.StringExtensionsTests.FromLocalToUtc_WhenChinaLocalTimeCrossesDateBoundary_ShouldWrapToPreviousUtcDay",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateStoreLocksTests.ExecuteAsync_WithoutCustomTimeout_ShouldKeepLegacyTimeout",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.Analyzer_ShouldTrackEntryRatesOnlyOnSecondaryNode(operatingMode: SecondaryNodeMode, expectedTypeCount: 1)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenSourceIsUnsafe_ReturnsMatchingBlockingIssue(targetStatus: CompositeSourceConflict, mutationStatus: CompositeSourceConflict, expectedCode: RollbackCompositeSourceConflict)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiMutationMapperTests.MapPostCommitWarning_ReturnsChineseOperatorMessage(kind: UnifiedVersionCapture, expectedMessage: \"配置已保存，但无法生成对应的统一版本快照。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenValueIsIncompatible_FlattensLocalizedValidationIssueAsSkipped",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenHistoricalRootExists_DoesNotInferMissingHistoryFromAnEmptyValue(json: \"[]\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenAllowedValuesUseFrameworkMessage_UsesRuleValues",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: False, httpStatus: 400, body: \"{\\\"code\\\":400,\\\"message\\\":\\\"check fields\\\"}\", resultStatus: 400, reason: \"operation.failed\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.AffectedServicesResponse_WhenSerialized_UsesFrontendConfirmationContract",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightRouteCacheDeduplicatorTests.ContainsEquivalentRoute_WithIdenticalRoute_ShouldReturnTrue",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.SaveStateWithRetryAsync_WhenCancelledBeforeSave_ShouldNotWrite",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiMutationMapperTests.MapPostCommitWarning_ReturnsChineseOperatorMessage(kind: DistributedNotification, expectedMessage: \"配置已保存，但分布式重载通知失败。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.MapsterCompatibility_ShouldSupportRequiredMembersRecordsAndCustomConstructors",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportScopeTests.ShouldAnalyze_WhenSelectionIsOmitted_IncludesEveryKnownSupportedCategory",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: FlightRoute)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: False, httpStatus: 200, body: \"secret-invalid-json\", resultStatus: 502, reason: \"dependency.invalid_response\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenHistoryDoesNotContainAnEntireDefinition_DoesNotInventRemovals",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostOperation_WhenPrimaryNodeReceivesSelfHostHeader_ShouldIgnoreHeaderForOperationState",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.SetAsSelfHost_WhenFlagsAreAlreadyLoaded_ShouldKeepExistingUploadingFlag",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: File)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.MoDataSyncPropertySetterTests.SetDataSyncProperties_WhenEntityAlreadySelfHosted_ShouldKeepExistingSourceAndFlags",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiOptionTypeSelectionTests.Parse_WhenSelectionIsExplicit_NormalizesAndDeduplicatesIt",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/parameters\", expectedSummary: \"获取前端可直接使用的配置参数\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferEndpointTests.MapEndpoints_UsesChineseOperatorDocumentation(route: \"/api/configuration/export\", expectedSummary: \"将当前有效配置参数导出为格式化的 JSON 文件\", expectedDescriptionFragment: \"未传入时仅导出 SYS\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightRouteCacheDeduplicatorTests.ContainsEquivalentRoute_WithDifferentCurrentFields_ShouldReturnFalse",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenMessageIsFrameworkDefault_ReturnsChineseMessage",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenHistoricalRootExists_DoesNotInferMissingHistoryFromAnEmptyValue(json: \"\\\"\\\"\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiUnifiedVersionRollbackTests.PreviewUnifiedVersionRollbackAsync_WhenFingerprintChangesDuringProjection_ReturnsChineseConflict",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenNamingPolicyChanges_ConvergesOnlyItsIssueContract(policyKind: 2)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateUpdateExecutorTests.CalculateMaxRetryCount_ShouldPreserveLegacyContentionWindow(lockWaitMilliseconds: 15000, expectedRetryCount: 15)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.UserEventMapping_ShouldPopulateTheRequiredVipFlight",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenCompleteValidationBlocksHistoricalDifference_PreservesBlockingAndFingerprint",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: Message)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenRootFindingAlreadyExists_DoesNotReplaceOrDuplicateIt",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"[1,2]\", targetJson: \"[2,1]\", expectedCount: 1)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiOptionTypeSelectionTests.Parse_WhenSelectionIsOmitted_DefaultsToSys",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.ParameterContract_WhenMetadataIsOld_RemainsUnknownInJson",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: GeneralFlight)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenLocalCodeThrows_ShouldPropagateToHostExceptionHandler(mvc: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenMessageIsUnknown_AddsChineseDiagnosticContext",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreviewChange_WhenGlobalDefaultsAreIgnored_StillWritesOperation(operation: Set)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"True\", expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.Encode_WhenDictionaryKeyContainsConfigurationSeparator_ShouldReject",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRedisIsLoading_ShouldReturnTrue",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostRequest_WhenHttpContextIsMissing_ShouldReturnFalse",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.PlatformFlightMappings_WhenLabelsAreNull_ShouldPreserveNull",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: Cancelled, detail: \"调用已取消\", expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenCallerCancels_ShouldPropagateCancellationAndNeverSend(mvc: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncJsonElementDeserializationTests.Deserialize_WhenPayloadIsEventAlterFlight_ShouldCreateTypedDomainEvent",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenDefinitionIsMissing_ReturnsDefinitionFinding",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: FlightIntegration)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationAffectedServiceMapperTests.Map_WhenServiceNameIsConfigured_UsesChineseDisplayName",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AlarmMapping_WhenProfileUsesServiceContext_ShouldResolveTheRegisteredDependency",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_WhenScalarStringNodeHasEditorHint_ShouldTransportHint",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.Record_WhenNoDialogIsSampling_ShouldNotCreateCounters",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.Record_WhenCalledConcurrently_ShouldPreserveEntryAndConsumptionTotals",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.SetProxyDecision_WhenCalled_ShouldWriteDecisionToCurrentRequestHeader",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValueCanonicalizerTests.Canonicalize_WhenEnumAlreadyUsesCanonicalName_DoesNotRequireRepair",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.IsolatedProviderTransaction_ShouldCommitOrRollbackBothTables(provider: \"PostgreSQL\", environmentVariable: \"FIPS_EFCORE_TEST_POSTGRES\", commit: False)",
+        "Outcome": "NotExecuted",
+        "Error": "Set FIPS_EFCORE_TEST_POSTGRES to an isolated disposable test database to run this test."
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Invoke_WhenRequestBodyIsSeekable_ShouldForwardOriginalBodyAndContentHeaders",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenHttpContextIsMissing_ShouldReturnFalse",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.DeliveryGate_AllowsRetryAfterSignalRDeliveryFails",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenRangeUsesFrameworkMessage_IncludesConfiguredBounds",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_PreservesObjectRuleAndLocalizesSafeOperationalFaults(kind: Execution, problem: \"Configuration validation could not complete during\"···, expected: \"配置校验无法安全执行，未能完成完整校验。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_PreservesPublishedValidationContractWithoutPromotingUnknown(capability: Unknown, revision: null)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenSourceIsUnsafe_ReturnsMatchingBlockingIssue(targetStatus: RuntimeOutOfSync, mutationStatus: RuntimeOutOfSync, expectedCode: RollbackRuntimeOutOfSync)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.PlatformScalarMappings_ShouldPreservePrimitiveNullableAndDateOnlySemantics",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.RoundTrip_WhenPathUsesDictionaryKey_ShouldPreserveDictionarySegment",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValueCanonicalizerTests.Canonicalize_WhenValueContainsNestedEnums_NormalizesKnownValuesAndPreservesUnknownProperties",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.TimedRecord_AfterTypeCacheWarmup_ShouldNotAllocatePerMessage",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.TrySaveStateAsync_WithExistingETag_ShouldUseWriteWithoutReadBack",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiOptionTypeSelectionTests.ParseForImport_WhenSelectionIsOmitted_DoesNotFilterActiveCategories",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.GetSnapshot_WithTimedCompletions_ShouldCalculateAverageSuccessfulConsumptionDuration",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenStoredDocumentInvalidButEffectiveValueValid_ConvergesFindingsWithoutLosingBlockingState",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenCollectionContentsDiffer_ReturnsOneRealParameterIdAndPreservesTargetValue(kind: List, currentJson: \"[\\\"remote\\\"]\", targetJson: \"[\\\"remote\\\",\\\"remote\\\",\\\"remote\\\",\\\"remote\\\"]\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenValidationDetailsAreHidden_PreservesSensitivityBoundary",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.UnitOfWorkBatchExtensionsTests.RunInBatchesAsync_WhenSecondBatchFailsAfterFlush_ShouldKeepOnlyEarlierCommit",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/rollback/unified-version/{versi\"···, expectedSummary: \"预览统一配置版本回滚将产生的精确变更\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenIssuesHaveDefaults_OmitsOnlyOptionalDefaultsAndPreservesNonBlockingState(ignoreCondition: WhenWritingDefault)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"\\\"\\\"\", targetJson: \"\\\"\\\"\", expectedCount: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.SaveAcrossShards_ShouldCaptureEachChangeOnceAndQueryBothTables",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenAbsentHistoricalRootHasBlockingFindings_KeepsTheBlockingSummaryFirst",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenNamingPolicyChanges_ConvergesOnlyItsIssueContract(policyKind: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiAffectedServicesTests.GetAffectedServicesAsync_WhenChangeIsInvalid_ReturnsChineseBadRequestWithoutImpactLookup",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.Encode_WhenDefinitionKeyContainsSeparator_ShouldReject",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: BasicData)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRedisReplicaIsReadOnly_ShouldReturnTrue",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateStoreLocksTests.ExecuteAsync_WhenActionThrows_ShouldReclaimLocalLockAndAllowFollowingCall",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Extensions.StringExtensionsTests.BeIfNullOrEmpty_WhenSourceIsEmpty_ShouldReturnFirstNonEmptyFallback",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.IsolatedProviderTransaction_ShouldCommitOrRollbackBothTables(provider: \"PostgreSQL\", environmentVariable: \"FIPS_EFCORE_TEST_POSTGRES\", commit: True)",
+        "Outcome": "NotExecuted",
+        "Error": "Set FIPS_EFCORE_TEST_POSTGRES to an isolated disposable test database to run this test."
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.MutationApply_WhenDeserialized_PreservesOpaqueValidationFingerprint",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationAffectedServiceMapperTests.Map_WhenParameterIsStaticAfterStartup_ReturnsOfflineRestartGuidance",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_PreservesObjectRuleAndLocalizesSafeOperationalFaults(kind: Contract, problem: \"Configuration validation could not complete during\"···, expected: \"配置校验契约无法完整执行，不能提交。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiUnifiedVersionRollbackTests.RollbackUnifiedVersionAsync_WhenPreviewFingerprintIsStale_ReturnsChineseConflict",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenSourceIsUnsafe_ReturnsMatchingBlockingIssue(targetStatus: LowerPriorityFallback, mutationStatus: LowerPriorityFallback, expectedCode: RollbackLowerPriorityFallback)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_WhenStoredEnumUsesLegacyNumber_ShowsNameAndMarksCanonicalRepair",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: System)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: Alarm)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/unified-version/{version:long}/\"···, expectedSummary: \"获取指定统一版本及其上一个版本的配置参数\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenImportedEnumUsesLegacyNumber_CanonicalizesMutationToMemberName",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Extensions.StringExtensionsTests.BeIfNullOrEmpty_WhenSourceHasValue_ShouldReturnSource",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateUpdateExecutorTests.ExecuteAsync_WhenOptimisticWriteHasTransientFailure_ShouldRetryInsideShortLockPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenRequestNameStartsWithQuery_ShouldExecuteLocallyAndKeepDecision",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.TrySaveStateAsync_WithoutETag_ShouldPreserveCreateOnlyBehavior",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: True, httpStatus: 200, body: \"secret-invalid-json\", resultStatus: 502, reason: \"dependency.invalid_response\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackApply_WhenDeserialized_ReadsPreviewFingerprintContract",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: Metrics)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.RoundTrip_WhenPathUsesPropertySegments_ShouldPreserveCanonicalPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: True, httpStatus: 400, body: \"{\\\"code\\\":400,\\\"message\\\":\\\"check fields\\\"}\", resultStatus: 400, reason: \"operation.failed\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: True, httpStatus: 400, body: \"{\\\"code\\\":451,\\\"message\\\":\\\"check fields\\\"}\", resultStatus: 502, reason: \"dependency.invalid_response\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"0\", expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenHistoryIsEmpty_AddsOneNoticePerCurrentRootAndIsIdempotent",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetProxyDecision_WhenHttpContextIsMissing_ShouldReturnNull",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenAllProfileAssembliesAreDiscovered_ShouldBuildMaximalHost",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"true\", expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ModuleExtend.ExtendModuleLoggerTests.SensitiveHostingRequestLog_WhenRequestUsesAnOrdinaryPath_IsRetained",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncJsonElementDeserializationTests.Deserialize_WhenPayloadIsInMessageEntitySync_ShouldCreateTypedEntityListAndCachePlan",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiOptionTypeSelectionTests.Parse_WhenSelectionContainsUnknownValue_ReturnsActionableFailure",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_WhenEffectiveValueIsSensitive_ShouldRejectDefinition",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"false\", expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.SamplingGuard_WhenDialogIsClosed_ShouldNotReadClockOrAllocate",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_WhenStateContainsAggregateAndScalarValues_ShouldPreserveShapeAndVersions",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.ObjectMappingProfiles_ShouldOwnUniqueMappingPairs",
+        "Outcome": "Failed",
+        "Error": "Assert.Empty() Failure: Collection was not empty\r\nCollection: [\"System.String -> System.Int64: Platform.Infrastruc\"···, \"System.String -> System.DateOnly: Platform.Infrast\"···, \"System.Nullable`1[[System.Int32, System.Private.Co\"···, \"System.TimeSpan -> System.Int32: Platform.Infrastr\"···, \"System.Nullable`1[[System.Int64, System.Private.Co\"···, ···]"
+      }
+    ]
+  },
+  {
+    "Name": "original-fips-shared-all",
+    "Counters": "<Counters total=\"316\" executed=\"313\" passed=\"310\" failed=\"3\" error=\"0\" timeout=\"0\" aborted=\"0\" inconclusive=\"0\" passedButRunAborted=\"0\" notRunnable=\"0\" notExecuted=\"0\" disconnected=\"0\" warning=\"0\" completed=\"0\" inProgress=\"0\" pending=\"0\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" />",
+    "Results": [
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"0\", targetJson: null, expectedCount: 1)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenHistoricalRootExists_DoesNotInferMissingHistoryFromAnEmptyValue(json: \"0\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.Encode_WhenDefinitionKeyContainsSeparator_ShouldReject",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"[1,2]\", targetJson: \"[2,1]\", expectedCount: 1)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.Record_WhenNoDialogIsSampling_ShouldNotCreateCounters",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/history/{historyId}\", expectedSummary: \"获取一条配置变更历史\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenHttpContextIsMissing_ShouldReturnFalse",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateStoreLocksTests.ExecuteAsync_WithConcurrentSameKeyCalls_ShouldRunActionsSerially",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/mutation-groups/affected-servic\"···, expectedSummary: \"保存配置前查询受影响的服务\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenMessageIsUnknown_AddsChineseDiagnosticContext",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiMutationMapperTests.MapPostCommitWarning_ReturnsChineseOperatorMessage(kind: EffectiveValueVerification, expectedMessage: \"配置已保存并重新加载，但实际生效值与已审核的目标值不一致。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiMutationMapperTests.MapPostCommitWarning_ReturnsChineseOperatorMessage(kind: UnifiedVersionCapture, expectedMessage: \"配置已保存，但无法生成对应的统一版本快照。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.DbContextFactoryRegistrationTests.AddSharedDatabase_ShouldRegisterScopeOwningDbContextFactory",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferEndpointTests.MapEndpoints_UsesChineseOperatorDocumentation(route: \"/api/configuration/export\", expectedSummary: \"将当前有效配置参数导出为格式化的 JSON 文件\", expectedDescriptionFragment: \"未传入时仅导出 SYS\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostRequest_WhenHttpContextIsMissing_ShouldReturnFalse",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Invoke_WhenRequestBodyIsSeekable_ShouldForwardOriginalBodyAndContentHeaders",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenExportedEnumNameMatchesCanonicalDisplayButStorageIsNumeric_CreatesRepairMutation",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: False, httpStatus: 400, body: \"{\\\"code\\\":400,\\\"message\\\":\\\"check fields\\\"}\", resultStatus: 400, reason: \"operation.failed\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.ParameterContract_WhenMetadataIsOld_RemainsUnknownInJson",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportScopeTests.ShouldAnalyze_WhenSelectionIsExplicit_UsesTheSelectedCategoriesWithoutAddingSys",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiUnifiedVersionRollbackTests.PreviewUnifiedVersionRollbackAsync_WhenSnapshotIsStable_ReturnsCompleteCurrentAndTargetParameters",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.GetSnapshot_WhenMessagesArriveBetweenSamples_ShouldCalculateEntryAndConsumptionRates",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRedisCannotPersistSnapshot_ShouldReturnTrue",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenTowerAndAftnAreAbsentFromVersion_ReturnsSidebarNoticesAndPreservesTheNativePlan",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenParametersHaveTemplates_PreservesTheCompleteParameterJson",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenFragmentHasOnlySchemaCoverage_StagesWithoutClaimingCompleteValidation",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: False, httpStatus: 400, body: \"{\\\"code\\\":451,\\\"message\\\":\\\"check fields\\\"}\", resultStatus: 502, reason: \"dependency.invalid_response\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Extensions.StringExtensionsTests.FromLocalToUtc_WhenChinaLocalTimeCrossesDateBoundary_ShouldWrapToPreviousUtcDay",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenCallerCancels_ShouldPropagateCancellationAndNeverSend(mvc: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_WhenLegacyEnumComesFromExternalSource_ShowsNameWithoutShadowingRepair",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: Unavailable, detail: \"服务暂时不可用\", expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.ExecuteStateStoreUpdateWithRetryAsync_WhenMaxRetryCountIsReached_ShouldThrow",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenSelfHostedMediatorHandlerAllowsProxy_ShouldProxy",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenNamingPolicyChanges_ConvergesOnlyItsIssueContract(policyKind: 2)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.MigrationSql_ShouldExpandColumnChangesToBothShards(provider: \"Sqlite\", environmentVariable: null)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiOptionTypeSelectionTests.Parse_WhenSelectionContainsUnknownValue_ReturnsActionableFailure",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_WhenStateContainsAggregateAndScalarValues_ShouldPreserveShapeAndVersions",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.IsolatedProviderTransaction_ShouldCommitOrRollbackBothTables(provider: \"PostgreSQL\", environmentVariable: \"FIPS_EFCORE_TEST_POSTGRES\", commit: True)",
+        "Outcome": "NotExecuted",
+        "Error": "Set FIPS_EFCORE_TEST_POSTGRES to an isolated disposable test database to run this test."
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.DeliveryGate_AllowsRetryAfterSignalRDeliveryFails",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiMutationMapperTests.MapPostCommitWarning_WhenKindIsUnknown_ReturnsChineseFallback",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.DurableEventTimestampProviderTests.DurableUtcTimestamps_WhenCreatingProviderParameters_ShouldPreserveUtcClockValues(useGaussDb: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.ExecuteStateStoreUpdateWithRetryAsync_WhenMaxRetryCountAllowsRetry_ShouldSucceed",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.TrySaveStateAsync_WithoutETag_ShouldPreserveCreateOnlyBehavior",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.RpcClient.RpcDateTimeContractTests.BuildApiRequestUri_WhenCurrentFlightListHasFractionalTicks_ShouldPreserveWallClockPrecision",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ModuleExtend.ExtendModuleLoggerTests.SensitiveHostingRequestLog_WhenRequestUsesAnOrdinaryPath_IsRetained",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_PreservesPublishedValidationContractWithoutPromotingUnknown(capability: ObjectCode, revision: \"object-owner-revision\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenClientExplicitlyDisablesProxy_ShouldOverrideDefaultCommandRule",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: FlightRouteAdaptor)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenRequestNameStartsWithCommand_ShouldProxyAndKeepDecision",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenNativePlanAlreadyChangesVisibleContainer_DoesNotCountItsChildrenAgain",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_PreservesObjectRuleAndLocalizesSafeOperationalFaults(kind: Code, problem: \"下限不能超过上限。\", expected: \"下限不能超过上限。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.UserEventMapping_ShouldPopulateTheRequiredVipFlight",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.MutationApply_WhenDeserialized_PreservesOpaqueValidationFingerprint",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: Internal, detail: \"WRONGTYPE Operation against a key holding the wron\"···, expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"false\", expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenListItemsHaveSeveralFindings_PreservesDetailsAndAddsOneSidebarSummary",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenTargetsAreSafe_ReturnsDisplayChangeSummaries",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateUpdateExecutorTests.ExecuteAsync_WhenOptimisticWriteSucceeds_ShouldNotCallLockService",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.MoDataSyncPropertySetterTests.SetDataSyncProperties_WhenEntityAlreadySelfHosted_ShouldKeepExistingSourceAndFlags",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationAffectedServiceMapperTests.Map_WhenServiceNameIsMissing_FallsBackToStableServiceKey",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.MoDataSyncPropertySetterTests.SetDataSyncProperties_WhenSelfHostedUploadingOperation_ShouldSetFlagsAndLocalSource",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Invoke_WhenDaprProxyPatternIsConfigured_ShouldRewriteAppId",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_PreservesPublishedValidationContractWithoutPromotingUnknown(capability: PortableOnly, revision: \"portable-owner-revision\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateUpdateExecutorTests.ExecuteAsync_WhenOptimisticWriteHasTransientFailure_ShouldRetryInsideShortLockPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Mediator_WhenDescriptorDisablesProxy_ShouldExecuteLocally",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: File)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.GetSnapshot_WithIndependentSamplers_ShouldNotShareRateBaselines",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: User)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.UnitOfWorkBatchExtensionsTests.RunInBatchesAsync_WhenSecondBatchFailsAfterFlush_ShouldKeepOnlyEarlierCommit",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenCallerCancels_ShouldPropagateCancellationAndNeverSend(mvc: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.RoundTrip_WhenPathUsesListItemKey_ShouldPreserveListItemSegment",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: True, httpStatus: 500, body: \"{\\\"code\\\":500,\\\"message\\\":\\\"safe domain failure\\\",\"···, resultStatus: 500, reason: \"domain.failed\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.SetAsSelfHost_WhenFlagsAreAlreadyLoaded_ShouldKeepExistingUploadingFlag",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.Analyzer_ShouldTrackEntryRatesOnlyOnSecondaryNode(operatingMode: PrimaryNodeMode, expectedTypeCount: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenRuleDefinesErrorMessage_PreservesApplicationTextVerbatim",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenMissingValueUsesFrameworkFallback_PrefersConfiguredRuleMessage",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenMessageIsFrameworkDefault_ReturnsChineseMessage",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: DeadlineExceeded, detail: \"调用超时\", expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.UnifiedServiceConfigStartupTests.Constructor_ShouldCreateAnApplicationOwnedStartupMarker",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenHistoryDoesNotContainAnEntireDefinition_DoesNotInventRemovals",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: Alarm)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/history\", expectedSummary: \"查询配置变更历史\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: True, httpStatus: 200, body: \"secret-invalid-json\", resultStatus: 502, reason: \"dependency.invalid_response\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_WhenEffectiveValueIsSensitive_ShouldRejectDefinition",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenIssuesHaveDefaults_OmitsOnlyOptionalDefaultsAndPreservesNonBlockingState(ignoreCondition: Never)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiMutationMapperTests.MapPostCommitWarning_ReturnsChineseOperatorMessage(kind: AuditFinalization, expectedMessage: \"配置已保存，但变更审计无法完成。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenMediatorHandlerDisablesProxy_ShouldExecuteLocally",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.SaveStateWithRetryAsync_WhenCancelledAfterFailure_ShouldPreserveFailureWithoutRetry",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostOperation_WhenHeaderIsMissingOrInvalid_ShouldReturnFalse(headerValue: \"\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.RpcClient.RpcDateTimeContractTests.BuildApiRequestUri_WhenFlightListForAlarmDateTimeKindsDiffer_ShouldSerializeSameWallClockValues",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.UnitOfWorkBatchExtensionsTests.RunInBatchesAsync_WhenCanceledAfterCommit_ShouldNotStartAnotherBatch",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: Metrics)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenCanonicalEnumValueNeedsNoPersistedRepair_DoesNotCreateMutation",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/rollback/unified-version/{versi\"···, expectedSummary: \"回滚到指定的统一配置版本\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.CompletePreviewEndpoint_IsProtectedAndDocumentsSameProcessFingerprint",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncJsonElementDeserializationTests.Deserialize_WhenPayloadIsEventAlterFlight_ShouldCreateTypedDomainEvent",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetProxyDecision_WhenHttpContextIsMissing_ShouldReturnNull",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.MutationChange_WhenExpectedVersionIsNull_AlwaysWritesRequiredMember",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreviewChange_WhenGlobalDefaultsAreIgnored_StillWritesOperation(operation: Remove)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenCollectionContentsDiffer_ReturnsOneRealParameterIdAndPreservesTargetValue(kind: List, currentJson: \"[{\\\"Name\\\":\\\"A\\\",\\\"Value\\\":1}]\", targetJson: \"[{\\\"Name\\\":\\\"A\\\",\\\"Value\\\":2},{\\\"Name\\\":\\\"B\\\",\\\"Va\"···)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiUnifiedVersionRollbackTests.PreviewUnifiedVersionRollbackAsync_WhenCompleteCurrentParametersChange_ReturnsChineseConflict",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenTransportFails_ShouldReturnUnavailableWithoutLocalFallback(mvc: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenChangedImportedValueIsInvalid_ReturnsBlockingIssue",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.SaveStateWithRetryAsync_WhenCancelledBeforeSave_ShouldNotWrite",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: FlightPlan)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"False\", expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: False, httpStatus: 500, body: \"{\\\"code\\\":500,\\\"message\\\":\\\"safe domain failure\\\",\"···, resultStatus: 500, reason: \"domain.failed\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: Cancelled, detail: \"调用已取消\", expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.SetAsSelfHost_WhenCalledWithoutHeader_ShouldMarkCurrentAsyncFlowAsSelfHosted",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: Platform)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.TranslateRuntimeIssue_UsesSameChineseSchemaGuidanceForStartupConsumers",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: FlightIntegration)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateUpdateExecutorTests.ExecuteAsync_WhenOptimisticWriteConflicts_ShouldRetryInsideShortLockPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostOperation_WhenPrimaryNodeReceivesSelfHostHeader_ShouldIgnoreHeaderForOperationState",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostOperation_WhenHeaderIsMissingOrInvalid_ShouldReturnFalse(headerValue: \"not-a-number\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationAffectedServiceMapperTests.Map_WhenServiceNameIsConfigured_UsesChineseDisplayName",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.AffectedServicesResponse_WhenSerialized_UsesFrontendConfirmationContract",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.RollbackEndpoints_DocumentPreviewFingerprintAsConsistencyProtection",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Invoke_WhenRequestHasJsonContentType_ShouldCopyHeadersAndOverwriteSource",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenIssuesHaveDefaults_OmitsOnlyOptionalDefaultsAndPreservesNonBlockingState(ignoreCondition: WhenWritingDefault)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightRouteCacheDeduplicatorTests.ContainsEquivalentRoute_WithIdenticalRoute_ShouldReturnTrue",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenHistoryIsEmpty_AddsOneNoticePerCurrentRootAndIsIdempotent",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightRouteCacheDeduplicatorTests.ContainsEquivalentRoute_WithMatchingHashButDifferentSerializedContent_ShouldReturnFalse",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiAffectedServicesTests.GetAffectedServicesAsync_WhenChangeIsInvalid_ReturnsChineseBadRequestWithoutImpactLookup",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.MigrationSql_ShouldExpandColumnChangesToBothShards(provider: \"PostgreSQL\", environmentVariable: \"FIPS_EFCORE_TEST_POSTGRES\")",
+        "Outcome": "NotExecuted",
+        "Error": "Set FIPS_EFCORE_TEST_POSTGRES to an isolated disposable test database to run this test."
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiMutationMapperTests.MapPostCommitWarning_ReturnsChineseOperatorMessage(kind: LocalReload, expectedMessage: \"配置已保存，但当前服务无法重新加载配置。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.MapsterCompatibility_ShouldSupportRequiredMembersRecordsAndCustomConstructors",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.GetSnapshot_WithTimedCompletions_ShouldCalculateAverageSuccessfulConsumptionDuration",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/unified-version/{version:long}/\"···, expectedSummary: \"获取指定统一版本及其上一个版本的配置参数\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: GeneralFlight)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferEndpointTests.MapEndpoints_UsesChineseOperatorDocumentation(route: \"/api/configuration/import\", expectedSummary: \"分析已导出的配置参数 JSON 文档\", expectedDescriptionFragment: \"此操作不会保存任何修改\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: MilitaryFlight)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: True, httpStatus: 400, body: \"{\\\"code\\\":400,\\\"message\\\":\\\"check fields\\\"}\", resultStatus: 400, reason: \"operation.failed\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiOptionTypeSelectionTests.Parse_WhenSelectionContainsOnlyWhitespace_DefaultsToSys",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Invoke_WhenJsonContentTypeHasNoRequestObject_ShouldSendEmptyJsonObject",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenSourceIsUnsafe_ReturnsMatchingBlockingIssue(targetStatus: UnsupportedSource, mutationStatus: UnsupportedSource, expectedCode: RollbackUnsupportedSource)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ModuleExtend.ExtendModuleLoggerTests.SensitiveHostingRequestLog_WhenAccessTokenNameIsEncoded_IsExcludedByHubPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRedisReplicaIsReadOnly_ShouldReturnTrue",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.Record_AfterTypeCacheWarmup_ShouldNotAllocatePerMessage",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiNativeValidationTests.ModifiedFingerprint_WhenCommandsAreOtherwiseValid_RejectsBeforeAnyWrite",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateUpdateExecutorTests.ExecuteAsync_WithOptimisticPathDisabled_ShouldUseShortLockPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.PlatformFlightMappings_WhenLabelsAreNull_ShouldPreserveNull",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.AffectedServicesEndpoint_DocumentsPreSaveConfirmationWithoutServerToken",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.Record_WhenCalledConcurrently_ShouldPreserveEntryAndConsumptionTotals",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/unified-version\", expectedSummary: \"获取统一配置版本历史\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"false\", targetJson: null, expectedCount: 1)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.TrySaveStateAsync_WithExistingETag_ShouldUseWriteWithoutReadBack",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_PreservesObjectRuleAndLocalizesSafeOperationalFaults(kind: Contract, problem: \"Configuration validation could not complete during\"···, expected: \"配置校验契约无法完整执行，不能提交。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenIssuesHaveDefaults_OmitsOnlyOptionalDefaultsAndPreservesNonBlockingState(ignoreCondition: WhenWritingNull)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/mutation-groups/preview\", expectedSummary: \"预览配置变更组的完整校验\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.RecordConsumptionCompleted_ForInFlightMessage_ShouldCreateConsumptionOnlyCounter",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenAllProfileAssembliesAreDiscovered_ShouldBuildMaximalHost",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateStoreLocksTests.ExecuteAsync_WithoutCustomTimeout_ShouldKeepLegacyTimeout",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenHistoryHasNoRoot_DoesNotTreatAnOrphanedParameterAsARecordedDefinition",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostOperation_WhenSecondaryHeaderContainsSelfHostedAndUploading_ShouldReadBothFlags",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenHistoricalRootExists_DoesNotInferMissingHistoryFromAnEmptyValue(json: \"false\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenSelfHostedCrudActionAllowsSelfHostProxy_ShouldIgnoreKeptDecisionAndProxy",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_WhenAuthorizationIsRequired_ExposesProtectedUnifiedVersionDeleteRoute",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: FlightQuery)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenNamingPolicyChanges_ConvergesOnlyItsIssueContract(policyKind: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.DeliveryGate_SerializesAndDeduplicatesAcrossReplicaInstances",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateUpdateExecutorTests.CalculateMaxRetryCount_ShouldPreserveLegacyContentionWindow(lockWaitMilliseconds: 15000, expectedRetryCount: 15)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.IsolatedProviderTransaction_ShouldCommitOrRollbackBothTables(provider: \"PostgreSQL\", environmentVariable: \"FIPS_EFCORE_TEST_POSTGRES\", commit: False)",
+        "Outcome": "NotExecuted",
+        "Error": "Set FIPS_EFCORE_TEST_POSTGRES to an isolated disposable test database to run this test."
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.IsolatedProviderTransaction_ShouldCommitOrRollbackBothTables(provider: \"GaussDB\", environmentVariable: \"FIPS_EFCORE_TEST_GAUSS\", commit: True)",
+        "Outcome": "Failed",
+        "Error": "Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.\r\n---- System.ArgumentException : Cannot write DateTime with Kind=UTC to PostgreSQL type 'timestamp without time zone', consider using 'timestamp with time zone'. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')"
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: BasicData)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateStoreLocksTests.ExecuteAsync_WhenLockIsAcquired_ShouldReleaseHandleOnce",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.DeliveryGate_TreatsReusedProgressIdAsANewRun",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenSelfHostedCommandHasKeptProxyDecision_ShouldStillStayLocal",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenHistoricalDefinitionContainsAddedAndRemovedParameters_PreservesTheirDisplayBoundaries",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.UnifiedServiceConfigStartupTests.AddMonicaApplication_ShouldForwardTheConfigurationOwnedMarker",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenInvalidImportedValueIsUnchanged_DoesNotValidateOrReportIssue",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenNamingPolicyChanges_ConvergesOnlyItsIssueContract(policyKind: 1)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.SaveStateWithRetryAsync_WhenRetryDelayIsCancelled_ShouldStopBeforeNextWrite",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: DataExchange)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.ObjectMappingProfiles_ShouldOwnUniqueMappingPairs",
+        "Outcome": "Failed",
+        "Error": "Assert.Empty() Failure: Collection was not empty\r\nCollection: [\"System.String -> System.Int64: Platform.Infrastruc\"···, \"System.String -> System.DateOnly: Platform.Infrast\"···, \"System.Nullable`1[[System.Int32, System.Private.Co\"···, \"System.TimeSpan -> System.Int32: Platform.Infrastr\"···, \"System.Nullable`1[[System.Int32, System.Private.Co\"···, ···]"
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenAllowedValuesUseFrameworkMessage_UsesRuleValues",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_WhenStoredEnumUsesLegacyNumber_ShowsNameAndMarksCanonicalRepair",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenHistoricalRootExists_DoesNotInferMissingHistoryFromAnEmptyValue(json: \"\\\"\\\"\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenSerialized_UsesPreviewFingerprintContract",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.DeliveryGate_DropsDuplicatesOutOfOrderAndPostTerminalSnapshots",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.ProgressSnapshot_RoundTripsThroughTheDistributedEventJsonContract",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.MapSensitiveIssue_NeverExposesValueRulesOrTechnicalProblem",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiAffectedServicesTests.GetAffectedServicesAsync_WhenChangeIsValid_UsesPreparedParameterTargets",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.PlatformScalarMappings_ShouldPreservePrimitiveNullableAndDateOnlySemantics",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: PermissionDenied, detail: \"没有缓存写入权限\", expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.UnifiedServiceConfigStartupTests.StartupMarker_ShouldRejectReusingOneServiceConfigurationForAnotherHost",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Extensions.StringExtensionsTests.BeIfNullOrEmpty_WhenSourceHasValue_ShouldReturnSource",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenCompleteContractRejectsHistory_BlocksInsteadOfSkippingAndPreservesEveryPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenLocalCodeThrows_ShouldPropagateToHostExceptionHandler(mvc: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiOptionTypeSelectionTests.Parse_WhenSelectionIsOmitted_DefaultsToSys",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"true\", expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"false\", targetJson: \"false\", expectedCount: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.ImportAnalysis_WhenSerialized_PreservesValidationIssuesPropertyAndSharedFields",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiOptionTypeSelectionTests.ParseForImport_WhenSelectionIsOmitted_DoesNotFilterActiveCategories",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.SaveAcrossShards_ShouldCaptureEachChangeOnceAndQueryBothTables",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenSourceIsUnsafe_ReturnsMatchingBlockingIssue(targetStatus: CompositeSourceConflict, mutationStatus: CompositeSourceConflict, expectedCode: RollbackCompositeSourceConflict)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.RoundTrip_WhenPathIsRoot_ShouldPreserveDefinitionAndPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.SetProxyDecision_WhenCalled_ShouldWriteDecisionToCurrentRequestHeader",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenCollectionContentsDiffer_ReturnsOneRealParameterIdAndPreservesTargetValue(kind: Dictionary, currentJson: \"{\\\"A\\\":1}\", targetJson: \"{\\\"A\\\":2,\\\"B\\\":3}\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenValueIsIncompatible_FlattensLocalizedValidationIssueAsSkipped",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightRouteCacheDeduplicatorTests.ContainsEquivalentRoute_WithDifferentCurrentFields_ShouldReturnFalse",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/mutation-groups\", expectedSummary: \"提交一个配置变更组\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.TransactionAcrossShards_ShouldCommitOrRollbackBothTables(commit: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.Analyzer_ShouldTrackEntryRatesOnlyOnSecondaryNode(operatingMode: SecondaryNodeMode, expectedTypeCount: 1)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenRequestNameStartsWithQuery_ShouldExecuteLocallyAndKeepDecision",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.MigrationSql_ShouldExpandColumnChangesToBothShards(provider: \"GaussDB\", environmentVariable: \"FIPS_EFCORE_TEST_GAUSS\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Utils.UtilsFlightLabelTests.SplitByLabel_WhenExplicitLabelsArePresent_ShouldReturnLabelValuePairs",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenCplAndTwrHistoryIsSkipped_ExposesBothParameterDifferencesWithoutChangingThePlan",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenDefinitionIsNotVisible_DoesNotCreateAnUnreachableSidebarSummary",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateUpdateExecutorTests.CalculateMaxRetryCount_ShouldPreserveLegacyContentionWindow(lockWaitMilliseconds: 500, expectedRetryCount: 30)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Extensions.StringExtensionsTests.BeIfNullOrEmpty_WhenSourceIsEmpty_ShouldReturnFirstNonEmptyFallback",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"1\", expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenHistoricalRootExists_DoesNotInferMissingHistoryFromAnEmptyValue(json: \"[]\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportScopeTests.ShouldAnalyze_WhenIdCannotBeClassified_RetainsItForDiagnostics(parameterId: \"invalid:key:shape\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/parameters\", expectedSummary: \"获取前端可直接使用的配置参数\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenTimeoutWrapsCancellation_ShouldNotRetry",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiExportJsonTests.CreateExportJsonOptions_WhenContentContainsChinese_PreservesReadableTextAndSafeEscaping",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiAffectedServicesTests.GetAffectedServicesAsync_WhenChangesContainNull_ReturnsChineseBadRequest",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: FlightEntity)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValueCanonicalizerTests.Canonicalize_WhenScalarEnumUsesLegacyNumber_ReturnsMemberName",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.ReportAndComplete_PublishDistinctSignalRSnapshots",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.ParameterItem_WhenSerialized_DoesNotExposeCanonicalPersistenceHint",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.PlatformScalarProjection_ShouldUseTheHostOwnedConfiguration",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.IsolatedProviderTransaction_ShouldCommitOrRollbackBothTables(provider: \"GaussDB\", environmentVariable: \"FIPS_EFCORE_TEST_GAUSS\", commit: False)",
+        "Outcome": "Failed",
+        "Error": "Assert.Throws() Failure: Exception type was not an exact match\r\nExpected: typeof(Test.Platform.Shared.Repository.ShardingCompatibilityTests+IntentionalRollbackException)\r\nActual:   typeof(Microsoft.EntityFrameworkCore.DbUpdateException)\r\n---- Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.\r\n-------- System.ArgumentException : Cannot write DateTime with Kind=UTC to PostgreSQL type 'timestamp without time zone', consider using 'timestamp with time zone'. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')"
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightRouteCacheDeduplicatorTests.ContainsEquivalentRoute_WithNullAndEmptyCollections_ShouldReturnFalse",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: System)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightRouteCacheDeduplicatorTests.ContainsEquivalentRoute_WithNullLegacyCollectionsAndValues_ShouldNotThrow",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.ValidationPreview_WhenSerialized_PreservesBoundaryKindsAndAllLogicalPaths",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"\\\"\\\"\", targetJson: \"\\\"\\\"\", expectedCount: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreview_WhenIssuesHaveDiagnostics_PreservesAllPathsRulesAndPresentValues",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenStoredDocumentInvalidButEffectiveValueValid_ConvergesFindingsWithoutLosingBlockingState",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiEndpointTests.MapEndpoints_UsesChineseOperatorSummaries(route: \"/api/configuration/rollback/unified-version/{versi\"···, expectedSummary: \"预览统一配置版本回滚将产生的精确变更\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: False, httpStatus: 429, body: \"<html>secret</html>\", resultStatus: 503, reason: \"dependency.rate_limited\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightRouteCacheDeduplicatorTests.ContainsEquivalentRoute_ShouldFindLatestEquivalentRoute",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenHistoricalRootExists_DoesNotInferMissingHistoryFromAnEmptyValue(json: null)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.MoDataSyncPropertySetterTests.SetDataSyncProperties_WhenObjectDoesNotImplementDataSyncContract_ShouldDoNothing",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenCalledFromRollbackPreview_PreservesConfiguredMessage",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiUnifiedVersionRollbackTests.RollbackUnifiedVersionAsync_WhenPreviewFingerprintIsStale_ReturnsChineseConflict",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenBlockedFindingHasNoVisualDifference_StillExposesBlockingStateWithoutCandidateDetails",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiNativeValidationTests.ExecutionFault_WhenUserCodeThrows_ReturnsSafeChineseFailedCoverageWithoutSecretOrWrites",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"0\", targetJson: \"0\", expectedCount: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenImportedEnumUsesLegacyNumber_CanonicalizesMutationToMemberName",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenCurrentDefinitionsAreAbsentFromHistory_ExplainsEveryRootWithoutInventingChanges",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncJsonElementDeserializationTests.Deserialize_WhenPayloadIsInMessageEntitySync_ShouldCreateTypedEntityListAndCachePlan",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportScopeTests.ShouldAnalyze_WhenIdCannotBeClassified_RetainsItForDiagnostics(parameterId: \"unknown-options:Enabled\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenTransportFails_ShouldReturnUnavailableWithoutLocalFallback(mvc: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackApply_WhenDeserialized_ReadsPreviewFingerprintContract",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenCollectionContentsDiffer_ReturnsOneRealParameterIdAndPreservesTargetValue(kind: List, currentJson: \"[\\\"remote\\\"]\", targetJson: \"[\\\"remote\\\",\\\"remote\\\",\\\"remote\\\",\\\"remote\\\"]\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.RoundTrip_WhenPathUsesPropertySegments_ShouldPreserveCanonicalPath",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"True\", expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_WhenStateOmitsSchemaPath_ShouldFailClosed",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: Message)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.BeginSampling_WithMultipleDialogs_ShouldRemainEnabledUntilLastDialogCloses",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationAffectedServiceMapperTests.Map_WhenParameterIsStaticAfterStartup_ReturnsOfflineRestartGuidance",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.Encode_WhenDictionaryKeyContainsConfigurationSeparator_ShouldReject",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: False, httpStatus: 200, body: \"secret-invalid-json\", resultStatus: 502, reason: \"dependency.invalid_response\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AlarmMapping_WhenProfileUsesServiceContext_ShouldResolveTheRegisteredDependency",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.UnitOfWorkBatchExtensionsTests.RunInBatchesAsync_ShouldCommitBoundedIndependentTransactions",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiNativeValidationTests.PairedChanges_WhenReviewedTogether_UseSameNormalizedCommandsAndCommitOneDocument",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportCandidateAnalyzerTests.Analyze_WhenFragmentValidationFailsWithoutDetailedIssues_ReturnsBlockingFinding",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenTargetIsBlocked_OmitsEveryMutationAndReturnsSourceFindings",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Utils.UtilsFlightLabelTests.SplitByLabel_WhenRegexLabelsArePresent_ShouldReturnRouteValuePairs",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.GetSnapshot_WithUntimedCompletion_ShouldExcludeItFromAverageDuration",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: True, httpStatus: 400, body: \"{\\\"code\\\":451,\\\"message\\\":\\\"check fields\\\"}\", resultStatus: 502, reason: \"dependency.invalid_response\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenCrudActionDisablesProxy_ShouldExecuteLocally",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.Decode_WhenKeyUsesLegacyShape_ShouldReject",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.MoDataSyncPropertySetterTests.SetDataSyncProperties_WhenOperationIsNotSelfHosted_ShouldLeaveEntityUnchanged",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenSourceIsUnsafe_ReturnsMatchingBlockingIssue(targetStatus: LowerPriorityFallback, mutationStatus: LowerPriorityFallback, expectedCode: RollbackLowerPriorityFallback)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_PreservesPublishedValidationContractWithoutPromotingUnknown(capability: Unknown, revision: null)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.Decode_WhenLogicalPathIsMalformed_ShouldReject",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenRangeUsesFrameworkMessage_IncludesConfiguredBounds",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiKeyCodecTests.RoundTrip_WhenPathUsesDictionaryKey_ShouldPreserveDictionarySegment",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiParameterMapperTests.MapCurrent_WhenScalarStringNodeHasEditorHint_ShouldTransportHint",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiOptionTypeSelectionTests.Parse_WhenSelectionIsExplicit_NormalizesAndDeduplicatesIt",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"yes\", expected: null)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenValidationDetailsAreHidden_PreservesSensitivityBoundary",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenPlannedEnumValueIsNormalized_PreservesExistingRequestsAndAppendsOnlyMissingDifferences",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.SaveStateWithRetryAsync_WhenRedisTypeIsWrong_ShouldDeleteAndRebuild",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostOperation_WhenHeaderIsMissingOrInvalid_ShouldReturnFalse(headerValue: null)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Infrastructure.FipsObjectMappingCompositionTests.AddObjectMapping_WhenProfileAssemblyIsDiscovered_ShouldApplyProfile(composition: FlightRoute)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Extensions.StringExtensionsTests.BeIfNullOrEmpty_WhenAllValuesAreEmpty_ShouldReturnEmptyString",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_PreservesObjectRuleAndLocalizesSafeOperationalFaults(kind: Execution, problem: \"Configuration validation could not complete during\"···, expected: \"配置校验无法安全执行，未能完成完整校验。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRedisIsLoading_ShouldReturnTrue",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncFunctionsTests.IsSelfHostOperation_WhenHeaderIsMissingOrInvalid_ShouldReturnFalse(headerValue: \"0\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiDtoJsonTests.RollbackPreviewChange_WhenGlobalDefaultsAreIgnored_StillWritesOperation(operation: Set)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.SamplingGuard_WhenDialogIsClosed_ShouldNotReadClockOrAllocate",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenManyDefinitionsAreAbsentFromVersion_PreservesEveryUniqueSidebarNotice",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenRootFindingAlreadyExists_DoesNotReplaceOrDuplicateIt",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateStoreLocksTests.ExecuteAsync_WhenActionThrows_ShouldReclaimLocalLockAndAllowFollowingCall",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValueCanonicalizerTests.Canonicalize_WhenEnumAlreadyUsesCanonicalName_DoesNotRequireRepair",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenLocalCodeThrows_ShouldPropagateToHostExceptionHandler(mvc: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: \"{\\\"A\\\":1,\\\"B\\\":2}\", targetJson: \"{\\\"B\\\":2,\\\"A\\\":1}\", expectedCount: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.Proxy_WhenDownstreamResponds_ShouldShareClassificationAndNeverExecuteLocally(mvc: True, httpStatus: 429, body: \"<html>secret</html>\", resultStatus: 503, reason: \"dependency.rate_limited\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.AddRootIssues_WhenAbsentHistoricalRootHasBlockingFindings_KeepsTheBlockingSummaryFirst",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.DurableEventTimestampProviderTests.DurableUtcTimestamps_WhenCreatingProviderParameters_ShouldPreserveUtcClockValues(useGaussDb: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: Internal, detail: \"failed to set key: i/o timeout\", expected: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiNativeValidationTests.InvalidCompleteCandidate_WhenFacadeReturnsFailure_RetainsRejectedDataAndAllPathsWithoutWrites",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiTransferProgressTests.DeliveryGate_DoesNotBlockIndependentRuns",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Helpers.StateStoreHelperTests.IsTransientStateStoreException_WhenRpcFailureIsWrapped_ShouldClassifyUnderlyingFailure(statusCode: InvalidArgument, detail: \"无效的缓存值\", expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenObjectAndNestedPropertyDiffer_CountsOnlyTheProperty",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValueCanonicalizerTests.Canonicalize_WhenValueContainsNestedEnums_NormalizesKnownValuesAndPreservesUnknownProperties",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiMutationMapperTests.MapPostCommitWarning_ReturnsChineseOperatorMessage(kind: DistributedNotification, expectedMessage: \"配置已保存，但分布式重载通知失败。\")",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataTypeConsumptionRateTrackerTests.TimedRecord_AfterTypeCacheWarmup_ShouldNotAllocatePerMessage",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiValidationMessageTranslatorTests.Translate_WhenFrameworkMessageContainsSchemaName_PreservesTheName",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiUnifiedVersionRollbackTests.PreviewUnifiedVersionRollbackAsync_WhenFingerprintChangesDuringProjection_ReturnsChineseConflict",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenDefinitionIsMissing_ReturnsDefinitionFinding",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenCompleteValidationBlocksHistoricalDifference_PreservesBlockingAndFingerprint",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"0\", expected: False)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionPreviewDisplayBuilderTests.MergeChanges_WhenComparingJsonValues_UsesValueEqualityAndIgnoresVersionChanges(currentJson: null, targetJson: null, expectedCount: 0)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationUnifiedVersionApiMapperTests.MapPreview_WhenSourceIsUnsafe_ReturnsMatchingBlockingIssue(targetStatus: RuntimeOutOfSync, mutationStatus: RuntimeOutOfSync, expectedCode: RollbackRuntimeOutOfSync)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.RequestProxyDecisionTests.GetClientProxyDecision_WhenHeaderIsPresent_ShouldParseSupportedBooleanFormats(headerValue: \"\", expected: null)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.Repository.ShardingCompatibilityTests.TransactionAcrossShards_ShouldCommitOrRollbackBothTables(commit: True)",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryNodeProxyInvokerTests.ShouldProxy_WhenCrudActionDisablesProxyAndChainKeepIsFalse_ShouldNotWriteDecisionHeader",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.ConfigurationApi.ConfigurationApiImportScopeTests.ShouldAnalyze_WhenSelectionIsOmitted_IncludesEveryKnownSupportedCategory",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.SecondaryFlightStateStoreLocksTests.ExecuteAsync_WithCustomTimeout_ShouldUseTimeoutAndRunFallbackAction",
+        "Outcome": "Passed",
+        "Error": null
+      },
+      {
+        "Name": "Test.Platform.Shared.PrimarySecondary.DataSyncJsonElementDeserializationTests.Deserialize_WhenProjectUnitIsUnknown_ShouldCacheFailedPlan",
+        "Outcome": "Passed",
+        "Error": null
+      }
+    ]
+  }
+]

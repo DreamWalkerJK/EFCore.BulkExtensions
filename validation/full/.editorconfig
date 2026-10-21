@@ -1,0 +1,7 @@
+# Standalone executable harness; awaiting its entry-point flow needs no library context policy.
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf

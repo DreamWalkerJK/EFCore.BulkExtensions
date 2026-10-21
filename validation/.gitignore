@@ -1,0 +1,5 @@
+/packages/
+/package-cache/
+**/bin/
+**/obj/
+/evidence/*.trx

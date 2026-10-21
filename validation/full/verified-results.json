@@ -1,0 +1,126 @@
+{
+  "started": "2026-10-21T12:17:15.4493146+08:00",
+  "finished": "2026-10-21T12:19:44.4222478+08:00",
+  "runtime": "10.0.12",
+  "database": "bulk_current_full_beea47352dad4dfca160d440fbe4a6ef",
+  "passed": 23,
+  "failed": 0,
+  "limitations": 0,
+  "scenarios": [
+    {
+      "Name": "Connection and provider detection",
+      "Status": "PASS",
+      "Detail": "DotNetCore.EntityFrameworkCore.GaussDB; (openGauss 6.0.3 build 4e5c48e7) compiled at 2025-12-23 21:31:25 commit 0 last mr 8753  on x86_64-unknown-linux-gnu, compiled by g\u002B\u002B (GCC) 10.3.0, 64-bit"
+    },
+    {
+      "Name": "Create isolated schema",
+      "Status": "PASS",
+      "Detail": "Tables created"
+    },
+    {
+      "Name": "BulkInsert with generated identities",
+      "Status": "PASS",
+      "Detail": "20 rows, IDs 1..20"
+    },
+    {
+      "Name": "BulkRead with nullable matching key",
+      "Status": "PASS",
+      "Detail": "insert-1"
+    },
+    {
+      "Name": "BulkUpdate",
+      "Status": "PASS",
+      "Detail": "Updated 5 rows"
+    },
+    {
+      "Name": "BulkInsertOrUpdate by unique natural key",
+      "Status": "PASS",
+      "Detail": "Name=new, Version=1"
+    },
+    {
+      "Name": "BulkDelete",
+      "Status": "PASS",
+      "Detail": "Deleted 3 rows"
+    },
+    {
+      "Name": "Composite-key bulk insert",
+      "Status": "PASS",
+      "Detail": "2 composite-key rows"
+    },
+    {
+      "Name": "External transaction rollback",
+      "Status": "PASS",
+      "Detail": "Rollback preserved"
+    },
+    {
+      "Name": "Async cancellation does not leave staging tables",
+      "Status": "PASS",
+      "Detail": "Cancellation handled"
+    },
+    {
+      "Name": "Complex Flight aggregate bulk operations by entity set",
+      "Status": "PASS",
+      "Detail": "3 flights, 9 labels, 18 nested notes; CRUD and child upsert passed"
+    },
+    {
+      "Name": "Airway-like reference data ordinary CRUD",
+      "Status": "PASS",
+      "Detail": "ordinary CRUD: 1 airway, 3 shared points; nested query/update and cascade/shared-reference delete passed"
+    },
+    {
+      "Name": "Airway-like reference data bulk CRUD",
+      "Status": "PASS",
+      "Detail": "bulk CRUD: 30 points, 5 airways, 40 segments; update/read/upsert/delete and shared-reference protection passed"
+    },
+    {
+      "Name": "Deep complex aggregate EF CRUD",
+      "Status": "PASS",
+      "Detail": "ordinary EF CRUD passed for wide 4-level graph"
+    },
+    {
+      "Name": "Deep complex aggregate nested bulk CRUD",
+      "Status": "PASS",
+      "Detail": "bulk CRUD passed for 4 roots/8 segments/24 waypoints/24 constraints/12 crew"
+    },
+    {
+      "Name": "Large-volume BulkInsert/BulkUpdate/BulkDelete (10,000 rows)",
+      "Status": "PASS",
+      "Detail": "10,000 rows; insert=196 ms (51,020 rows/s), update=320 ms (31,250 rows/s), delete=114 ms (87,719 rows/s) (provider-default)"
+    },
+    {
+      "Name": "Large-volume DeepMission graph bulk CRUD (10,000 roots)",
+      "Status": "PASS",
+      "Detail": "10,000 roots / 50,000 graph rows (10,000 each in root, segment, waypoint, constraint, crew); insert roots=1019 ms (9,814 rows/s), insert segments=427 ms (23,419 rows/s), insert waypoints=458 ms (21,834 rows/s), insert constraints=358 ms (27,933 rows/s), insert crew=360 ms (27,778 rows/s), verify inserted graph=106 ms (471,698 rows/s), update roots=791 ms (12,642 rows/s), update segments=310 ms (32,258 rows/s), update waypoints=218 ms (45,872 rows/s), update constraints=206 ms (48,544 rows/s), update crew=191 ms (52,356 rows/s), read graph=114 ms (438,596 rows/s), delete constraints=96 ms (104,167 rows/s), delete waypoints=367 ms (27,248 rows/s), delete segments=382 ms (26,178 rows/s), delete crew=86 ms (116,279 rows/s), delete roots=608 ms (16,447 rows/s); verified all 5 table counts restored; cycle=8219 ms"
+    },
+    {
+      "Name": "Large-volume BulkInsert/BulkUpdate/BulkDelete (20,000 rows)",
+      "Status": "PASS",
+      "Detail": "20,000 rows; insert=310 ms (64,516 rows/s), update=389 ms (51,414 rows/s), delete=123 ms (162,602 rows/s) (provider-default)"
+    },
+    {
+      "Name": "Large-volume DeepMission graph bulk CRUD (20,000 roots)",
+      "Status": "PASS",
+      "Detail": "20,000 roots / 100,000 graph rows (20,000 each in root, segment, waypoint, constraint, crew); insert roots=1697 ms (11,786 rows/s), insert segments=690 ms (28,986 rows/s), insert waypoints=646 ms (30,960 rows/s), insert constraints=848 ms (23,585 rows/s), insert crew=514 ms (38,911 rows/s), verify inserted graph=172 ms (581,395 rows/s), update roots=1359 ms (14,717 rows/s), update segments=405 ms (49,383 rows/s), update waypoints=400 ms (50,000 rows/s), update constraints=383 ms (52,219 rows/s), update crew=320 ms (62,500 rows/s), read graph=216 ms (462,963 rows/s), delete constraints=127 ms (157,480 rows/s), delete waypoints=612 ms (32,680 rows/s), delete segments=703 ms (28,450 rows/s), delete crew=109 ms (183,486 rows/s), delete roots=1076 ms (18,587 rows/s); verified all 5 table counts restored; cycle=13243 ms"
+    },
+    {
+      "Name": "Large-volume BulkInsert/BulkUpdate/BulkDelete (50,000 rows)",
+      "Status": "PASS",
+      "Detail": "50,000 rows; insert=1084 ms (46,125 rows/s), update=1435 ms (34,843 rows/s), delete=281 ms (177,936 rows/s) (provider-default)"
+    },
+    {
+      "Name": "Large-volume DeepMission graph bulk CRUD (50,000 roots)",
+      "Status": "PASS",
+      "Detail": "50,000 roots / 250,000 graph rows (50,000 each in root, segment, waypoint, constraint, crew); insert roots=6187 ms (8,081 rows/s), insert segments=2035 ms (24,570 rows/s), insert waypoints=2124 ms (23,540 rows/s), insert constraints=1848 ms (27,056 rows/s), insert crew=1537 ms (32,531 rows/s), verify inserted graph=487 ms (513,347 rows/s), update roots=3365 ms (14,859 rows/s), update segments=953 ms (52,466 rows/s), update waypoints=1048 ms (47,710 rows/s), update constraints=1299 ms (38,491 rows/s), update crew=875 ms (57,143 rows/s), read graph=623 ms (401,284 rows/s), delete constraints=261 ms (191,571 rows/s), delete waypoints=1591 ms (31,427 rows/s), delete segments=1729 ms (28,918 rows/s), delete crew=241 ms (207,469 rows/s), delete roots=3052 ms (16,383 rows/s); verified all 5 table counts restored; cycle=38121 ms"
+    },
+    {
+      "Name": "Large-volume BulkInsert/BulkUpdate/BulkDelete (100,000 rows)",
+      "Status": "PASS",
+      "Detail": "100,000 rows; insert=1292 ms (77,399 rows/s), update=1850 ms (54,054 rows/s), delete=444 ms (225,225 rows/s) (provider-default)"
+    },
+    {
+      "Name": "Large-volume DeepMission graph bulk CRUD (100,000 roots)",
+      "Status": "PASS",
+      "Detail": "100,000 roots / 500,000 graph rows (100,000 each in root, segment, waypoint, constraint, crew); insert roots=8819 ms (11,339 rows/s), insert segments=3326 ms (30,066 rows/s), insert waypoints=2863 ms (34,928 rows/s), insert constraints=2966 ms (33,715 rows/s), insert crew=2644 ms (37,821 rows/s), verify inserted graph=1316 ms (379,939 rows/s), update roots=6160 ms (16,234 rows/s), update segments=2176 ms (45,956 rows/s), update waypoints=1866 ms (53,591 rows/s), update constraints=1692 ms (59,102 rows/s), update crew=1656 ms (60,386 rows/s), read graph=1688 ms (296,209 rows/s), delete constraints=424 ms (235,849 rows/s), delete waypoints=3115 ms (32,103 rows/s), delete segments=3138 ms (31,867 rows/s), delete crew=451 ms (221,729 rows/s), delete roots=6009 ms (16,642 rows/s); verified all 5 table counts restored; cycle=66587 ms"
+    }
+  ]
+}

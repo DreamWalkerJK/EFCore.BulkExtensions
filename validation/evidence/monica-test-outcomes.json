@@ -1,0 +1,596 @@
+{
+  "Name": "current-monica-repository",
+  "Counters": "<Counters total=\"118\" executed=\"118\" passed=\"118\" failed=\"0\" error=\"0\" timeout=\"0\" aborted=\"0\" inconclusive=\"0\" passedButRunAborted=\"0\" notRunnable=\"0\" notExecuted=\"0\" disconnected=\"0\" warning=\"0\" completed=\"0\" inProgress=\"0\" pending=\"0\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" />",
+  "Results": [
+    {
+      "Name": "Test.Monica.Repository.Persistence.RepositoryDbContextConceptTests.SaveChanges_WhenCalledSynchronouslyOutsideUnitOfWork_ShouldApplyConcepts",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.SharedTransactionTests.ExecuteAsync_WhenMethodSelectsContext_ShouldUseSelectionUnlessScopeOptionsOverrideIt(overrideSelection: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UIRepository.State.RepositoryDashboardStateTests.UpdateMigrationAsync_WhenCommandSucceedsButRegistryRefreshFails_ShouldPreserveSuccessSeparatelyFromReadError(bulk: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Hosting.MonicaTestScopeTests.ExecuteAsync_WhenArrangedSeparately_ShouldUseFreshContextsAndTheSameDatabase",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.SharedTransactionTests.RunAsync_WhenStoresAreAmbiguous_ShouldRequireSelection",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.Support.RepositoryConnectionPoolInfoParserTests.Parse_WhenKeywordsAreCaseInsensitive_ShouldReturnExplicitValues",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.MvcExecutionPipelineIntegrationTests.UnhandledActionException_ShouldFailTheMvcExecutionBoundary",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.SharedTransactionTests.RunAsync_WhenPrimaryWasFlushedFirst_ShouldFlushLaterParticipantProjectionOnOwner",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.MvcExecutionPipelineIntegrationTests.DeclaredControllerMetadata_ShouldRemainAuthoritativeForDerivedRuntimeControllers",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkRepositoryCommitTests.RunAsync_WhenOperationEnds_ShouldRejectScopeReuseAndDirectWrites(fail: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkRepositoryCommitTests.ExecuteAsync_WhenHandlerFails_ShouldRollBackStagedAndFlushedWrites(flush: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.SharedTransactionTests.RunAsync_WhenNoUnitOfWorkParticipantIsRegistered_ShouldAllowReadsWithoutTransaction",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.DurableEventTimestampTests.TimestampMapping_WhenCreatingParameters_ShouldPreserveUtcTicksWithoutTimezoneKind",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.SharedTransactionTests.RunAsync_WhenContextsShareConnection_ShouldUseOneAtomicTransaction(fail: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Models.RepositoryActivitySummaryTests.Create_WhenDatabaseNameMissing_ShouldScopeAllRows",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.Support.RepositoryConnectionPoolInfoParserTests.Parse_WhenMaxPoolSizeInvalid_ShouldIgnoreValue(connectionString: \"Max Pool Size=\")",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UIRepository.State.RepositoryDashboardStateTests.UpdateMigrationAsync_WhenConfirmedIdDoesNotMatchExactly_ShouldDenyAdmissionInsteadOfUpdatingSelection",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkRepositoryCommitTests.ExecuteAsync_WhenBulkSqlFails_ShouldRollBack",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.Support.ObjectToJsonConverterTests.HasJsonConversion_WhenCustomOptionsProvided_ShouldUseThemForStoredJson",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.Support.RepositoryConnectionPoolInfoParserTests.Parse_WhenConnectionStringEmpty_ShouldReturnNull(connectionString: null)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.ContextAdapterOwnershipTests.PhysicalSave_WhenEnlisted_ShouldBelongToTheLogicalOperation(fail: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkPipelineIntegrationTests.ExecuteAsync_ShouldApplyUnitOfWorkOnlyToAutomaticBoundaries(registerTransitively: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.SharedTransactionTests.RunAsync_WhenIndependentStoreIsExplicitlySelected_ShouldCommitOnlyThatStore",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.EntityEventPublishingTests.Drain_WhenDurableLocalEventHasNoSubscription_ShouldRemainPending",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.SharedTransactionTests.ExecuteAsync_WhenMethodSelectsContext_ShouldUseSelectionUnlessScopeOptionsOverrideIt(overrideSelection: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UIRepository.State.RepositoryDashboardStateTests.UpdateSelectedMigrationAsync_WhenQueuedBehindASelectionChangingRefresh_ShouldUseTheIdFrozenAtAdmission(confirmedContextRemoved: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.MvcExecutionPipelineIntegrationTests.Actions_ShouldUseExactlyOneOwningExecutionBoundary",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.EntityEventPublishingTests.Publish_WhenSerializationFailsAndCallerCatches_ShouldRollBackTheOperation",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Models.RepositoryActivitySummaryTests.Create_WhenDatabaseNameDiffersInCase_ShouldStillScopeRows",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UIRepository.State.RepositoryDashboardStateTests.RefreshContextsAsync_WhenCancellationPrecedesFacadeCompletion_ShouldRejectLateSuccessOrCaughtFailure(throwCancellation: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.PersistencePolicyTests.SaveChanges_WhenDeferredAndDisabledCascadesAreMixed_ShouldRejectBeforeWriting(deletes: Never, orphans: OnSaveChanges)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.PersistencePolicyTests.SaveChanges_WhenDeferredAndDisabledCascadesAreMixed_ShouldRejectBeforeWriting(deletes: OnSaveChanges, orphans: Never)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkPipelineIntegrationTests.ExecuteAsync_ShouldApplyUnitOfWorkOnlyToAutomaticBoundaries(registerTransitively: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.InboxExecutionTests.Receive_WhenTwoConsumersShareDatabase_ShouldRunEachOnce",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.Support.RepositoryConnectionPoolInfoParserTests.Parse_WhenPoolKeywordsPresent_ShouldReturnExplicitValues",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.EntityEventPublishingTests.EntityProjection_WhenKeyIsGenerated_ShouldCaptureFinalValueBeforeCommit",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UIRepository.State.RepositoryDashboardStateTests.UpdateMigrationAsync_WhenFacadeCatchesCommandFailure_ShouldClearPreviousOutcomesAndRecordCommandError(bulk: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UIRepository.State.RepositoryDashboardStateTests.UpdateMigrationAsync_WhenCommandSucceedsButRegistryRefreshFails_ShouldPreserveSuccessSeparatelyFromReadError(bulk: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.EntityEventPublishingTests.Drain_WhenTransportFails_ShouldRetryIdentityAndContinueWithOtherDueMessages",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkExecutionBehaviorTests.ExecuteAsync_WhenDomainEventsCycle_ShouldFailAndRollBack",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.Support.ObjectToJsonConverterTests.HasJsonConversion_WhenNestedValueIsMutated_ShouldPersistChange",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.PersistencePolicyTests.SaveChanges_WhenConcurrencyConflicts_ShouldPreserveExceptionAndFaultContext",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkRepositoryCommitTests.ExecuteAsync_WhenResultFails_ShouldRollBack",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.RepositoryDbContextConceptTests.SaveChangesAsync_WhenInsertedOutsideUnitOfWork_ShouldStampCreationAudit",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkExecutionBehaviorTests.ExecuteAsync_WhenDomainEffectsQueueEvents_ShouldDrainInTheSameScope",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UIRepository.State.RepositoryDashboardStateTests.RefreshContextsAsync_WhenCancellationPrecedesFacadeCompletion_ShouldRejectLateSuccessOrCaughtFailure(throwCancellation: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.SharedTransactionTests.ReceivedHandler_WhenSelectingSharedContexts_ShouldCommitInboxBusinessAndOutgoingRowsTogether",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.ContextAdapterOwnershipTests.PhysicalAccess_WhenNotEnlisted_ShouldFailBeforeAQueryOrSave(shareConnection: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UIRepository.State.RepositoryDashboardStateTests.SelectContextAsync_WhenExactIdIsAbsent_ShouldClearDetailsWithoutFallingBack(useShortName: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Models.RepositoryActivitySummaryTests.Create_WhenRowsWaiting_ShouldCountWaitingSessions",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.EntityEventPublishingTests.EntityProjections_ShouldRejectDuplicateEntityAndEventPair",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Models.RepositoryActivitySummaryTests.Create_WhenTransactionIdleStatesReported_ShouldLumpAbortedIntoIdleInTransaction",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.EntityEventPublishingTests.EntityProjection_WhenAsyncProjectionUsesSynchronousSave_ShouldRejectBeforeWriting",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkRepositoryCommitTests.MvcOutcome_WhenReturned_ShouldHonorEnvelopeStatus(status: Conflict, committed: False, json: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UIRepository.State.RepositoryDashboardStateTests.UpdateMigrationAsync_WhenFacadeCatchesCommandFailure_ShouldClearPreviousOutcomesAndRecordCommandError(bulk: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.EntityEventPublishingTests.Drain_WhenOldestRowHasLiveLease_ShouldSendNextDueRow",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.ExecutionTransactionPolicyTests.Send_WhenMethodDeclaresNone_ShouldPersistOnlyThroughEnclosingUnitOfWork(enclosing: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.EntityEventPublishingTests.Publish_OutsideAnActiveOperation_ShouldFailBeforeSending",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.MvcExecutionPipelineIntegrationTests.Action_WhenHttpConventionOrMethodOverrideApplies_ShouldSelectTransactionMode(method: \"POST\", route: \"write\", expected: Automatic)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.PersistencePolicyTests.SaveChanges_WhenInputsAreDeterministic_ShouldApplyRealAuditPolicy",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkRepositoryCommitTests.MvcOutcome_WhenReturned_ShouldHonorEnvelopeStatus(status: BadRequest, committed: False, json: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Models.RepositoryActivitySummaryTests.Create_WhenStatesPaddedOrUnknown_ShouldNormalizeAndIgnoreUnknownStates",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.EntityEventPublishingTests.Publish_WhenOperationRollsBackAfterFlush_ShouldDiscardBusinessAndMessageRows",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.PersistencePolicyTests.SaveChanges_WhenAcceptAllIsFalse_ShouldRejectBeforeWriting",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.PersistencePolicyTests.SaveChanges_WhenOrphanDeletionIsDisabled_ShouldPreserveCallerProtection",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.RepositoryDbContextConceptTests.SaveChangesAsync_WhenHardDeleteEntityRemovedOutsideUnitOfWork_ShouldHardDelete",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.EntityEventPublishingTests.Publish_WhenCanceledAndCallerCatches_ShouldRollBackTheOperation",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkRepositoryCommitTests.MvcOutcome_WhenReturned_ShouldHonorEnvelopeStatus(status: Ok, committed: True, json: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkRepositoryCommitTests.MvcOutcome_WhenReturned_ShouldHonorEnvelopeStatus(status: Created, committed: True, json: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.MvcExecutionPipelineIntegrationTests.Action_WhenHttpConventionOrMethodOverrideApplies_ShouldSelectTransactionMode(method: \"HEAD\", route: \"safe\", expected: None)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.ExecutionTransactionPolicyTests.Send_WhenMethodDeclaresNone_ShouldPersistOnlyThroughEnclosingUnitOfWork(enclosing: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.ContextAdapterOwnershipTests.PhysicalSave_WhenEnlisted_ShouldBelongToTheLogicalOperation(fail: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.EntityEventPublishingTests.Publish_WhenOperationCommits_ShouldPersistAnImmutableSnapshotWithBusinessRows",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UIRepository.State.RepositoryDashboardStateTests.SelectContextAsync_WhenCanceledDuringActivityRead_ShouldRejectLateDetailsAndReleaseItsGate",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.EfRepositoryTests.Details_WhenGraphIsConfigured_ShouldRetainQueryFiltersAndLeavePlainQueriesUnchanged",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UIRepository.State.RepositoryDashboardStateTests.SelectContextAsync_WhenSelectionsOverlap_ShouldSerializeAndNeverPublishAnotherContextsEvidence",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkManagerTests.RunAsync_WhenCancellationAndRollbackFail_ShouldPreservePrimaryException",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkRepositoryCommitTests.ExecuteAsync_WhenHandlerFails_ShouldRollBackStagedAndFlushedWrites(flush: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Models.RepositoryActivitySummaryTests.Create_WhenDatabaseNameProvided_ShouldScopeStateCountsToThatDatabase",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkRepositoryCommitTests.RunAsync_WhenOperationEnds_ShouldRejectScopeReuseAndDirectWrites(fail: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Hosting.MonicaTestScopeTests.CreateAsync_WhenHostsAreIndependent_ShouldIsolateData",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.DurableEventTimestampTests.DurableEvents_WhenPublishedReceivedAndDelivered_ShouldUseCompatibleParametersAndReadUtc",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.Support.RepositoryConnectionPoolInfoParserTests.Parse_WhenConnectionStringMalformed_ShouldReturnNull",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.EntityEventPublishingTests.Drain_WhenLeaseExpires_ShouldReclaimTheSameStoredMessage",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.PersistencePolicyTests.Remove_WhenRootIsSoftDeleted_ShouldRetainOwnedData(timing: OnSaveChanges)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.PersistencePolicyTests.Remove_WhenSoftDeleted_ShouldDiscardEditsAndPreserveTenantFilter",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Hosting.MonicaTestScopeTests.UseTestDatabase_WhenContextIsMissing_ShouldRequireProductionRegistration",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.SharedTransactionTests.RunAsync_WhenTransactionIsOpen_ShouldStillRejectNonParticipantRead",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.MvcExecutionPipelineIntegrationTests.Action_WhenHttpConventionOrMethodOverrideApplies_ShouldSelectTransactionMode(method: \"POST\", route: \"orchestrate\", expected: None)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.EfRepositoryTests.Details_WhenGraphIsNotConfigured_ShouldKeepReadsDetached",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.PersistencePolicyTests.Remove_WhenRootIsSoftDeleted_ShouldRetainOwnedData(timing: Immediate)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.Support.RepositoryConnectionPoolInfoParserTests.Parse_WhenMaxPoolSizeInvalid_ShouldIgnoreValue(connectionString: \"Max Pool Size=not-a-number\")",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UIRepository.State.RepositoryDashboardStateTests.UpdateSelectedMigrationAsync_WhenQueuedBehindASelectionChangingRefresh_ShouldUseTheIdFrozenAtAdmission(confirmedContextRemoved: True)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.Support.RepositoryConnectionPoolInfoParserTests.Parse_WhenSynonymKeywordsUsed_ShouldReturnExplicitValues",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.ContextAdapterOwnershipTests.PhysicalAccess_WhenNotEnlisted_ShouldFailBeforeAQueryOrSave(shareConnection: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.SharedTransactionTests.RunAsync_WhenConnectionsAreIndependent_ShouldRejectBeforeHandler",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkPipelineIntegrationTests.Mediator_WhenHandlerDeclaresNone_ShouldSkipTransactionAndRetainEnclosingSession",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.InboxExecutionTests.Receive_WhenDuplicateDeliveriesOverlap_ShouldCommitOneReceiptPerConsumer",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.InboxExecutionTests.Receive_WhenIdentityIsMissing_ShouldRejectInboxHandler",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.MvcExecutionPipelineIntegrationTests.Action_WhenHttpConventionOrMethodOverrideApplies_ShouldSelectTransactionMode(method: \"OPTIONS\", route: \"safe\", expected: None)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.Support.RepositoryConnectionPoolInfoParserTests.Parse_WhenKeywordsOmitted_ShouldFallBackToSharedDefaults",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.RepositoryDbContextConceptTests.SaveChangesAsync_WhenRemovedOutsideUnitOfWork_ShouldSoftDeleteInsteadOfHardDelete",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.PersistencePolicyTests.Remove_WhenRootIsSoftDeleted_ShouldRetainOwnedData(timing: Never)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.MvcExecutionPipelineIntegrationTests.AddControllers_ShouldRouteDirectActionsThroughTheExecutionPipeline",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.UnitOfWorkRepositoryCommitTests.RunAsync_WhenNestedFailureIsCaught_ShouldPreventCommit",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.MvcExecutionPipelineIntegrationTests.Action_WhenHttpConventionOrMethodOverrideApplies_ShouldSelectTransactionMode(method: \"GET\", route: \"forced-write\", expected: Automatic)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.EfRepositoryTests.ApplyDetails_WhenCrudRequestsGraph_ShouldPreserveTrackedIdentityAndOperationCommit",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.SharedTransactionTests.RunAsync_WhenContextsShareConnection_ShouldUseOneAtomicTransaction(fail: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.Support.RepositoryConnectionPoolInfoParserTests.Parse_WhenConnectionStringEmpty_ShouldReturnNull(connectionString: \"   \")",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.Support.RepositoryConnectionPoolInfoParserTests.Parse_WhenConnectionStringEmpty_ShouldReturnNull(connectionString: \"\")",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.RepositoryDbContextConceptTests.SaveChangesAsync_WhenModifiedOutsideUnitOfWork_ShouldStampModificationAudit",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.AuditTimeZoneTests.SaveChangesAsync_WithConfiguredDeploymentTimeZone_ShouldStampConvertedWallClock",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UIRepository.State.RepositoryDashboardStateTests.SelectContextAsync_WhenExactIdIsAbsent_ShouldClearDetailsWithoutFallingBack(useShortName: False)",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.MvcExecutionPipelineIntegrationTests.HandledActionException_ShouldCompleteTheMvcExecutionBoundary",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.Services.Support.RepositoryConnectionPoolInfoParserTests.Parse_WhenMaxPoolSizeInvalid_ShouldIgnoreValue(connectionString: \"Max Pool Size=-5\")",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.AuditTimeZoneTests.SaveChangesAsync_WithoutConfiguredTimeZone_ShouldStampUtc",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.Persistence.RepositoryDbContextConceptTests.Repository_WhenWrittenOutsideUnitOfWork_ShouldPersistWithConcepts",
+      "Outcome": "Passed",
+      "Error": null
+    },
+    {
+      "Name": "Test.Monica.Repository.UnitOfWork.MvcExecutionPipelineIntegrationTests.Action_WhenHttpConventionOrMethodOverrideApplies_ShouldSelectTransactionMode(method: \"GET\", route: \"direct\", expected: None)",
+      "Outcome": "Passed",
+      "Error": null
+    }
+  ]
+}

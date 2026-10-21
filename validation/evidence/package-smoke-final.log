@@ -1,0 +1,1 @@
+PASS package-only consumer: generated Owned output, char/date, update/read/delete and transaction rollback.

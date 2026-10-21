@@ -1,0 +1,47 @@
+[
+  {
+    "name": "\u771F\u5B9E Flight \u5B8C\u6574\u56FE\u666E\u901A\u4FDD\u5B58\u3001\u540C\u6B65\u7B56\u7565\u4E0E\u67E5\u8BE2",
+    "status": "PASS",
+    "elapsedMs": 1399
+  },
+  {
+    "name": "\u771F\u5B9E Flight \u5BBD\u5B57\u6BB5\u591A\u8868 Bulk CRUD\u3001\u9009\u62E9\u6027 Owned \u66F4\u65B0\u4E0E\u590D\u5408\u952E",
+    "status": "PASS",
+    "elapsedMs": 1029
+  },
+  {
+    "name": "\u771F\u5B9E Flight \u666E\u901A\u4FDD\u5B58\u4E0E Bulk \u5171\u4E8B\u52A1\u5931\u8D25\u56DE\u6EDA",
+    "status": "PASS",
+    "elapsedMs": 115
+  },
+  {
+    "name": "Bulk \u540E\u666E\u901A Flight Owned \u8DDF\u8E2A\u4FEE\u6539\u548C\u540C\u6B65\u7B56\u7565\u4ECD\u5DE5\u4F5C",
+    "status": "PASS",
+    "elapsedMs": 100
+  },
+  {
+    "name": "\u771F\u5B9E Flight BulkSaveChanges \u4FDD\u7559\u751F\u4EA7\u540C\u6B65\u548C\u4FDD\u5B58\u7BA1\u7EBF",
+    "status": "PASS",
+    "elapsedMs": 100
+  },
+  {
+    "name": "\u771F\u5B9E FIPS \u7ED3\u675F\u6216\u5931\u8D25\u5DE5\u4F5C\u5355\u5143\u7981\u6B62\u540E\u7EED\u540C\u6B65\u53CA\u5F02\u6B65 COPY",
+    "status": "PASS",
+    "elapsedMs": 144
+  },
+  {
+    "name": "\u771F\u5B9E User \u548C FileTemplate JSON \u6DF1\u5C42\u5BF9\u8C61\u3001\u96C6\u5408\u3001\u7A7A\u503C\u5F80\u8FD4",
+    "status": "PASS",
+    "elapsedMs": 471
+  },
+  {
+    "name": "\u771F\u5B9E MAPlan \u52A0\u5BC6 converter COPY\u3001\u7269\u7406\u5BC6\u6587\u4E0E EF \u89E3\u5BC6",
+    "status": "FAIL",
+    "error": "GaussDB.PostgresException (0x80004005): 08P01: insufficient data left in message\r\n   at GaussDB.Internal.GaussDBConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)\r\n   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder\u00601.StateMachineBox\u00601.System.Threading.Tasks.Sources.IValueTaskSource\u003CTResult\u003E.GetResult(Int16 token)\r\n   at GaussDB.GaussDBBinaryImporter.Complete(Boolean async, CancellationToken cancellationToken)\r\n   at EFCore.BulkExtensions.SqlAdapters.GaussDB.GaussDBAdapter.InsertAsync[T](BulkContext context, IEnumerable\u00601 entities, TableInfo tableInfo, Action\u00601 progress, Boolean isAsync, CancellationToken cancellationToken) in D:\\Documents\\Code\\EFCore.BulkExtensions\\EFCore.BulkExtensions.GaussDB\\SqlAdapters\\GaussDB\\GaussDBAdapter.cs:line 137\r\n   at EFCore.BulkExtensions.SqlAdapters.GaussDB.GaussDBAdapter.InsertAsync[T](BulkContext context, IEnumerable\u00601 entities, TableInfo tableInfo, Action\u00601 progress, Boolean isAsync, CancellationToken cancellationToken) in D:\\Documents\\Code\\EFCore.BulkExtensions\\EFCore.BulkExtensions.GaussDB\\SqlAdapters\\GaussDB\\GaussDBAdapter.cs:line 156\r\n   at EFCore.BulkExtensions.SqlAdapters.GaussDB.GaussDBAdapter.InsertAsync[T](BulkContext context, Type type, IEnumerable\u00601 entities, TableInfo tableInfo, Action\u00601 progress, CancellationToken cancellationToken) in D:\\Documents\\Code\\EFCore.BulkExtensions\\EFCore.BulkExtensions.GaussDB\\SqlAdapters\\GaussDB\\GaussDBAdapter.cs:line 29\r\n   at EFCore.BulkExtensions.SqlBulkOperation.InsertAsync[T](BulkContext context, Type type, IEnumerable\u00601 entities, TableInfo tableInfo, Action\u00601 progress, CancellationToken cancellationToken) in D:\\Documents\\Code\\EFCore.BulkExtensions\\EFCore.BulkExtensions.Core\\SqlBulkOperation.cs:line 58\r\n   at EFCore.BulkExtensions.DbContextBulkTransaction.ExecuteAsync[T](BulkContext context, Type type, IEnumerable\u00601 entities, OperationType operationType, BulkConfig bulkConfig, Action\u00601 progress, CancellationToken cancellationToken) in D:\\Documents\\Code\\EFCore.BulkExtensions\\EFCore.BulkExtensions.Core\\DbContextBulkTransaction.cs:line 80\r\n   at Monica.Testing.Hosting.MonicaTestApplication.\u003C\u003Ec__DisplayClass13_0.\u003C\u003CExecuteAsync\u003Eb__0\u003Ed.MoveNext() in D:\\Documents\\Code\\FIPS\\MoLibrary\\Monica.Testing\\Hosting\\MonicaTestApplication.cs:line 80\r\n--- End of stack trace from previous location ---\r\n   at Monica.Repository.UnitOfWork.Services.UnitOfWorkManager.RunAsync[T](Func\u00601 work, UnitOfWorkScopeOptions options, CancellationToken cancellationToken) in D:\\Documents\\Code\\FIPS\\MoLibrary\\Monica.Repository\\UnitOfWork\\Services\\UnitOfWorkManager.cs:line 64\r\n   at Monica.Repository.UnitOfWork.Services.UnitOfWorkManager.RunAsync[T](Func\u00601 work, UnitOfWorkScopeOptions options, CancellationToken cancellationToken) in D:\\Documents\\Code\\FIPS\\MoLibrary\\Monica.Repository\\UnitOfWork\\Services\\UnitOfWorkManager.cs:line 81\r\n   at Monica.Repository.UnitOfWork.Services.UnitOfWorkManager.RunAsync[T](Func\u00601 work, UnitOfWorkScopeOptions options, CancellationToken cancellationToken) in D:\\Documents\\Code\\FIPS\\MoLibrary\\Monica.Repository\\UnitOfWork\\Services\\UnitOfWorkManager.cs:line 96\r\n   at Monica.Testing.Hosting.MonicaTestApplication.ExecuteAsync[TResult](Func\u00602 action, UnitOfWorkScopeOptions options, CancellationToken cancellationToken) in D:\\Documents\\Code\\FIPS\\MoLibrary\\Monica.Testing\\Hosting\\MonicaTestApplication.cs:line 73\r\n   at Monica.Testing.Hosting.MonicaTestApplication.ExecuteAsync[TResult](Func\u00602 action, UnitOfWorkScopeOptions options, CancellationToken cancellationToken) in D:\\Documents\\Code\\FIPS\\MoLibrary\\Monica.Testing\\Hosting\\MonicaTestApplication.cs:line 73\r\n   at Program.\u003C\u003Ec__DisplayClass0_1.\u003C\u003C\u003CMain\u003E$\u003Eb__13\u003Ed.MoveNext() in D:\\Documents\\Code\\DreamWalkerJK.EFCore.BulkExtensions.GaussDB.Tests\\Validation\\Current20261021\\FIPS\\Program.cs:line 213\r\n--- End of stack trace from previous location ---\r\n   at Program.\u003C\u003Ec__DisplayClass0_0.\u003C\u003C\u003CMain\u003E$\u003Eg__Run|0\u003Ed.MoveNext() in D:\\Documents\\Code\\DreamWalkerJK.EFCore.BulkExtensions.GaussDB.Tests\\Validation\\Current20261021\\FIPS\\Program.cs:line 262\r\n  Exception data:\r\n    Severity: ERROR\r\n    SqlState: 08P01\r\n    MessageText: insufficient data left in message\r\n    Where: COPY MilitaryPlans, line 1, column PlanDate\r\n    ColumnName: 9473\r\n    DataTypeName: BACKEND"
+  },
+  {
+    "name": "\u771F\u5B9E MessageCircuitState Revision \u5E76\u53D1\u901A\u8FC7\u4FDD\u7559\u4FDD\u5B58\u7BA1\u7EBF\u62D2\u7EDD\u65E7\u5FEB\u7167",
+    "status": "FAIL",
+    "error": "System.InvalidCastException: Reading as \u0027System.DateOnly\u0027 is not supported for fields having DataTypeName \u0027timestamp without time zone\u0027\r\n   at GaussDB.Internal.AdoSerializerHelpers.\u003CGetTypeInfoForReading\u003Eg__ThrowReadingNotSupported|0_0(Type type, String displayName, Exception inner)\r\n   at GaussDB.Internal.AdoSerializerHelpers.GetTypeInfoForReading(Type type, PostgresType postgresType, PgSerializerOptions options)\r\n   at GaussDB.BackendMessages.FieldDescription.\u003CGetInfo\u003Eg__GetInfoSlow|50_0(Type type, ColumnInfo\u0026 lastColumnInfo)\r\n   at GaussDB.BackendMessages.FieldDescription.GetInfo(Type type, ColumnInfo\u0026 lastColumnInfo)\r\n   at GaussDB.GaussDBDataReader.\u003CGetInfo\u003Eg__Slow|133_0(ColumnInfo\u0026 info, PgConverter\u0026 converter, Size\u0026 bufferRequirement, Boolean\u0026 asObject, \u003C\u003Ec__DisplayClass133_0\u0026)\r\n   at GaussDB.GaussDBDataReader.GetFieldValueCore[T](Int32 ordinal)\r\n   at GaussDB.GaussDBDataReader.GetFieldValue[T](Int32 ordinal)\r\n   at lambda_method2001(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable\u00601.AsyncEnumerator.MoveNextAsync()\r\n   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable\u00601 asyncEnumerable, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable\u00601 asyncEnumerable, CancellationToken cancellationToken)\r\n   at Program.\u003C\u003Ec.\u003C\u003C\u003CMain\u003E$\u003Eb__0_71\u003Ed.MoveNext() in D:\\Documents\\Code\\DreamWalkerJK.EFCore.BulkExtensions.GaussDB.Tests\\Validation\\Current20261021\\FIPS\\Program.cs:line 252\r\n--- End of stack trace from previous location ---\r\n   at Monica.Testing.Hosting.MonicaTestApplication.VerifyAsync[TDbContext](Func\u00603 verify, CancellationToken cancellationToken) in D:\\Documents\\Code\\FIPS\\MoLibrary\\Monica.Testing\\Hosting\\MonicaTestApplication.cs:line 105\r\n   at Monica.Testing.Hosting.MonicaTestApplication.VerifyAsync[TDbContext](Func\u00603 verify, CancellationToken cancellationToken) in D:\\Documents\\Code\\FIPS\\MoLibrary\\Monica.Testing\\Hosting\\MonicaTestApplication.cs:line 105\r\n   at Program.\u003C\u003Ec__DisplayClass0_1.\u003C\u003C\u003CMain\u003E$\u003Eb__14\u003Ed.MoveNext() in D:\\Documents\\Code\\DreamWalkerJK.EFCore.BulkExtensions.GaussDB.Tests\\Validation\\Current20261021\\FIPS\\Program.cs:line 252\r\n--- End of stack trace from previous location ---\r\n   at Program.\u003C\u003Ec__DisplayClass0_1.\u003C\u003C\u003CMain\u003E$\u003Eb__14\u003Ed.MoveNext() in D:\\Documents\\Code\\DreamWalkerJK.EFCore.BulkExtensions.GaussDB.Tests\\Validation\\Current20261021\\FIPS\\Program.cs:line 252\r\n--- End of stack trace from previous location ---\r\n   at Program.\u003C\u003Ec__DisplayClass0_0.\u003C\u003C\u003CMain\u003E$\u003Eg__Run|0\u003Ed.MoveNext() in D:\\Documents\\Code\\DreamWalkerJK.EFCore.BulkExtensions.GaussDB.Tests\\Validation\\Current20261021\\FIPS\\Program.cs:line 262"
+  }
+]

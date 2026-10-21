@@ -1,0 +1,50 @@
+  正在确定要还原的项目…
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.AutoModel\Monica.AutoModel.csproj (用时 255 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.Testing\Monica.Testing.csproj (用时 258 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.UI\Monica.UI.csproj (用时 251 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.DependencyInjection\Monica.DependencyInjection.csproj (用时 251 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.JobScheduler\Monica.JobScheduler.csproj (用时 251 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.Core\Monica.Core.csproj (用时 253 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.WebApi\Monica.WebApi.csproj (用时 259 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.Repository\Monica.Repository.csproj (用时 255 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.Repository.UI\Monica.Repository.UI.csproj (用时 255 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.StateStore\Monica.StateStore.csproj (用时 250 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.Authority\Monica.Authority.csproj (用时 251 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.HealthCheck\Monica.HealthCheck.csproj (用时 250 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.EventBus\Monica.EventBus.csproj (用时 253 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\Monica.Tool\Monica.Tool.csproj (用时 250 毫秒)。
+  已还原 D:\Documents\Code\FIPS\MoLibrary\tests\Test.Monica.Repository\Test.Monica.Repository.csproj (用时 260 毫秒)。
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\tests\Test.Monica.Repository\Test.Monica.Repository.csproj]
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\Monica.DependencyInjection\Monica.DependencyInjection.csproj]
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\Monica.Tool\Monica.Tool.csproj]
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\Monica.Testing\Monica.Testing.csproj]
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\Monica.Core\Monica.Core.csproj]
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\Monica.UI\Monica.UI.csproj]
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\Monica.EventBus\Monica.EventBus.csproj]
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\Monica.JobScheduler\Monica.JobScheduler.csproj]
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\Monica.WebApi\Monica.WebApi.csproj]
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\Monica.Repository\Monica.Repository.csproj]
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\Monica.Authority\Monica.Authority.csproj]
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\Monica.Repository.UI\Monica.Repository.UI.csproj]
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\Monica.HealthCheck\Monica.HealthCheck.csproj]
+C:\Program Files\dotnet\sdk\11.0.100-preview.6.26359.118\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: 你正在使用 .NET 的预览版。请参阅 https://aka.ms/dotnet-support-policy [D:\Documents\Code\FIPS\MoLibrary\Monica.StateStore\Monica.StateStore.csproj]
+  Monica.Tool -> D:\Documents\Code\FIPS\MoLibrary\Monica.Tool\bin\Release\net10.0\Monica.Tool.dll
+  Monica.Core -> D:\Documents\Code\FIPS\MoLibrary\Monica.Core\bin\Release\net10.0\Monica.Core.dll
+  Monica.HealthCheck -> D:\Documents\Code\FIPS\MoLibrary\Monica.HealthCheck\bin\Release\net10.0\Monica.HealthCheck.dll
+  Monica.DependencyInjection -> D:\Documents\Code\FIPS\MoLibrary\Monica.DependencyInjection\bin\Release\net10.0\Monica.DependencyInjection.dll
+  Monica.Authority -> D:\Documents\Code\FIPS\MoLibrary\Monica.Authority\bin\Release\net10.0\Monica.Authority.dll
+  Monica.StateStore -> D:\Documents\Code\FIPS\MoLibrary\Monica.StateStore\bin\Release\net10.0\Monica.StateStore.dll
+  Monica.EventBus -> D:\Documents\Code\FIPS\MoLibrary\Monica.EventBus\bin\Release\net10.0\Monica.EventBus.dll
+  Monica.JobScheduler -> D:\Documents\Code\FIPS\MoLibrary\Monica.JobScheduler\bin\Release\net10.0\Monica.JobScheduler.dll
+  Monica.AutoModel -> D:\Documents\Code\FIPS\MoLibrary\Monica.AutoModel\bin\Release\net10.0\Monica.AutoModel.dll
+  Monica.Repository -> D:\Documents\Code\FIPS\MoLibrary\Monica.Repository\bin\Release\net10.0\Monica.Repository.dll
+  Monica.WebApi -> D:\Documents\Code\FIPS\MoLibrary\Monica.WebApi\bin\Release\net10.0\Monica.WebApi.dll
+  Monica.UI -> D:\Documents\Code\FIPS\MoLibrary\Monica.UI\bin\Release\net10.0\Monica.UI.dll
+  Monica.Testing -> D:\Documents\Code\FIPS\MoLibrary\Monica.Testing\bin\Release\net10.0\Monica.Testing.dll
+  Monica.Repository.UI -> D:\Documents\Code\FIPS\MoLibrary\Monica.Repository.UI\bin\Release\net10.0\Monica.Repository.UI.dll
+  Test.Monica.Repository -> D:\Documents\Code\FIPS\MoLibrary\tests\Test.Monica.Repository\bin\Release\net10.0\Test.Monica.Repository.dll
+D:\Documents\Code\FIPS\MoLibrary\tests\Test.Monica.Repository\bin\Release\net10.0\Test.Monica.Repository.dll (.NETCoreApp,Version=v10.0)的测试运行
+总共 1 个测试文件与指定模式相匹配。
+结果文件: D:\Documents\Code\FIPS\MoLibrary\tests\Test.Monica.Repository\TestResults\current-monica-repository.trx
+
+已通过! - 失败:     0，通过:   118，已跳过:     0，总计:   118，持续时间: 7 s - Test.Monica.Repository.dll (net10.0)
